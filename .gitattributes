@@ -1,0 +1,2 @@
+# Frozen source and evidence hashes require exact bytes on every platform.
+* -text

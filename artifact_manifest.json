@@ -148,6 +148,11 @@
   ],
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 83,
+      "sha256": "c5c310ab7194081edd9a0f46f69166c5065ebc1d43b5e4adc3a5dfcb7f7d2083"
+    },
+    {
       "path": ".gitignore",
       "bytes": 61,
       "sha256": "783e24d36b32c9a68c9c8b80748310f26e95edc56c5c187c7402c08c147c55fd"

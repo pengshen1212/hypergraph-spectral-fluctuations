@@ -1,0 +1,11 @@
+{
+  "registered_utc": "2026-10-12T04:47:02.498254+00:00",
+  "protocol_sha256": "9fc795d9ad4c5300b8ccbd98f2bae566eb5de1cc3001aa7d3ceec354166edd14",
+  "launcher_sha256": "202e33b17aadd1d28af4f2ef9fb980a06eeec0c93449c9c779e08f83435ee806",
+  "tests_sha256": "f588d9884bfc1ed2a69e57759105867cbc065376659ab48568484069255d634a",
+  "from_workers": 2,
+  "to_workers": 8,
+  "scope": "validation scheduling only; every frozen scientific function and stream unchanged",
+  "reason": "DBLP per-draw sparse norm cost; available independent CPU cores",
+  "status": "frozen before all validation draws"
+}

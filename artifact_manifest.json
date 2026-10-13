@@ -1,0 +1,901 @@
+{
+  "artifact": "Paper1 spectral fluctuations",
+  "date": "2026-10-14",
+  "source_bytes_preserved": true,
+  "copied_evidence_files": [
+    "paper/paper1/experiments/prob2-relation-error/attribution_fixed.py",
+    "paper/paper1/experiments/prob2-relation-error/attribution_gcn_lp.py",
+    "paper/paper1/experiments/prob2-relation-error/crossfit_v2.py",
+    "paper/paper1/experiments/prob2-relation-error/cyclic_overlap.py",
+    "paper/paper1/experiments/prob2-relation-error/full_bootstrap.py",
+    "paper/paper1/experiments/prob2-relation-error/full_bootstrap_batches.py",
+    "paper/paper1/experiments/prob2-relation-error/gcn_diagnose.py",
+    "paper/paper1/experiments/prob2-relation-error/identifiability_boundary.py",
+    "paper/paper1/experiments/prob2-relation-error/joint_mc_verification.py",
+    "paper/paper1/experiments/prob2-relation-error/mixed_separation_check.py",
+    "paper/paper1/experiments/prob2-relation-error/multi_dataset_pipeline.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/certify_pilot.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/conditional_moments.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/exact_certificate.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/finite_sample.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/formal_protocol_n4.json",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/formal_protocol_n4_amendment_v1.json",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/n4_repair.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/n4_runner.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/n4r_execution.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/native_protocol.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/protocol.json",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/risk_certificate.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/run_feasibility.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/run_norm_preflight.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/spectral_supplement.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_conditional_moments.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_exact_certificate.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_finite_sample.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_n4_repair.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_n4_runner.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_n4r_execution.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_spectral_supplement.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/test_verified_norm.py",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/verified_norm.py",
+    "paper/paper1/experiments/prob2-relation-error/propagation_chain_checked.py",
+    "paper/paper1/experiments/prob2-relation-error/realdata_fixed.py",
+    "paper/paper1/experiments/prob2-relation-error/replication_v2.py",
+    "paper/paper1/experiments/prob2-relation-error/results/attribution_fixed.json",
+    "paper/paper1/experiments/prob2-relation-error/results/attribution_gcn_lp.json",
+    "paper/paper1/experiments/prob2-relation-error/results/calib_scan.json",
+    "paper/paper1/experiments/prob2-relation-error/results/centered_ab.json",
+    "paper/paper1/experiments/prob2-relation-error/results/centered_ab_v2.json",
+    "paper/paper1/experiments/prob2-relation-error/results/conditional_protocol.json",
+    "paper/paper1/experiments/prob2-relation-error/results/crossfit_v1.json",
+    "paper/paper1/experiments/prob2-relation-error/results/crossfit_v2.json",
+    "paper/paper1/experiments/prob2-relation-error/results/cyclic_overlap.json",
+    "paper/paper1/experiments/prob2-relation-error/results/full_bootstrap.json",
+    "paper/paper1/experiments/prob2-relation-error/results/full_bootstrap_batches.json",
+    "paper/paper1/experiments/prob2-relation-error/results/gcn_fixed.json",
+    "paper/paper1/experiments/prob2-relation-error/results/gcn_pipeline.json",
+    "paper/paper1/experiments/prob2-relation-error/results/identifiability_boundary.json",
+    "paper/paper1/experiments/prob2-relation-error/results/joint_mc_verification.json",
+    "paper/paper1/experiments/prob2-relation-error/results/mixed_separation_check.json",
+    "paper/paper1/experiments/prob2-relation-error/results/multi_dataset_pipeline.json",
+    "paper/paper1/experiments/prob2-relation-error/results/overlap_centered.json",
+    "paper/paper1/experiments/prob2-relation-error/results/realdata_audit_v2.json",
+    "paper/paper1/experiments/prob2-relation-error/results/realdata_budget_sweep.json",
+    "paper/paper1/experiments/prob2-relation-error/results/realdata_peredge_audit.json",
+    "paper/paper1/experiments/prob2-relation-error/results/second_order_audit.json",
+    "paper/paper1/experiments/prob2-relation-error/results/second_order_law.json",
+    "paper/paper1/experiments/prob2-relation-error/results/second_order_law_v2.json",
+    "paper/paper1/experiments/prob2-relation-error/results/spectral_subspace_consequence.json",
+    "paper/paper1/experiments/prob2-relation-error/results/theorem_verification.json",
+    "paper/paper1/experiments/prob2-relation-error/spectral_subspace_consequence.py",
+    "paper/paper1/experiments/prob2-relation-error/test_realdata_matched.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/audit_paper_numbers.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/decision_log.jsonl",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/g0_reproduction.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/influence_families.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/node_influence.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/protocol.json",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/results/g0_reproduction.json",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/results/native_validation.json",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/results/pilot_influence.json",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/results/structure_validation.json",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/results/subspace_validation.json",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/run_influence_pilot.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/run_influence_validation.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/run_subspace_validation.py",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/test_node_influence.py",
+    "paper/paper1/notes/native-risk/baseline_manifest.json",
+    "paper/paper1/notes/native-risk/completion_manifest.json",
+    "paper/paper1/notes/native-risk/decision_log.jsonl",
+    "paper/paper1/notes/native-risk/exact_certificate_pilot.json",
+    "paper/paper1/notes/native-risk/feasibility_pilot.json",
+    "paper/paper1/notes/native-risk/n3_decision_log.jsonl",
+    "paper/paper1/notes/native-risk/n3_manifest.json",
+    "paper/paper1/notes/native-risk/n4_calibration.json",
+    "paper/paper1/notes/native-risk/n4_directions.json",
+    "paper/paper1/notes/native-risk/n4_evaluation.json",
+    "paper/paper1/notes/native-risk/n4_precommit_certificate.json",
+    "paper/paper1/notes/native-risk/n4_spectral_supplement_certificate.json",
+    "paper/paper1/notes/native-risk/n4_spectral_supplement_directions.json",
+    "paper/paper1/notes/native-risk/n4_spectral_supplement_protocol.json",
+    "paper/paper1/notes/native-risk/n4r_calibration.json",
+    "paper/paper1/notes/native-risk/n4r_evaluation.json",
+    "paper/paper1/notes/native-risk/n4r_execution_workers.json",
+    "paper/paper1/notes/native-risk/n4r_precommit_certificate.json",
+    "paper/paper1/notes/native-risk/n4r_protocol.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_A_12510001.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_A_12610001.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_B_12410001.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_B_12710001.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_B_12810001.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_A_12510101.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_A_12610101.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_B_12410101.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_B_12710101.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_B_12810101.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_A_12510201.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_A_12610201.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_B_12410201.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_B_12710201.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_B_12810201.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_A_12510301.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_A_12610301.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_B_12410301.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_B_12710301.json",
+    "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_B_12810301.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_A_12510401.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_A_12610401.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_B_12410401.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_B_12710401.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_B_12810401.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_A_12510501.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_A_12610501.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_B_12410501.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_B_12710501.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_B_12810501.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_A_12510601.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_A_12610601.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_B_12410601.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_B_12710601.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_B_12810601.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_A_12510701.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_A_12610701.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_B_12410701.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_B_12710701.json",
+    "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_B_12810701.json",
+    "paper/paper1/notes/native-risk/norm_preflight.json",
+    "paper/paper1/notes/native-risk/norm_solver_snapshot.json"
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 61,
+      "sha256": "783e24d36b32c9a68c9c8b80748310f26e95edc56c5c187c7402c08c147c55fd"
+    },
+    {
+      "path": "input_hashes.json",
+      "bytes": 1870,
+      "sha256": "52812caf419bae6b3c51cee65f3bfdbb5e2c988b59b35ae20894d1ae023497ee"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1092,
+      "sha256": "8d31cf2ce0bf732d2ccce8be9ecb86574540ca43db48738efda9154ffde19425"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/attribution_fixed.py",
+      "bytes": 10589,
+      "sha256": "ca9deec940158750b7a47f12e0a9192a679223e345329a877d71245974604796"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/attribution_gcn_lp.py",
+      "bytes": 7073,
+      "sha256": "684f9400e90a73bf0af0c147cb7f63dbc472715a821653ee0b66900564f4c7fc"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/crossfit_v2.py",
+      "bytes": 10434,
+      "sha256": "5e3e7cbdb94c1c0f2555def778b777eb09f3ead965dab5a346b7dc0de6c00476"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/cyclic_overlap.py",
+      "bytes": 6479,
+      "sha256": "6cc9375ec9a36ceb03a16615c39310d14da0cf5f60660c9a1ed922cbee271035"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/full_bootstrap.py",
+      "bytes": 5727,
+      "sha256": "446b7de408f8039b94b3619c44bf7428e4b72f85e2a83869cfa3cdb3c871b636"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/full_bootstrap_batches.py",
+      "bytes": 12296,
+      "sha256": "cb47bff029b7f59cdda4bd1155e298dfef4fa2d14d7aa4e9c80895182de6bafd"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/gcn_diagnose.py",
+      "bytes": 9742,
+      "sha256": "81b58ec60fd14e80280ae361b5e21977f3f973ca44d8e28ad347e18d7a7d7364"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/identifiability_boundary.py",
+      "bytes": 6508,
+      "sha256": "ff4799104c45aa0bfdf2294a83c5c5d47dee5f8b045b14e81e629965d865ba49"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/joint_mc_verification.py",
+      "bytes": 12853,
+      "sha256": "ba49cbfb3e9d1ab348de4ee247cd05af400c45e688e9816a750af1b10ef0a538"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/mixed_separation_check.py",
+      "bytes": 21274,
+      "sha256": "2d052065488360f6d041d7be3af250929df9121de317f461599d8504b228ee0c"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/multi_dataset_pipeline.py",
+      "bytes": 9511,
+      "sha256": "e0ca4978219e4f9f59a927478219f3252c7e251952211efa1ac79bf203a7d70c"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/certify_pilot.py",
+      "bytes": 7066,
+      "sha256": "dcada8efc21f31ddfbe1752ca87289cdb3fcb3cf4e126c4d6ce2cdafbc1f6ecf"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/conditional_moments.py",
+      "bytes": 9084,
+      "sha256": "05e1506a716d89c21019a1df4f7a23656c034b8a91c606bcbaf86f1b146082a1"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/exact_certificate.py",
+      "bytes": 6637,
+      "sha256": "e2e280f0f529892741ead86af5d5744f0fba1506c025b103123a3e6fc1f15a0f"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/finite_sample.py",
+      "bytes": 1939,
+      "sha256": "42a9a65c97dcf087d9060f2848e9c343e9ae183b65a187a345bf9fe9c4c5cc4f"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/formal_protocol_n4.json",
+      "bytes": 10365,
+      "sha256": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/formal_protocol_n4_amendment_v1.json",
+      "bytes": 4084,
+      "sha256": "126fcf069e40d6269e5b86d6fc4b24f67fe385c10c2c1fb7738610b356e2de95"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/n4_repair.py",
+      "bytes": 13553,
+      "sha256": "59063c0fcc5f21012fb02a15db7d9485b53a9d0612ca385a12da054853dd9499"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/n4_runner.py",
+      "bytes": 29821,
+      "sha256": "edf57b3b57f0d77546d22b130d8787bcc047815e77af0c7f6bfde918e43719a6"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/n4r_execution.py",
+      "bytes": 2209,
+      "sha256": "202e33b17aadd1d28af4f2ef9fb980a06eeec0c93449c9c779e08f83435ee806"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/native_protocol.py",
+      "bytes": 3686,
+      "sha256": "6c536a788a939ec31958f41b267b80e60772969cb98643d3b36bd039b071f55e"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/protocol.json",
+      "bytes": 4378,
+      "sha256": "44819f828d5e5196442e3593d4036916585a599e30d0a5bd262601a526f23064"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/risk_certificate.py",
+      "bytes": 2482,
+      "sha256": "b44e9e3fa0b3fe43ddd6b38700b3099cf904a529e7d1439c075be7d79206967a"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/run_feasibility.py",
+      "bytes": 11995,
+      "sha256": "828a6bb49fc0695e1ca0829b95b2823ed586ecbbec06f1987ad6a14fdf1297f5"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/run_norm_preflight.py",
+      "bytes": 4708,
+      "sha256": "3294cc6c4b1c2b3d70b59d623c5d7f44a390885de0c3e76899739f88189ac377"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/spectral_supplement.py",
+      "bytes": 11802,
+      "sha256": "8058f5c7b5515c0d70f0090c8fcda77ccb24bce110496d988fdabc6c840404a3"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_conditional_moments.py",
+      "bytes": 11508,
+      "sha256": "edb2249b518551f6fae8cd11586da8dd97baf2b05e23fbab97b32c5cd5e64d15"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_exact_certificate.py",
+      "bytes": 2543,
+      "sha256": "951c673f71750351fda55cb8df632fcaefdd54d87912ede66387c4d0b52113a8"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_finite_sample.py",
+      "bytes": 1290,
+      "sha256": "df52fe6268afcfbf8d2587d4308a85e0f3014a92341c997f2b0f8dc0c41fe876"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_n4_repair.py",
+      "bytes": 2466,
+      "sha256": "4558471c705cbaf7a854ff8058369e934470da3aea765783ef25c3441128bff5"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_n4_runner.py",
+      "bytes": 6873,
+      "sha256": "6a4b3d67a5acf30e50ab83aa25d8c366e97328a8c4bf92f3e8061b7ea9a021f5"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_n4r_execution.py",
+      "bytes": 590,
+      "sha256": "f588d9884bfc1ed2a69e57759105867cbc065376659ab48568484069255d634a"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_spectral_supplement.py",
+      "bytes": 2324,
+      "sha256": "f3d757383f0a8b0c8b4bb03a19e5ad06ed8502a248de553e1cb335838afcfc06"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/test_verified_norm.py",
+      "bytes": 6121,
+      "sha256": "5d0dbe06c4258cc31dd91c89b3cb9394f3389ec6f8a3c3c447aa79e94234bfd5"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/native_risk/verified_norm.py",
+      "bytes": 10598,
+      "sha256": "0665046e10b70b12925907ffc462f7f0df9f5fb0f44cf8a772877bb64bbc10b0"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/propagation_chain_checked.py",
+      "bytes": 7814,
+      "sha256": "c69dfe3579ee6dce134c748c1060ac9dc1b124e399c15e11c28afa38fa4d5105"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/realdata_fixed.py",
+      "bytes": 10342,
+      "sha256": "b25b86f415595dd5449b28eb22cd7ba79020b18cb8e4b484aa2aff451630afce"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/replication_v2.py",
+      "bytes": 7797,
+      "sha256": "ecbd2c64f98b22a2c7f12dc8029841e64d3a38cf21a77ce849f8efc44156a460"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/attribution_fixed.json",
+      "bytes": 2866,
+      "sha256": "5f67a0f7e7faa0edd6d53a4bfee5351c78062ac97b5297527d46de5ee8f1cafb"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/attribution_gcn_lp.json",
+      "bytes": 1386,
+      "sha256": "c8c8b80a0ff98cd9ad399fe28e6224e33e95b107661a5768d5b8e3ea467ac84b"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/calib_scan.json",
+      "bytes": 1829,
+      "sha256": "d42d55bb46ff3277d6e24c327733129b8eeb1fef156bb87e33de55153c7ad544"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/centered_ab.json",
+      "bytes": 2017,
+      "sha256": "f36a43839b634e0cd97a6794ad51a60a375e44aaf1b575cfa871bbd52a07a51c"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/centered_ab_v2.json",
+      "bytes": 5360,
+      "sha256": "00c1e88f4cedfab01d51931594b287bf27b7f975c1123a2803916ba9a4bac4df"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/conditional_protocol.json",
+      "bytes": 2570,
+      "sha256": "cd30f873734dc7d5452fc6f63478bf2f0cf43d6a05dc1cceeaf9878c7373cdda"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/crossfit_v1.json",
+      "bytes": 1040,
+      "sha256": "7561227791f30a530cfe87a9c478332536ff9cddcdedcb840f12be0b5ff71efc"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/crossfit_v2.json",
+      "bytes": 1260,
+      "sha256": "48cfceecd4bfc26e7b1acb996d8e6569d4327429f4f40f297515944aae020035"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/cyclic_overlap.json",
+      "bytes": 1711,
+      "sha256": "29fea74a1c078ed0ee6deb647838f5cbce685d239cb87ade09424ae8ef8e323c"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/full_bootstrap.json",
+      "bytes": 1829,
+      "sha256": "07e8ed8038922d58e1911a73de3877b9b687feaf69ddc943dd6ffbaeea1b0461"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/full_bootstrap_batches.json",
+      "bytes": 12185,
+      "sha256": "08b0b5f1a08e5d446e7c8c38911c81cb4d00725840b9325445caff01d13026f8"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/gcn_fixed.json",
+      "bytes": 187,
+      "sha256": "c174bc5d14075429236b57fbf15d4e20796eacf993a1ac5f41489b21090739ba"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/gcn_pipeline.json",
+      "bytes": 213,
+      "sha256": "a373431d6962c54b774fa810a6abba761983ee419e0bfddc08871765fde6f60f"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/identifiability_boundary.json",
+      "bytes": 327,
+      "sha256": "53768f0083b8a4be73aafeef2698c21089da2da16fdb3a94011f2bc57c6a66fd"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/joint_mc_verification.json",
+      "bytes": 8676,
+      "sha256": "fcf9e775686b68d95d6439e699d7f3d3ba1f8ad57b3e357ade76e177ffb2eec4"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/mixed_separation_check.json",
+      "bytes": 10520,
+      "sha256": "733d84184082337b1d7bbdb7a7591383f96c8e9df7151c49167e517fed9f24b5"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/multi_dataset_pipeline.json",
+      "bytes": 653,
+      "sha256": "20c27f5c4d7d5edb1f69fe1d42fe5a06fe161a53b846647b071f41d63a10e50f"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/overlap_centered.json",
+      "bytes": 5925,
+      "sha256": "80a0b50f37aa4dc788f662a752ed7a8062383ea66b5089f8b5eed7deb2f311b6"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/realdata_audit_v2.json",
+      "bytes": 4368,
+      "sha256": "097bde70caaf7c127da0c86e3e5bf8e2abdfec7c1918af443811fae032ba7242"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/realdata_budget_sweep.json",
+      "bytes": 9956,
+      "sha256": "8c8275cf48a4da2bd123b2b07778275c525d9176e1a9b39aa1a135990660a85d"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/realdata_peredge_audit.json",
+      "bytes": 55241,
+      "sha256": "3e61835b8935891833fb5ac999f31f8ca38c0553665b37848f2fe4a1df8ec230"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/second_order_audit.json",
+      "bytes": 1391,
+      "sha256": "51f331b097b3687107c7bc7362b3605eba9dcb9954b5173f4d229b9c011172b1"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/second_order_law.json",
+      "bytes": 1279,
+      "sha256": "50d83558c8648c2650ec9d1d9a7a59589dde6603837dea3f5faddd15ba29dc42"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/second_order_law_v2.json",
+      "bytes": 2275,
+      "sha256": "0c0cc1854b639264692e926ead9416715e9d860ec18a8328d5e232637f07b690"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/spectral_subspace_consequence.json",
+      "bytes": 1626,
+      "sha256": "f9a2a9e9770edc3b1dbe0e4081bb7d9162f817f44450950dcea08f3f6d7f7ef5"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/results/theorem_verification.json",
+      "bytes": 2204,
+      "sha256": "522a67a328fa6315d433285a5f99950c81869aedb9d370e1b68387c373e190ed"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/spectral_subspace_consequence.py",
+      "bytes": 7274,
+      "sha256": "7ad888afa066c629c8849b4da394b7df140fdcd8b1bbe71f056040b0738d6fbe"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/test_realdata_matched.py",
+      "bytes": 3997,
+      "sha256": "f99676004f5dd3923c7d625091a6b37b3f1ba64a87a758ccb94943b7fbbf455b"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/audit_paper_numbers.py",
+      "bytes": 5971,
+      "sha256": "d5417336a746136e926140bbc89e61b2ed15f31ac6a802461e59662a08837313"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/decision_log.jsonl",
+      "bytes": 13547,
+      "sha256": "61f2b58fa0596bad1441b94f9ccb2d0c4d99cc371cbc1eb1ff202000d3b30790"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/g0_reproduction.py",
+      "bytes": 12072,
+      "sha256": "6dd649b5e4bf14a20245f2cc1ca32280587079de5cbd475ca0c5f327f9556592"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/influence_families.py",
+      "bytes": 7157,
+      "sha256": "2799a8e21082fabb695a577bc811f28b28cb7f17e75858dd3487295daf3b800c"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/node_influence.py",
+      "bytes": 7135,
+      "sha256": "39d419f01ac0fd213befe0ae21814667e68c6820071ee301bfc94c86047e1bed"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/protocol.json",
+      "bytes": 4535,
+      "sha256": "105cf15ee9f52a8c759eecbcaec45e0d32fb43b7f352687daff7e4830d1676e3"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/results/g0_reproduction.json",
+      "bytes": 2160,
+      "sha256": "1643f2df9e7de94cca42677406319a0ac66a02fa119d30d07c4397eff7d08347"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/results/native_validation.json",
+      "bytes": 21564,
+      "sha256": "3584de7d61e944ae685d197c7f9189489a67d4b4e70f5c2274fe822d710ce188"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/results/pilot_influence.json",
+      "bytes": 40376,
+      "sha256": "09b506a99692b090dd99353238d3911f79b667cc68058035c232527c3f150afd"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/results/structure_validation.json",
+      "bytes": 465970,
+      "sha256": "7925ce4e682ca28a3d7e5aa6df1b5ba1218f529d4a02423f02282b7cd04b8bd1"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/results/subspace_validation.json",
+      "bytes": 1858,
+      "sha256": "2c29fd24483f4293f41bf478a6fa981b7fdac32194bb6cac19be60439cb77ca7"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/run_influence_pilot.py",
+      "bytes": 4041,
+      "sha256": "4beacbd89adbb4dde074e5fc48bc11019bb9443853547f3bb3abde3da558a09c"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/run_influence_validation.py",
+      "bytes": 13538,
+      "sha256": "8baf0f6e3a60121f6044869f2a54c844e8f2e2b04e12787dd4bb2fe3c9f660bc"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/run_subspace_validation.py",
+      "bytes": 5863,
+      "sha256": "50f14581c265c4893b9077c5ac36ae30d11f1880a65d581f0bc1953fe71a730a"
+    },
+    {
+      "path": "paper/paper1/experiments/prob2-relation-error/upgrade/test_node_influence.py",
+      "bytes": 8497,
+      "sha256": "414989e388b04b7920e28ad756acb624b6d11d450f53c4a5c6b24b515063292c"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/baseline_manifest.json",
+      "bytes": 4956,
+      "sha256": "0a462b35c76d4e032b1b0f15988eae8776888b4c9484899f0de3dbe4bcc8ac8f"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/completion_manifest.json",
+      "bytes": 3104,
+      "sha256": "1eb271ab5dcb71f9527837c5dae438658628f73290a66b244e6319c7e9be8907"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/decision_log.jsonl",
+      "bytes": 2423,
+      "sha256": "897043a30c4c21afee55a6fdb7aca5589688335e9b9545008cda997246b512aa"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/exact_certificate_pilot.json",
+      "bytes": 180383,
+      "sha256": "4f57fd0412ba32c4881221808fbc42c919db55cefc0e106c650477b134b5ee41"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/feasibility_pilot.json",
+      "bytes": 26034,
+      "sha256": "6d16e976e68afc005954cf1d13e5123dca60aa231a9e5d3b6463ff51e28869e0"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n3_decision_log.jsonl",
+      "bytes": 874,
+      "sha256": "3868ce687b1bc2a7cd216e72d485aa1026c71e92ccdc7616589fc4d57360596f"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n3_manifest.json",
+      "bytes": 2743,
+      "sha256": "d79e2d5d53fefba1892c5cd3a38e77fb641e9b27b2d6998e11d55f7b747d2af4"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_calibration.json",
+      "bytes": 601814,
+      "sha256": "254baf487816914a719d22da2a89cff80fc6fba7f8adf9e4f690c7bd76256bd1"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_directions.json",
+      "bytes": 159592,
+      "sha256": "1df8a857422ca119554b9173966d77b41eca1894939b01de1f6140b56bb88ba6"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_evaluation.json",
+      "bytes": 27276,
+      "sha256": "25a9e8b101c6f49f6cd18e0503ec4529ad5ba32d95c96d6fe52794fa784fdf4d"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_precommit_certificate.json",
+      "bytes": 37446,
+      "sha256": "5ff101cd63407fada85696272b693223430a23f88bb74d71ab35759152fbad69"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_spectral_supplement_certificate.json",
+      "bytes": 281733,
+      "sha256": "a79e498e5706e69a5ec08806a75f588ab451f9f25fcc6332b21f09086b9f8dea"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_spectral_supplement_directions.json",
+      "bytes": 1514442,
+      "sha256": "4672b85ac0682e7fded2509be4a33a6d753f12c0ba175a6d633e41e98960bc5d"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4_spectral_supplement_protocol.json",
+      "bytes": 4651,
+      "sha256": "35eed61c764454d007148f4238a0d180c2afac7e31a1d50191fef398d548618b"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_calibration.json",
+      "bytes": 1288,
+      "sha256": "ad9d4b894129b9047105207fac689305d5d684b8c66e1762d173d217117a7b90"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_evaluation.json",
+      "bytes": 23825,
+      "sha256": "fd980396f2381485479683a91fee46c556e705809bf05352254071dd319abeec"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_execution_workers.json",
+      "bytes": 597,
+      "sha256": "4aa2bc59318ae91a34c440ddcd3bec2bdfc18a9a683e7d1db9abc1d3a8749c19"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_precommit_certificate.json",
+      "bytes": 162146,
+      "sha256": "20eefee1057de59f366252bebce47275aae6758cf32ad5260242b4e15e1f7df7"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_protocol.json",
+      "bytes": 5483,
+      "sha256": "9fc795d9ad4c5300b8ccbd98f2bae566eb5de1cc3001aa7d3ceec354166edd14"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_A_12510001.json",
+      "bytes": 97419,
+      "sha256": "ea83cf77468be4cb2b9fabde3b7945b2350099cc7bfabc473fbe14c31ed0f1c4"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_A_12610001.json",
+      "bytes": 97409,
+      "sha256": "1eada785f6c6a55aae5edeacc94b801db8d5969915a15749b9227ee167f670c6"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_B_12410001.json",
+      "bytes": 196105,
+      "sha256": "f1b6bbe088eea1b7b5c3488a9fb120dc5ddd20550981084d3cc46bb53a0d619a"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_B_12710001.json",
+      "bytes": 98108,
+      "sha256": "01e0bb34522510f1a1229849f98104279b3d3a72aa21ecb7fc271479896e43f7"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e005_B_12810001.json",
+      "bytes": 98125,
+      "sha256": "ed82055142c432752b8fe2dbf64d9a9ba17c1455b2d75bae070e9950a7a4ded5"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_A_12510101.json",
+      "bytes": 97787,
+      "sha256": "cb278a75a5b93d62d5f2418121fc5f451e888e3a2a987385e6a405f6df311622"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_A_12610101.json",
+      "bytes": 97751,
+      "sha256": "46102ce9cc1e7a0e22ad41f1552e4e17595ce2875be23bed64f8fbbbe2247d7f"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_B_12410101.json",
+      "bytes": 195502,
+      "sha256": "290e56c47b32e3a5c6759467649185152c5b5db38ea921f456423fd8df36f6ea"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_B_12710101.json",
+      "bytes": 97833,
+      "sha256": "b91aa556e50c2dc5d878a3cf444ebdff3c36dbf8ce82367ae9e16bbb7e732c7d"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-binary-e015_B_12810101.json",
+      "bytes": 97857,
+      "sha256": "94dbbb2c069f7232beb5e74d23ec24e9e1490d23bca9debd115c8af5a6db20a8"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_A_12510201.json",
+      "bytes": 97495,
+      "sha256": "6df997cf6aa8d1fd9ad6e45337af224cf090bd99ea3d73c441f1ab8bb2a8dff1"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_A_12610201.json",
+      "bytes": 97488,
+      "sha256": "c53a297b5ed66f352989f57bdbf23cf47f0975a3505079276e94b93d1f7d12c9"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_B_12410201.json",
+      "bytes": 196172,
+      "sha256": "e1f07b70ca249c75a808e98866212d7d06a05dd4f483c69e7e6c7b4aea842236"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_B_12710201.json",
+      "bytes": 98183,
+      "sha256": "6bcd6364e1d94fc95e56cc63a17e066a8422f64c8716fb068947876447adc3bf"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e005_B_12810201.json",
+      "bytes": 98113,
+      "sha256": "36ce020d6a0c74204e70dd197dc20ad51893724bb0ba555a4c4db8ed6d87f408"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_A_12510301.json",
+      "bytes": 97682,
+      "sha256": "f26eb2019d3fa450d448257c29d0c6294254b40ad8f06017fa55bfb61e909c7b"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_A_12610301.json",
+      "bytes": 97693,
+      "sha256": "b9692a26cbebfc8ddb0f8cad143cb664e51264a1ee0f921ed576908f32a3bead"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_B_12410301.json",
+      "bytes": 195693,
+      "sha256": "5ae9dd8d85e54ab482c830c8c5fa9ae7dff93d94e3fb4681229ab12970e032a0"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_B_12710301.json",
+      "bytes": 97928,
+      "sha256": "342c6adee6e3926f9dfdf3380f552bd86975771c1644314818bcaba8017bcd5c"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_cora-multiclass-e015_B_12810301.json",
+      "bytes": 97930,
+      "sha256": "ed392730bf269c9310704a8e4bebd946774b8e5d4f1506061dc363119d2dcccb"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_A_12510401.json",
+      "bytes": 97337,
+      "sha256": "ed4861feb6c261faa2f273eb55634bd10f9a0339779e665778c48aab8ae599cf"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_A_12610401.json",
+      "bytes": 97334,
+      "sha256": "601e19291da8ea9b4226247a6459353522a387a3dcd2036460ef1112b55af053"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_B_12410401.json",
+      "bytes": 196169,
+      "sha256": "832e315e859a2c5910ae8d214564634b84bb3aa851fc058355aa4df97cd87d26"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_B_12710401.json",
+      "bytes": 98175,
+      "sha256": "7209b6a9834336cf8c57ee18f339a5114ee754c2ecc687e23ff86fcdbbe6309f"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e005_B_12810401.json",
+      "bytes": 98145,
+      "sha256": "a88d97af617736f1155fe5a72f6a202faae6d371323afb3f001fb0214957fa8b"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_A_12510501.json",
+      "bytes": 97145,
+      "sha256": "e69c2e79813072fb3fd3cfd5651e5f10c913db3cef2bdabc1fe15b5fb38a49e0"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_A_12610501.json",
+      "bytes": 97116,
+      "sha256": "8ae4f3760c92c90da3b6fe287f827e8dfa18e5c3aabd056627f530ab548671b4"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_B_12410501.json",
+      "bytes": 196207,
+      "sha256": "75463d2899d79c69f7ae6de48b5db0c24af937cfe68e859e1e542d1de3696fd0"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_B_12710501.json",
+      "bytes": 98163,
+      "sha256": "93622aa84d629d74dd3c65d96979cda2960d57a4323fa20b3e0a2adeba540200"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-binary-e015_B_12810501.json",
+      "bytes": 98151,
+      "sha256": "a1274c9b014869636d4f7409c3634325784cac66b98cab0e3899e4ac246a8b60"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_A_12510601.json",
+      "bytes": 97340,
+      "sha256": "9e1c3865ffe5c68b3939cdd0e691e2c544b79a1e3ca0faee2bc51e041bce0cc1"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_A_12610601.json",
+      "bytes": 97350,
+      "sha256": "ac8e25ac22b37cc607766f649eaf34497adc0f54053b3219b3e6b1d1febd1c74"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_B_12410601.json",
+      "bytes": 196238,
+      "sha256": "f42f3aad620e9f06c605418789d4f71482bcce919d339bd51613252e0a190e8a"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_B_12710601.json",
+      "bytes": 98140,
+      "sha256": "c8523f37b848a71dc9cf2e98b5e47c41281a753f59e01d84fe835d714eac913a"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e005_B_12810601.json",
+      "bytes": 98186,
+      "sha256": "01f8d4919a9b535781a814f21cc8e102259fcb398076ed152ef5a395b22ccd8f"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_A_12510701.json",
+      "bytes": 97156,
+      "sha256": "af04e5927d6827663a5c660297fbb0b3bed7b568c8433761804e0acc71c349f5"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_A_12610701.json",
+      "bytes": 97093,
+      "sha256": "9cb9b5107f343f7fd43c6b78784ed86f94e28c51ad51330c69f2190adb4e3947"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_B_12410701.json",
+      "bytes": 196109,
+      "sha256": "0d152668c2d445295762e554160e7198ce73d6dde639abe90679636e5bacfb61"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_B_12710701.json",
+      "bytes": 98188,
+      "sha256": "ed8fd12575aafaab79fc89d1388d1069256de0151317963f5f1586e8df61f027"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/n4r_raw_dblp-multiclass-e015_B_12810701.json",
+      "bytes": 98188,
+      "sha256": "ee15874bd92f9c543b4eaf8460596945ff0a9b050ab20b232523d5ef91dae546"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/norm_preflight.json",
+      "bytes": 14672,
+      "sha256": "fc3d86a310dffd4cbc5cdb3d2a9d9b33ebdf8c3ae65b7b8e6ec337ec4cecc850"
+    },
+    {
+      "path": "paper/paper1/notes/native-risk/norm_solver_snapshot.json",
+      "bytes": 2709,
+      "sha256": "72919edb94fcac9224a279dd399f7fcb6d215db2ba3e547593cc074ab3241a26"
+    },
+    {
+      "path": "paper_tables.json",
+      "bytes": 3916,
+      "sha256": "1ad6da125af7ee535476ef779c2c65f8d5903e0276c2935f377e9a646cb4c007"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4826,
+      "sha256": "533d0ddcfa937687930ee736606064ec7af911f0bb1c7a3efc758a940f53155e"
+    },
+    {
+      "path": "requirements.txt",
+      "bytes": 28,
+      "sha256": "c25758bac9a3dc1a9be4d6303e82dbcb2fe1c51fe224581d62aa4472230e5ee8"
+    },
+    {
+      "path": "run.py",
+      "bytes": 3463,
+      "sha256": "dc59c0ea121b676ecb6b2db3263fe611bb01d3694f4bddc8265f44d6efc7d438"
+    },
+    {
+      "path": "verify_artifacts.py",
+      "bytes": 5932,
+      "sha256": "2fd1d56aed4a6c05aca7eb84d1b9c5f4be3e7f3f1df0af047e20588fc9a61433"
+    }
+  ]
+}

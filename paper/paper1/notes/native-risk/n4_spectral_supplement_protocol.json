@@ -1,0 +1,86 @@
+{
+  "id": "paper1-n4-retrospective-spectral-supplement-20261012-v1",
+  "created_utc": "2026-10-12T04:23:34.391471+00:00",
+  "inferential_status": "retrospective exact-model calculation; not a registered N4 pass",
+  "scope": "all eight original native cells, same groups and calibrated thresholds; no random draws",
+  "binary_rule": "reuse every saved N3 state witness without reselection",
+  "multiclass_rule": "existing supported spectral_witness at largest absolute eigenvalue for every positive-probability state; exact zeros outside conditional-mean support",
+  "zero_mean_rule": "unit vector at node zero if the conditional mean is identically zero",
+  "ordering": "save and hash all directions before computing any new threshold bounds",
+  "stop": "one fixed witness rule only; retain zero and unavailable results; no tuning after bounds",
+  "source_hashes": {
+    "experiments\\prob2-relation-error\\native_risk\\spectral_supplement.py": "8058f5c7b5515c0d70f0090c8fcda77ccb24bce110496d988fdabc6c840404a3",
+    "experiments\\prob2-relation-error\\native_risk\\exact_certificate.py": "e2e280f0f529892741ead86af5d5744f0fba1506c025b103123a3e6fc1f15a0f",
+    "experiments\\prob2-relation-error\\native_risk\\run_feasibility.py": "828a6bb49fc0695e1ca0829b95b2823ed586ecbbec06f1987ad6a14fdf1297f5",
+    "experiments\\prob2-relation-error\\native_risk\\conditional_moments.py": "05e1506a716d89c21019a1df4f7a23656c034b8a91c606bcbaf86f1b146082a1",
+    "experiments\\prob2-relation-error\\native_risk\\native_protocol.py": "6c536a788a939ec31958f41b267b80e60772969cb98643d3b36bd039b071f55e",
+    "experiments\\prob2-relation-error\\native_risk\\n4_runner.py": "edf57b3b57f0d77546d22b130d8787bcc047815e77af0c7f6bfde918e43719a6",
+    "notes\\native-risk\\n4_calibration.json": "254baf487816914a719d22da2a89cff80fc6fba7f8adf9e4f690c7bd76256bd1",
+    "notes\\native-risk\\exact_certificate_pilot.json": "4f57fd0412ba32c4881221808fbc42c919db55cefc0e106c650477b134b5ee41",
+    "experiments\\prob2-relation-error\\native_risk\\formal_protocol_n4.json": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652",
+    "notes\\native-risk\\n4_directions.json": "1df8a857422ca119554b9173966d77b41eca1894939b01de1f6140b56bb88ba6",
+    "notes\\native-risk\\n4_precommit_certificate.json": "5ff101cd63407fada85696272b693223430a23f88bb74d71ab35759152fbad69",
+    "notes\\native-risk\\n4_evaluation.json": "25a9e8b101c6f49f6cd18e0503ec4529ad5ba32d95c96d6fe52794fa784fdf4d",
+    "experiments\\prob2-relation-error\\native_risk\\formal_protocol_n4_amendment_v1.json": "126fcf069e40d6269e5b86d6fc4b24f67fe385c10c2c1fb7738610b356e2de95",
+    "source-data/cora-cc/hypergraph.pickle": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+    "source-data/cora-cc/labels.pickle": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+    "source-data/dblp-ca/hypergraph.pickle": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+    "source-data/dblp-ca/labels.pickle": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+  },
+  "data_sha256": {
+    "cora_hypergraph": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+    "cora_labels": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+    "dblp_hypergraph": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+    "dblp_labels": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+  },
+  "cells": [
+    {
+      "id": "cora-binary-e005",
+      "graph": "cora-cc",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.05
+    },
+    {
+      "id": "cora-binary-e015",
+      "graph": "cora-cc",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.15
+    },
+    {
+      "id": "cora-multiclass-e005",
+      "graph": "cora-cc",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.05
+    },
+    {
+      "id": "cora-multiclass-e015",
+      "graph": "cora-cc",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.15
+    },
+    {
+      "id": "dblp-binary-e005",
+      "graph": "dblp-ca",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.05
+    },
+    {
+      "id": "dblp-binary-e015",
+      "graph": "dblp-ca",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.15
+    },
+    {
+      "id": "dblp-multiclass-e005",
+      "graph": "dblp-ca",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.05
+    },
+    {
+      "id": "dblp-multiclass-e015",
+      "graph": "dblp-ca",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.15
+    }
+  ]
+}

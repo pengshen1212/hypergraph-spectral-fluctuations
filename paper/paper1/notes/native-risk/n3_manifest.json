@@ -1,0 +1,36 @@
+{
+  "stage": "N3",
+  "date": "2026-10-12",
+  "decision": "analysis_and_protocol_design_complete_n4_blocked",
+  "n4_samples_generated": false,
+  "protected_baseline_sha256": {
+    "paper/paper1/main.tex": "6c0ceb1d93a7338c88d63765b42d811a9f7d0ae7fee44a945c6ca86acd6af84d",
+    "paper/paper1/main.pdf": "5e8145cc6ea4055810f1a39d516b11854776e75befea03ad114396cb8d69a82a",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/protocol.json": "105cf15ee9f52a8c759eecbcaec45e0d32fb43b7f352687daff7e4830d1676e3",
+    "paper/paper1/experiments/prob2-relation-error/upgrade/results/native_validation.json": "3584de7d61e944ae685d197c7f9189489a67d4b4e70f5c2274fe822d710ce188",
+    "data/cora-cc/hypergraph.pickle": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+    "data/cora-cc/labels.pickle": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+    "data/dblp-ca/hypergraph.pickle": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+    "data/dblp-ca/labels.pickle": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+  },
+  "n3_artifact_sha256": {
+    "paper/paper1/experiments/prob2-relation-error/native_risk/exact_certificate.py": "046dbdd935fd9cf2212a90e239dfe936873d8329752185c313ce6a8060cd1e95",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/finite_sample.py": "42a9a65c97dcf087d9060f2848e9c343e9ae183b65a187a345bf9fe9c4c5cc4f",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/certify_pilot.py": "dcada8efc21f31ddfbe1752ca87289cdb3fcb3cf4e126c4d6ce2cdafbc1f6ecf",
+    "paper/paper1/experiments/prob2-relation-error/native_risk/formal_protocol_n4.json": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652",
+    "paper/paper1/notes/native-risk/exact_certificate_pilot.json": "4f57fd0412ba32c4881221808fbc42c919db55cefc0e106c650477b134b5ee41",
+    "paper/paper1/notes/native-risk/proof_targets.md": "32ca48d8636dd3ea4c31084d74ba419bba3f036f8c90d1b13f3a7bb9951ed014",
+    "paper/paper1/notes/native-risk/novelty_matrix.md": "1679ceba5561e491e5036236b555f1ef41db18c5f22016160028c072f903bac4",
+    "paper/paper1/notes/native-risk/n3_status.md": "319c955397c4b1f11fee503fb433c7da807dc360179dce36304e1951fcfb24ab",
+    "paper/paper1/notes/native-risk/n3_decision_log.jsonl": "3868ce687b1bc2a7cd216e72d485aa1026c71e92ccdc7616589fc4d57360596f"
+  },
+  "verification": {
+    "native_risk_tests": "20/20 passed",
+    "legacy_upgrade_tests": "10/10 passed",
+    "manuscript_evidence_verifier": "passed",
+    "n4_protocol_cells": "8 native + 5 secondary",
+    "n4_unique_seeds": "55/55",
+    "proof_review": "independent adversarial review remains required",
+    "spectral_norm_enclosure": "not implemented/validated; blocks N4"
+  }
+}

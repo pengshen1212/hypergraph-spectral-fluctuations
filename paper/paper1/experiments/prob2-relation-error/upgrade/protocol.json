@@ -1,0 +1,65 @@
+{
+  "version": "frozen-2026-10-09-g4",
+  "purpose": "Formal validation protocol for the node-influence upgrade of paper1. Frozen BEFORE any formal sampling. Pilot records are kept separate and never merged into formal intervals.",
+  "model": {
+    "name": "independent-node binary predictions",
+    "edge_rule": "a_e = 1{all predictions on e agree}",
+    "centering": "per-edge exact mean p_e",
+    "A_operator": "X_A = sum_e (a_e - p_e) H_e, H_e = 1_e 1_e^T / r_e",
+    "B_operator": "X_B = sum_e (b_e - p_e) H_e, b_e ~ Bern(p_e) independent edges",
+    "spectral_norm": "max(|lambda_min|, |lambda_max|) via eigsh both ends, tol 1e-6",
+    "no_posthoc": "no edge deletion or label re-picking on native graphs"
+  },
+  "structure_families": {
+    "family_A_amplification": {
+      "description": "non-star overlapping block: edges {u_i, w_j, leaf_ij}, w_j drawn from a per-block pool of size d/kappa (bounded co-occurrence kappa), fresh leaves; blocks node-disjoint",
+      "params": {
+        "r": 3,
+        "t_blocks": 60,
+        "kappa": 5,
+        "d_values": [50, 100, 150, 200, 250, 300],
+        "hub_prob": "P[u_i,1] = 0.05 (weak class-1)",
+        "strong_prob": "P[w,1] = P[leaf,1] = 0.95"
+      },
+      "predicted": "phi_{u_i,e} = 0.95+0.95-1 = 0.90 aligned; Phi_i = 0.9 d/3; certification region d >= ~180 (T4); amplification Theta(d) vs O(sqrt(d log n)); t=60 gives no-hub-event prob (1-eps)^t = 0.046, so sep allowance ~0.906"
+    },
+    "family_B_competition": {
+      "description": "single hub u with d edges {u, w_j, leaf_j}, all co-members FRESH (no shared pair), leaf bias gamma swept from aligned to competing",
+      "params": {
+        "r": 3,
+        "d_values": [50, 100, 150, 200, 250, 300],
+        "hub_prob": "P[u,1] = 0.05",
+        "w_prob": "P[w_j,1] = 0.95",
+        "gamma_values": [0.95, 0.75, 0.55, 0.35, 0.15, 0.05]
+      },
+      "predicted": "phi_u = 0.95 + gamma - 1 = gamma - 0.05; amplification collapses to exact second-order cancellation Var_A(x)=Var_B(x) (all directions) at gamma=0.05; V1/V_B peaks at gamma=0.95"
+    }
+  },
+  "formal_grid": {
+    "structure": "family_A: 6 d-values x 256 draws; family_B: 6 gamma-values at d=200 x 256 draws; total 12 points x 256 independent node-prediction draws",
+    "native": "Cora-CC and DBLP-CA binarized (majority vs rest); noise p in {0.05, 0.15}; 30 independent prediction draws per (graph, p); controlled-error model, not real-classifier-noise theorem",
+    "seeds": {
+      "namespace": "upgrade-formal-20261009",
+      "structure_seed": 20261009,
+      "draw_seed_base": 7000001,
+      "collision_check": "all seeds disjoint from saved runs (31k/32k/33k/36k/41k/44k/49k/52k/60k/61k blocks and 42/20261008/20261009/99/777/31337)"
+    },
+    "statistics": {
+      "resample_unit": "one full prediction draw (nodes within a draw are not independent repeats)",
+      "interval": "percentile bootstrap over draws (1000 resamples)",
+      "recorded_per_draw": ["betaA", "betaB", "V1_at_witness", "varA_quadratic_at_witness", "varB_quadratic_at_witness", "phi_profile_extrema", "theory_bounds", "eigsh_residuals", "wall_seconds"]
+    },
+    "failure_handling": "eigsh non-convergence: rerun same instance once with tol 1e-4; still failing -> record as missing, never reseed",
+    "registered_hypotheses": [
+      "H1 (family A): T4 certification nonempty for d >= 180 and empirical separation frequency >= 87% (allowance 1-(1-eps)^60 - eta - eta2 - delta = 0.876) throughout d >= 100",
+      "H2 (family A): mean betaA grows linearly in d (fitted slope on d in {150..300} within 25% of 0.9/3), betaB grows as sqrt(d)",
+      "H3 (family B): directional variance ratio varA/varB at the hub witness equals 1 within bootstrap CI at gamma=0.05 (exact equality predicted); centered norm ratio mean betaA/betaB within 15% of 1 at gamma=0.05 and >= 1.5 at gamma=0.95; separation frequency is NOT pre-registered at the endpoint (distributional asymmetry may remain; recorded, not tested)",
+      "H4 (native): influence profile on native graphs has hub-concentrated Phi (top-1 node share of V1 >= 50% for at least one p) or is reported as diffuse (boundary finding, both outcomes reported)"
+    ],
+    "pilot": {
+      "draws": 64,
+      "purpose": "cost estimation and pipeline debugging only; records kept in results/pilot/, never merged into formal intervals"
+    }
+  },
+  "stop_rules": "Per plan section 2: stop at first failed innovation gate or 120 h total; scientific blockers (counterexample, irreproducibility) halt submission push regardless"
+}

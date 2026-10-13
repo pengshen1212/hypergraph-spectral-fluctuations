@@ -1,0 +1,127 @@
+{
+  "id": "paper1-native-risk-n4r-confirmation-20261012-v1",
+  "registered_utc": "2026-10-12T04:41:30.421150+00:00",
+  "status": "frozen before any N4-R calibration or validation draws",
+  "inferential_scope": "prospective confirmation after retrospective witness development; controlled profiles on two fixed native graphs only",
+  "cells": [
+    {
+      "id": "cora-binary-e005",
+      "graph": "cora-cc",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.05,
+      "B_calibration_seed": 12410001,
+      "A_batch_1_seed": 12510001,
+      "A_batch_2_seed": 12610001,
+      "B_batch_1_seed": 12710001,
+      "B_batch_2_seed": 12810001
+    },
+    {
+      "id": "cora-binary-e015",
+      "graph": "cora-cc",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.15,
+      "B_calibration_seed": 12410101,
+      "A_batch_1_seed": 12510101,
+      "A_batch_2_seed": 12610101,
+      "B_batch_1_seed": 12710101,
+      "B_batch_2_seed": 12810101
+    },
+    {
+      "id": "cora-multiclass-e005",
+      "graph": "cora-cc",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.05,
+      "B_calibration_seed": 12410201,
+      "A_batch_1_seed": 12510201,
+      "A_batch_2_seed": 12610201,
+      "B_batch_1_seed": 12710201,
+      "B_batch_2_seed": 12810201
+    },
+    {
+      "id": "cora-multiclass-e015",
+      "graph": "cora-cc",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.15,
+      "B_calibration_seed": 12410301,
+      "A_batch_1_seed": 12510301,
+      "A_batch_2_seed": 12610301,
+      "B_batch_1_seed": 12710301,
+      "B_batch_2_seed": 12810301
+    },
+    {
+      "id": "dblp-binary-e005",
+      "graph": "dblp-ca",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.05,
+      "B_calibration_seed": 12410401,
+      "A_batch_1_seed": 12510401,
+      "A_batch_2_seed": 12610401,
+      "B_batch_1_seed": 12710401,
+      "B_batch_2_seed": 12810401
+    },
+    {
+      "id": "dblp-binary-e015",
+      "graph": "dblp-ca",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.15,
+      "B_calibration_seed": 12410501,
+      "A_batch_1_seed": 12510501,
+      "A_batch_2_seed": 12610501,
+      "B_batch_1_seed": 12710501,
+      "B_batch_2_seed": 12810501
+    },
+    {
+      "id": "dblp-multiclass-e005",
+      "graph": "dblp-ca",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.05,
+      "B_calibration_seed": 12410601,
+      "A_batch_1_seed": 12510601,
+      "A_batch_2_seed": 12610601,
+      "B_batch_1_seed": 12710601,
+      "B_batch_2_seed": 12810601
+    },
+    {
+      "id": "dblp-multiclass-e015",
+      "graph": "dblp-ca",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.15,
+      "B_calibration_seed": 12410701,
+      "A_batch_1_seed": 12510701,
+      "A_batch_2_seed": 12610701,
+      "B_batch_1_seed": 12710701,
+      "B_batch_2_seed": 12810701
+    }
+  ],
+  "calibration_draws": 2000,
+  "validation_draws_per_batch": 1000,
+  "alpha": "1/20",
+  "calibration_delta_per_cell": "1/800",
+  "calibration_rank": 1929,
+  "groups": "all original graph-selected singleton and pair groups; all stored states and supported directions without reselection",
+  "exact_moments": "reuse all exact rational conditional moments from the hash-frozen spectral supplement; recompute bounds at fresh thresholds",
+  "gates": {
+    "primary_certificate_gate": "At least one preselected group per graph has exact L(tau)>=0.07, computed before opening A validation results.",
+    "task_consequence_gate": "For a primary certified cell, simultaneous adjusted lower confidence bound of A exceedance exceeds 0.10 and both A batches have the same direction; report all other cells regardless.",
+    "multiclass_scope": "At least one multiclass cell with nonempty L is required for the broad multi-class upgrade claim; otherwise restrict the claim to the controlled binary profiles.",
+    "stop": "No threshold-correction algorithm, H1 power study, manuscript change, or reselection of nodes/directions is authorized by this N3 protocol freeze."
+  },
+  "stop": "one confirmation only; no retuning or subsequent confirmatory round regardless of outcome; no threshold-correction method",
+  "secondary_controls": "original completed N4 controls remain historical; not rerun and not part of this confirmation",
+  "numerical": "unchanged verified_norm and same-draw retry rule; keep every failed/ambiguous draw",
+  "source_hashes": {
+    "experiments\\prob2-relation-error\\native_risk\\n4_repair.py": "59063c0fcc5f21012fb02a15db7d9485b53a9d0612ca385a12da054853dd9499",
+    "experiments\\prob2-relation-error\\native_risk\\test_n4_repair.py": "4558471c705cbaf7a854ff8058369e934470da3aea765783ef25c3441128bff5",
+    "notes\\native-risk\\n4_spectral_supplement_directions.json": "4672b85ac0682e7fded2509be4a33a6d753f12c0ba175a6d633e41e98960bc5d",
+    "notes\\native-risk\\n4_spectral_supplement_certificate.json": "a79e498e5706e69a5ec08806a75f588ab451f9f25fcc6332b21f09086b9f8dea",
+    "experiments\\prob2-relation-error\\native_risk\\spectral_supplement.py": "8058f5c7b5515c0d70f0090c8fcda77ccb24bce110496d988fdabc6c840404a3",
+    "experiments\\prob2-relation-error\\native_risk\\formal_protocol_n4.json": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652"
+  },
+  "environment": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2"
+  },
+  "workers": 2,
+  "total_draws": 48000
+}

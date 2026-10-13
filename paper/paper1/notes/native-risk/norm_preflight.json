@@ -1,0 +1,479 @@
+{
+  "id": "native-risk-norm-preflight-20261012-v1",
+  "scope": "numerical width/cost preflight only; no formal calibration or risk inference",
+  "seed_namespace": "2026101201 + 100*cell_index + arm_index",
+  "draws_per_arm_per_cell": 2,
+  "solver_parameters": {
+    "square_path_cap": 20000000,
+    "relative_goal": 0.002,
+    "weight_iterations": 32,
+    "weight_floor": 1e-06
+  },
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.15.2"
+  },
+  "cells": [
+    {
+      "graph": "cora-cc",
+      "profile": "binary",
+      "epsilon": 0.05,
+      "build_seconds": 0.08883428573608398,
+      "draws": [
+        {
+          "lo": 10.259739158209543,
+          "hi": 10.26324507579277,
+          "power": 1,
+          "assembly_error": 8.500240463762127e-13,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101201,
+          "draw": 0,
+          "seconds": 0.026050806045532227,
+          "relative_width": 0.00034171605429387364
+        },
+        {
+          "lo": 18.798540327548853,
+          "hi": 18.827727178293642,
+          "power": 1,
+          "assembly_error": 1.6948132516328161e-12,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101201,
+          "draw": 1,
+          "seconds": 0.008795499801635742,
+          "relative_width": 0.0015526126090767134
+        },
+        {
+          "lo": 1.9498094067781608,
+          "hi": 2.020861172434324,
+          "power": 2,
+          "assembly_error": 9.671033204296864e-13,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101202,
+          "draw": 0,
+          "seconds": 0.02399301528930664,
+          "relative_width": 0.036440364585976805
+        },
+        {
+          "lo": 2.3383149139020607,
+          "hi": 2.392785778393785,
+          "power": 2,
+          "assembly_error": 9.058462876500899e-13,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101202,
+          "draw": 1,
+          "seconds": 0.026488780975341797,
+          "relative_width": 0.02329492241095363
+        }
+      ]
+    },
+    {
+      "graph": "cora-cc",
+      "profile": "binary",
+      "epsilon": 0.15,
+      "build_seconds": 0.08986115455627441,
+      "draws": [
+        {
+          "lo": 10.595522140208507,
+          "hi": 10.599939667395308,
+          "power": 2,
+          "assembly_error": 1.8217302263924377e-12,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101301,
+          "draw": 0,
+          "seconds": 0.020270824432373047,
+          "relative_width": 0.00041692397300904175
+        },
+        {
+          "lo": 10.486813947698165,
+          "hi": 10.488060581981081,
+          "power": 2,
+          "assembly_error": 1.7309300257007987e-12,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101301,
+          "draw": 1,
+          "seconds": 0.02032303810119629,
+          "relative_width": 0.00011887636122215003
+        },
+        {
+          "lo": 2.8858219072949107,
+          "hi": 3.0383172172274158,
+          "power": 2,
+          "assembly_error": 2.017808513332799e-12,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101302,
+          "draw": 0,
+          "seconds": 0.023942947387695312,
+          "relative_width": 0.05284293862591469
+        },
+        {
+          "lo": 3.69642428826092,
+          "hi": 3.733353528129548,
+          "power": 2,
+          "assembly_error": 1.903089606736369e-12,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101302,
+          "draw": 1,
+          "seconds": 0.02227783203125,
+          "relative_width": 0.009990530574617063
+        }
+      ]
+    },
+    {
+      "graph": "cora-cc",
+      "profile": "multiclass",
+      "epsilon": 0.05,
+      "build_seconds": 0.13387656211853027,
+      "draws": [
+        {
+          "lo": 3.7704002480848744,
+          "hi": 3.770774464705671,
+          "power": 2,
+          "assembly_error": 7.655382044787353e-13,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101401,
+          "draw": 0,
+          "seconds": 0.02265453338623047,
+          "relative_width": 9.925116597019337e-05
+        },
+        {
+          "lo": 3.585553769664581,
+          "hi": 3.585867850298672,
+          "power": 2,
+          "assembly_error": 7.14755606017364e-13,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101401,
+          "draw": 1,
+          "seconds": 0.020156383514404297,
+          "relative_width": 8.759612998922246e-05
+        },
+        {
+          "lo": 2.421187037710014,
+          "hi": 2.4286277599959836,
+          "power": 2,
+          "assembly_error": 9.076175928566041e-13,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101402,
+          "draw": 0,
+          "seconds": 0.0218660831451416,
+          "relative_width": 0.0030731712049008454
+        },
+        {
+          "lo": 2.386060364518972,
+          "hi": 2.3956160070286376,
+          "power": 2,
+          "assembly_error": 8.871817529792871e-13,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101402,
+          "draw": 1,
+          "seconds": 0.021839618682861328,
+          "relative_width": 0.004004778190761358
+        }
+      ]
+    },
+    {
+      "graph": "cora-cc",
+      "profile": "multiclass",
+      "epsilon": 0.15,
+      "build_seconds": 0.13199257850646973,
+      "draws": [
+        {
+          "lo": 13.376928264625784,
+          "hi": 13.383123713660236,
+          "power": 1,
+          "assembly_error": 1.5481070755408978e-12,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101501,
+          "draw": 0,
+          "seconds": 0.009821891784667969,
+          "relative_width": 0.000463144371554687
+        },
+        {
+          "lo": 28.25229553060466,
+          "hi": 28.261460860506862,
+          "power": 1,
+          "assembly_error": 2.332427470369876e-12,
+          "square_paths": 158542,
+          "arm": "A",
+          "seed": 2026101501,
+          "draw": 1,
+          "seconds": 0.010124683380126953,
+          "relative_width": 0.00032441009589023647
+        },
+        {
+          "lo": 3.182903136605665,
+          "hi": 3.203914783723661,
+          "power": 2,
+          "assembly_error": 1.6209014517101797e-12,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101502,
+          "draw": 0,
+          "seconds": 0.02047419548034668,
+          "relative_width": 0.006601409535950611
+        },
+        {
+          "lo": 2.966727629650736,
+          "hi": 2.9857286873666546,
+          "power": 2,
+          "assembly_error": 1.6482333808780265e-12,
+          "square_paths": 158542,
+          "arm": "B",
+          "seed": 2026101502,
+          "draw": 1,
+          "seconds": 0.023202180862426758,
+          "relative_width": 0.006404719302848665
+        }
+      ]
+    },
+    {
+      "graph": "dblp-ca",
+      "profile": "binary",
+      "epsilon": 0.05,
+      "build_seconds": 1.6820039749145508,
+      "draws": [
+        {
+          "lo": 11.750041263753948,
+          "hi": 11.750527019242082,
+          "power": 1,
+          "assembly_error": 6.3144329883779e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101601,
+          "draw": 0,
+          "seconds": 0.4321410655975342,
+          "relative_width": 4.134074742631889e-05
+        },
+        {
+          "lo": 11.750106953211573,
+          "hi": 11.750592111753686,
+          "power": 1,
+          "assembly_error": 6.3144329883779e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101601,
+          "draw": 1,
+          "seconds": 0.3852062225341797,
+          "relative_width": 4.128971285502601e-05
+        },
+        {
+          "lo": 2.1984927878332194,
+          "hi": 2.198543101405478,
+          "power": 1,
+          "assembly_error": 2.294278418594895e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101602,
+          "draw": 0,
+          "seconds": 0.6081805229187012,
+          "relative_width": 2.288548433597398e-05
+        },
+        {
+          "lo": 2.2498368001105913,
+          "hi": 2.256135942543244,
+          "power": 1,
+          "assembly_error": 2.5147719527605448e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101602,
+          "draw": 1,
+          "seconds": 0.6477832794189453,
+          "relative_width": 0.002799821939237095
+        }
+      ]
+    },
+    {
+      "graph": "dblp-ca",
+      "profile": "binary",
+      "epsilon": 0.15,
+      "build_seconds": 2.5659022331237793,
+      "draws": [
+        {
+          "lo": 9.052691834417198,
+          "hi": 9.052758791596041,
+          "power": 1,
+          "assembly_error": 4.527861231799527e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101701,
+          "draw": 0,
+          "seconds": 0.3676168918609619,
+          "relative_width": 7.3963833153619395e-06
+        },
+        {
+          "lo": 4.790294577885131,
+          "hi": 4.791022725616894,
+          "power": 1,
+          "assembly_error": 3.107357036588676e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101701,
+          "draw": 1,
+          "seconds": 0.43389129638671875,
+          "relative_width": 0.00015200479217374372
+        },
+        {
+          "lo": 2.412052903282656,
+          "hi": 2.427311001434875,
+          "power": 1,
+          "assembly_error": 3.026409151772347e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101702,
+          "draw": 0,
+          "seconds": 0.45644235610961914,
+          "relative_width": 0.006325772594561951
+        },
+        {
+          "lo": 2.5776372291324328,
+          "hi": 2.577637229180113,
+          "power": 1,
+          "assembly_error": 2.567377511990005e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101702,
+          "draw": 1,
+          "seconds": 0.5045864582061768,
+          "relative_width": 1.849759212269359e-11
+        }
+      ]
+    },
+    {
+      "graph": "dblp-ca",
+      "profile": "multiclass",
+      "epsilon": 0.05,
+      "build_seconds": 3.699453353881836,
+      "draws": [
+        {
+          "lo": 11.73072865083956,
+          "hi": 11.731233093977494,
+          "power": 1,
+          "assembly_error": 6.307062311778868e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101801,
+          "draw": 0,
+          "seconds": 0.3863027095794678,
+          "relative_width": 4.3001858874173744e-05
+        },
+        {
+          "lo": 5.842525970107067,
+          "hi": 5.842704783970821,
+          "power": 1,
+          "assembly_error": 3.738179286328057e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101801,
+          "draw": 1,
+          "seconds": 0.40738987922668457,
+          "relative_width": 3.0605574484233285e-05
+        },
+        {
+          "lo": 2.5114386047642303,
+          "hi": 2.517250927355592,
+          "power": 1,
+          "assembly_error": 2.4148067929567583e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101802,
+          "draw": 0,
+          "seconds": 0.5162320137023926,
+          "relative_width": 0.0023143399087422346
+        },
+        {
+          "lo": 2.246483519172407,
+          "hi": 2.246502200300199,
+          "power": 1,
+          "assembly_error": 2.2142498259910902e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101802,
+          "draw": 1,
+          "seconds": 0.506866455078125,
+          "relative_width": 8.315719938654906e-06
+        }
+      ]
+    },
+    {
+      "graph": "dblp-ca",
+      "profile": "multiclass",
+      "epsilon": 0.15,
+      "build_seconds": 3.417316198348999,
+      "draws": [
+        {
+          "lo": 8.867474232888474,
+          "hi": 8.869303262008904,
+          "power": 1,
+          "assembly_error": 4.4642560636796366e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101901,
+          "draw": 0,
+          "seconds": 0.2975609302520752,
+          "relative_width": 0.0002062626935690229
+        },
+        {
+          "lo": 5.5940765116154045,
+          "hi": 5.594944094690123,
+          "power": 1,
+          "assembly_error": 3.4161935896369736e-14,
+          "square_paths": 54906202,
+          "arm": "A",
+          "seed": 2026101901,
+          "draw": 1,
+          "seconds": 0.44373655319213867,
+          "relative_width": 0.00015508959752646436
+        },
+        {
+          "lo": 2.577106278601208,
+          "hi": 2.591818143602082,
+          "power": 1,
+          "assembly_error": 3.7334466388443454e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101902,
+          "draw": 0,
+          "seconds": 0.46430397033691406,
+          "relative_width": 0.005708676092652039
+        },
+        {
+          "lo": 2.907999999946435,
+          "hi": 2.908000000000224,
+          "power": 1,
+          "assembly_error": 2.858111345481363e-14,
+          "square_paths": 54906202,
+          "arm": "B",
+          "seed": 2026101902,
+          "draw": 1,
+          "seconds": 0.5199673175811768,
+          "relative_width": 1.8496895899742112e-11
+        }
+      ]
+    }
+  ],
+  "data_sha256": {
+    "cora-cc/hypergraph.pickle": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+    "cora-cc/labels.pickle": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+    "dblp-ca/hypergraph.pickle": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+    "dblp-ca/labels.pickle": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+  },
+  "wall_seconds": 21.780032873153687,
+  "code_sha256": {
+    "run_norm_preflight.py": "3294cc6c4b1c2b3d70b59d623c5d7f44a390885de0c3e76899739f88189ac377",
+    "verified_norm.py": "0665046e10b70b12925907ffc462f7f0df9f5fb0f44cf8a772877bb64bbc10b0",
+    "test_verified_norm.py": "5d0dbe06c4258cc31dd91c89b3cb9394f3389ec6f8a3c3c447aa79e94234bfd5"
+  }
+}

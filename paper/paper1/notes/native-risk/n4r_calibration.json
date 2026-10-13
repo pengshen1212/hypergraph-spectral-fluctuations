@@ -1,0 +1,56 @@
+{
+  "protocol_sha256": "9fc795d9ad4c5300b8ccbd98f2bae566eb5de1cc3001aa7d3ceec354166edd14",
+  "stage": "calibrate",
+  "cells": [
+    {
+      "id": "cora-binary-e005",
+      "threshold": 4.224784016761527,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "cora-binary-e015",
+      "threshold": 5.787853978527809,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "cora-multiclass-e005",
+      "threshold": 4.031375709095715,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "cora-multiclass-e015",
+      "threshold": 5.496180120828046,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "dblp-binary-e005",
+      "threshold": 3.340306902195369,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "dblp-binary-e015",
+      "threshold": 3.6637454595727372,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "dblp-multiclass-e005",
+      "threshold": 3.2464228864753615,
+      "rank": 1929,
+      "failed_draws": []
+    },
+    {
+      "id": "dblp-multiclass-e015",
+      "threshold": 3.6350000000002805,
+      "rank": 1929,
+      "failed_draws": []
+    }
+  ],
+  "complete": true,
+  "wall_seconds": 1447.9676500999776
+}

@@ -1,0 +1,59 @@
+{
+ "protocol": "spectral subspace consequence of relation-estimation errors; k=8; unit clique expansion weights 1/|e|; fresh eval seeds 60000+ and calibration seeds 61000+ (disjoint from all earlier blocks); B matched per-edge rates from 20 calibration runs",
+ "settings": [
+  {
+   "name": "Cora-all",
+   "n_realizations": 20,
+   "k": 8,
+   "oracle_gap_k": 0.21271891646043883,
+   "sinA_mean": 1.8968788126674891,
+   "sinB_mean": 1.8842364645082064,
+   "sin_ratio": 1.0067095337540781,
+   "sin_ratio_ci": [
+    0.969518011919359,
+    1.0440133503980322
+   ],
+   "dispersionA": 0.6219026559638009,
+   "dispersionB": 0.3830531774674846,
+   "dispersion_ratio": 1.6235413058715353,
+   "normA_mean": 17.772900360955312,
+   "normB_mean": 18.098398458048003,
+   "norm_ratio": 0.982015088360045,
+   "sinA_minmax": [
+    1.5228505011148092,
+    2.080673857110245
+   ],
+   "sinB_minmax": [
+    1.8319143459468508,
+    2.104382050377755
+   ]
+  },
+  {
+   "name": "DBLP-all",
+   "n_realizations": 10,
+   "k": 8,
+   "oracle_gap_k": 0.222874702709972,
+   "sinA_mean": 1.0055808330072415,
+   "sinB_mean": 1.0055808330067761,
+   "sin_ratio": 1.0000000000004627,
+   "sin_ratio_ci": [
+    0.999999999999931,
+    1.0000000000014617
+   ],
+   "dispersionA": 0.0,
+   "dispersionB": 2.796182152260507e-07,
+   "dispersion_ratio": 0.0,
+   "normA_mean": 5.955323061288333,
+   "normB_mean": 5.955323061288327,
+   "norm_ratio": 1.000000000000001,
+   "sinA_minmax": [
+    1.005580833007235,
+    1.005580833007248
+   ],
+   "sinB_minmax": [
+    1.0055808330023375,
+    1.005580833007479
+   ]
+  }
+ ]
+}

@@ -1,0 +1,92 @@
+{
+  "protocol_id": "paper1-native-risk-n4-formal-validation-20261012-v1",
+  "status": "frozen design; no N4 samples generated",
+  "frozen_at": "2026-10-12",
+  "authorized_stage": "N3 proof, novelty audit, and protocol freeze only; N4 remains unstarted",
+  "scope": {
+    "primary_question": "Under the fixed node-label probability model and unchanged native hypergraph, does the node-induced A arm exceed an independently calibrated matched-marginal B-arm spectral threshold more often?",
+    "operator": "X_A=sum_e(a_e-p_e)H_e; X_B=sum_e(b_e-p_e)H_e; H_e=1_e 1_e^T/|e|",
+    "edge_slots": "Preserve every input slot. Repeated supports share the node event in A and are separate Bernoulli variables in B.",
+    "statistic": "Mathematical target T=||X||_2 and strict alarm T>tau. A validated numerical enclosure is required for formal execution.",
+    "native_graphs": ["cora-cc", "dblp-ca"],
+    "probability_profiles": {
+      "binary_majority_vs_rest": "epsilon probability mass on the opposite binary class, using the frozen majority label from the original labels",
+      "symmetric_multiclass": "P[u,y_u]=1-epsilon and P[u,c]=epsilon/(C-1) for c != y_u; sorted original labels define columns"
+    },
+    "epsilon": [0.05, 0.15],
+    "groups": "For every native cell, compute the graph-only maximum-degree singleton and its weighted-overlap partner pair; ties use smallest node id. No A/B draw may select a group.",
+    "witness": "For every positive-probability group state, use a fixed unit eigenvector of M_U(z) at the largest absolute eigenvalue; compute and freeze it before all formal samples. Sign is oriented to the exact conditional mean. Any deterministic nonzero vector is valid, but all witnesses and directions must be saved before sampling. No state or direction may be dropped after results."
+  },
+  "finite_sample_calibration": {
+    "primary_native_cells": 8,
+    "alpha": "1/20",
+    "calibration_draws_per_cell": 2000,
+    "per_cell_failure_probability": "1/800",
+    "order_statistic_rank_one_based": 1929,
+    "rank_rule": "Smallest k for which Pr(Binomial(2000,19/20)>=k)<=1/800; exact rational check recorded in finite_sample.py tests.",
+    "threshold": "The 1929th order statistic of certified upper enclosures of exact B-arm spectral norms. If no certified upper enclosure routine passes preflight, N4 does not start.",
+    "guarantee": "For each cell, with failure probability at most 1/800, the true exact-B tail above tau is <=0.05. Bonferroni gives at least 0.99 joint calibration confidence for the eight native cells.",
+    "ties": "Alarm iff exact statistic > tau; ties are non-alarms. The order-statistic guarantee remains conservative for atoms."
+  },
+  "validation_draws": {
+    "per_native_cell": {
+      "A_batch_1": 1000,
+      "A_batch_2": 1000,
+      "B_batch_1": 1000,
+      "B_batch_2": 1000
+    },
+    "independence": "All calibration, A validation, and B validation streams are disjoint. Each draw is a full node-prediction or edge-Bernoulli realization; nodes and edge slots within a draw are not replicate units.",
+    "primary_intervals": "Pooled A false-alarm proportions use exact Clopper-Pearson intervals with per-cell confidence 1-0.05/8 (Bonferroni familywise 95% across eight native cells). Batch-wise rates and 95% exact intervals are also reported descriptively; both batches must have the same direction for the registered replication check.",
+    "B_validation": "Report independent B rates and exact 95% intervals descriptively; calibration guarantee and validation intervals are distinct uncertainty statements.",
+    "ambiguous_norm_interval": "For interval [lo,hi], definite alarm if lo>tau; definite non-alarm if hi<=tau; otherwise mark ambiguous. For s definite alarms and f ambiguous draws among N, report the full count envelope [s,s+f]/N and corresponding exact interval envelope. Never drop ambiguous or failed draws.",
+    "failure_handling": "A failed matrix/norm solve may be retried once on the same draw with the frozen deterministic fallback. If still unresolved, retain the draw as ambiguous; no reseeding, deletion, or replacement."
+  },
+  "native_cells": [
+    {"id":"cora-binary-e005","graph":"cora-cc","profile":"binary_majority_vs_rest","epsilon":0.05,"B_calibration_seed":9410001,"A_batch_1_seed":9510001,"A_batch_2_seed":9610001,"B_batch_1_seed":9710001,"B_batch_2_seed":9810001},
+    {"id":"cora-binary-e015","graph":"cora-cc","profile":"binary_majority_vs_rest","epsilon":0.15,"B_calibration_seed":9410101,"A_batch_1_seed":9510101,"A_batch_2_seed":9610101,"B_batch_1_seed":9710101,"B_batch_2_seed":9810101},
+    {"id":"cora-multiclass-e005","graph":"cora-cc","profile":"symmetric_multiclass","epsilon":0.05,"B_calibration_seed":9410201,"A_batch_1_seed":9510201,"A_batch_2_seed":9610201,"B_batch_1_seed":9710201,"B_batch_2_seed":9810201},
+    {"id":"cora-multiclass-e015","graph":"cora-cc","profile":"symmetric_multiclass","epsilon":0.15,"B_calibration_seed":9410301,"A_batch_1_seed":9510301,"A_batch_2_seed":9610301,"B_batch_1_seed":9710301,"B_batch_2_seed":9810301},
+    {"id":"dblp-binary-e005","graph":"dblp-ca","profile":"binary_majority_vs_rest","epsilon":0.05,"B_calibration_seed":9410401,"A_batch_1_seed":9510401,"A_batch_2_seed":9610401,"B_batch_1_seed":9710401,"B_batch_2_seed":9810401},
+    {"id":"dblp-binary-e015","graph":"dblp-ca","profile":"binary_majority_vs_rest","epsilon":0.15,"B_calibration_seed":9410501,"A_batch_1_seed":9510501,"A_batch_2_seed":9610501,"B_batch_1_seed":9710501,"B_batch_2_seed":9810501},
+    {"id":"dblp-multiclass-e005","graph":"dblp-ca","profile":"symmetric_multiclass","epsilon":0.05,"B_calibration_seed":9410601,"A_batch_1_seed":9510601,"A_batch_2_seed":9610601,"B_batch_1_seed":9710601,"B_batch_2_seed":9810601},
+    {"id":"dblp-multiclass-e015","graph":"dblp-ca","profile":"symmetric_multiclass","epsilon":0.15,"B_calibration_seed":9410701,"A_batch_1_seed":9510701,"A_batch_2_seed":9610701,"B_batch_2_seed":9810701,"B_batch_1_seed":9710701}
+  ],
+  "controlled_boundary": {
+    "inferential_status": "Secondary mechanism/negative-control diagnostics; not part of the eight-cell native primary family.",
+    "B_calibration_draws": 1000,
+    "per_cell_calibration_failure_probability": "1/100",
+    "order_statistic_rank_one_based": 966,
+    "rank_rule": "Smallest k for which Pr(Binomial(1000,19/20)>=k)<=1/100.",
+    "A_draws_per_cell": 1000,
+    "B_validation_draws_per_cell": 1000,
+    "cells": [
+      {"id":"family-A-d100","generator":"existing family_A_amplification","params":{"t":60,"d":100,"kappa":5,"structure_seed":20261009},"B_calibration_seed":9910001,"A_seed":9920001,"B_validation_seed":9930001},
+      {"id":"family-A-d250","generator":"existing family_A_amplification","params":{"t":60,"d":250,"kappa":5,"structure_seed":20261009},"B_calibration_seed":9910101,"A_seed":9920101,"B_validation_seed":9930101},
+      {"id":"family-B-gamma095","generator":"existing family_B_competition","params":{"d":200,"gamma":0.95},"B_calibration_seed":9910201,"A_seed":9920201,"B_validation_seed":9930201},
+      {"id":"family-B-gamma005","generator":"existing family_B_competition","params":{"d":200,"gamma":0.05},"B_calibration_seed":9910301,"A_seed":9920301,"B_validation_seed":9930301},
+      {"id":"node-disjoint-negative-control","generator":"60 pairwise node-disjoint triples","params":{"edges":"(3j,3j+1,3j+2), j=0,...,59","P_per_edge":"(0.95,0.95,0.05) for classes (0,0,1), repeated per triple","group_rule":"same maximum-degree then weighted-overlap rule; deterministic smallest-id tie break"},"B_calibration_seed":9910401,"A_seed":9920401,"B_validation_seed":9930401}
+    ],
+    "registered_negative_control": "With pairwise node-disjoint edge supports, A edge indicators are independent Bernoulli with the same p_e as B; therefore the full A and B operator distributions coincide. The risk implementation must not produce L>0.05 at a threshold whose exact-B tail is <=0.05."
+  },
+  "numerical_preflight": {
+    "requirement": "Before any formal calibration draw, produce a deterministic, validated enclosure [lo,hi] for each exact symmetric sparse spectral norm. A Ritz residual alone is not a certified upper bound on the largest absolute eigenvalue.",
+    "calibration_use": "Use hi as the B calibration score, making the selected tau conservative for the true B norm.",
+    "validation_use": "Classify only intervals wholly above/below tau; straddling intervals remain ambiguous and enter the worst-case count envelope.",
+    "stop_if_missing": "If a validated enclosure is unavailable or its intervals make the primary decision unresolved, do not execute/unseal N4 samples; report numerical feasibility as a limitation and revisit the statistic only under a separately approved protocol amendment."
+  },
+  "frozen_decisions": {
+    "primary_certificate_gate": "At least one preselected group per graph has exact L(tau)>=0.07, computed before opening A validation results.",
+    "task_consequence_gate": "For a primary certified cell, simultaneous adjusted lower confidence bound of A exceedance exceeds 0.10 and both A batches have the same direction; report all other cells regardless.",
+    "multiclass_scope": "At least one multiclass cell with nonempty L is required for the broad multi-class upgrade claim; otherwise restrict the claim to the controlled binary profiles.",
+    "stop": "No threshold-correction algorithm, H1 power study, manuscript change, or reselection of nodes/directions is authorized by this N3 protocol freeze."
+  },
+  "seed_namespace": "native-risk-formal-n4-20261012-v1",
+  "data_sha256": {
+    "cora_hypergraph": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+    "cora_labels": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+    "dblp_hypergraph": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+    "dblp_labels": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+  },
+  "implementation_precondition": "The runner and validated norm-enclosure implementation are not yet frozen or hashed. They must be independently tested, hashed, and appended through a protocol amendment before any N4 draw; no formal sample may be generated under this design-only freeze.",
+  "literature_and_novelty": "See notes/native-risk/novelty_matrix.md; no claim of systematic-review completeness or first-ever result is made."
+}

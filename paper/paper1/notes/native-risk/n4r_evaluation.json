@@ -1,0 +1,887 @@
+{
+  "protocol_sha256": "9fc795d9ad4c5300b8ccbd98f2bae566eb5de1cc3001aa7d3ceec354166edd14",
+  "stage": "evaluate",
+  "cells": [
+    {
+      "id": "cora-binary-e005",
+      "threshold": 4.224784016761527,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 955,
+          "definite_nonalarm": 43,
+          "ambiguous": 2,
+          "rate_envelope": [
+            0.955,
+            0.957
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9340220561615262,
+            0.9725789938025623
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9402471673065922,
+            0.9687088295439074
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 962,
+          "definite_nonalarm": 37,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.962,
+            0.963
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9423557598227834,
+            0.9773330490904308
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9482128963780359,
+            0.9738172911562627
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 47,
+          "definite_nonalarm": 953,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.047,
+            0.047
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.030643214961370444,
+            0.06833665061666419
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.034735062266795964,
+            0.062012630693305135
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 48,
+          "definite_nonalarm": 952,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.048,
+            0.048
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.031454615541035895,
+            0.06951265615564826
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.035600265342883276,
+            0.06314011540150924
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 1917,
+        "ambiguous": 3,
+        "rate_envelope": [
+          0.9585,
+          0.96
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.9447840515397373,
+          0.9709969025432779
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 95,
+        "ambiguous": 0,
+        "rate_envelope": [
+          0.0475,
+          0.0475
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.03546101867155828,
+          0.06200469406480955
+        ]
+      },
+      "precommitted_L": 0.09676487525430022
+    },
+    {
+      "id": "cora-binary-e015",
+      "threshold": 5.787853978527809,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 976,
+          "definite_nonalarm": 12,
+          "ambiguous": 12,
+          "rate_envelope": [
+            0.976,
+            0.988
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9595146704747202,
+            0.995333644107294
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9644993614686408,
+            0.9937844744404047
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 982,
+          "definite_nonalarm": 12,
+          "ambiguous": 6,
+          "rate_envelope": [
+            0.982,
+            0.988
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9671747933019187,
+            0.995333644107294
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9717009587509808,
+            0.9937844744404047
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 32,
+          "definite_nonalarm": 968,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.032,
+            0.032
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.018792405213086227,
+            0.050385489452114275
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.021988849605642426,
+            0.044875902835009286
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 30,
+          "definite_nonalarm": 969,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.03,
+            0.031
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.017269002840711534,
+            0.04916330680245053
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.02033048568310961,
+            0.043715085006238906
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 1958,
+        "ambiguous": 18,
+        "rate_envelope": [
+          0.979,
+          0.988
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.96862183004585,
+          0.9936115277151106
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 62,
+        "ambiguous": 1,
+        "rate_envelope": [
+          0.031,
+          0.0315
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.02140877069909522,
+          0.04374088798480821
+        ]
+      },
+      "precommitted_L": 0.14849101052535413
+    },
+    {
+      "id": "cora-multiclass-e005",
+      "threshold": 4.031375709095715,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 940,
+          "definite_nonalarm": 58,
+          "ambiguous": 2,
+          "rate_envelope": [
+            0.94,
+            0.942
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9165271008758212,
+            0.9603198978132471
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9234395095960652,
+            0.9556671397471793
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 938,
+          "definite_nonalarm": 61,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.938,
+            0.939
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9142243604962045,
+            0.9578173065856818
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9212200503389675,
+            0.9530221244589198
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 41,
+          "definite_nonalarm": 959,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.041,
+            0.041
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.025825024889095584,
+            0.061231725770139064
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.02958016853403611,
+            0.05521245931529931
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 38,
+          "definite_nonalarm": 962,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.038,
+            0.038
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.02345197335936792,
+            0.05764424017721654
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.027028815982983928,
+            0.05178710362196412
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 1878,
+        "ambiguous": 3,
+        "rate_envelope": [
+          0.939,
+          0.9405
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.922914201896351,
+          0.9540268745100228
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 79,
+        "ambiguous": 0,
+        "rate_envelope": [
+          0.0395,
+          0.0395
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.028576316102034958,
+          0.0529385215230276
+        ]
+      },
+      "precommitted_L": 0.09693539487590191
+    },
+    {
+      "id": "cora-multiclass-e015",
+      "threshold": 5.496180120828046,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 980,
+          "definite_nonalarm": 9,
+          "ambiguous": 11,
+          "rate_envelope": [
+            0.98,
+            0.991
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9645931966983605,
+            0.9970828095545501
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9692799673173909,
+            0.9958766043396575
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 982,
+          "definite_nonalarm": 11,
+          "ambiguous": 7,
+          "rate_envelope": [
+            0.982,
+            0.989
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9671747933019187,
+            0.9959360511292008
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9717009587509808,
+            0.9944964058076864
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 41,
+          "definite_nonalarm": 959,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.041,
+            0.041
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.025825024889095584,
+            0.061231725770139064
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.02958016853403611,
+            0.05521245931529931
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 35,
+          "definite_nonalarm": 965,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.035,
+            0.035
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.0211066066547338,
+            0.054029927266690966
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.02449752789475873,
+            0.04834238161422171
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 1962,
+        "ambiguous": 18,
+        "rate_envelope": [
+          0.981,
+          0.99
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.971030020009474,
+          0.9950346790689056
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 76,
+        "ambiguous": 0,
+        "rate_envelope": [
+          0.038,
+          0.038
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.02729910406182118,
+          0.05122515293931178
+        ]
+      },
+      "precommitted_L": 0.15128426631688932
+    },
+    {
+      "id": "dblp-binary-e005",
+      "threshold": 3.340306902195369,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 35,
+          "definite_nonalarm": 965,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.035,
+            0.035
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.0211066066547338,
+            0.054029927266690966
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.02449752789475873,
+            0.04834238161422171
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 38,
+          "definite_nonalarm": 962,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.038,
+            0.038
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.02345197335936792,
+            0.05764424017721654
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.027028815982983928,
+            0.05178710362196412
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 2000,
+        "ambiguous": 0,
+        "rate_envelope": [
+          1.0,
+          1.0
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.9971199946972821,
+          1.0
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 73,
+        "ambiguous": 0,
+        "rate_envelope": [
+          0.0365,
+          0.0365
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.026026800013666803,
+          0.04950695777122823
+        ]
+      },
+      "precommitted_L": 0.09499998896459241
+    },
+    {
+      "id": "dblp-binary-e015",
+      "threshold": 3.6637454595727372,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 44,
+          "definite_nonalarm": 955,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.044,
+            0.045
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.028222900586919168,
+            0.06597794383847377
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.032149497010871414,
+            0.05975283269340778
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 39,
+          "definite_nonalarm": 961,
+          "ambiguous": 0,
+          "rate_envelope": [
+            0.039,
+            0.039
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.024240066863695158,
+            0.05884290477995966
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.027877148795336416,
+            0.05293093578544508
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 2000,
+        "ambiguous": 0,
+        "rate_envelope": [
+          1.0,
+          1.0
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.9971199946972821,
+          1.0
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 83,
+        "ambiguous": 1,
+        "rate_envelope": [
+          0.0415,
+          0.042
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.03028644426219248,
+          0.05578410182218977
+        ]
+      },
+      "precommitted_L": 0.25499998594167683
+    },
+    {
+      "id": "dblp-multiclass-e005",
+      "threshold": 3.2464228864753615,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 49,
+          "definite_nonalarm": 950,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.049,
+            0.05
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.03226821629745341,
+            0.0718582917960874
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.03646705917204783,
+            0.06539048791549364
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 51,
+          "definite_nonalarm": 948,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.051,
+            0.052
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.033901767672973274,
+            0.07419581791036911
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.03820523677468613,
+            0.0676350140505073
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 2000,
+        "ambiguous": 0,
+        "rate_envelope": [
+          1.0,
+          1.0
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.9971199946972821,
+          1.0
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 100,
+        "ambiguous": 2,
+        "rate_envelope": [
+          0.05,
+          0.051
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.037634577346164225,
+          0.0659380691430243
+        ]
+      },
+      "precommitted_L": 0.09699998870216499
+    },
+    {
+      "id": "dblp-multiclass-e015",
+      "threshold": 3.6350000000002805,
+      "batches": {
+        "A_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "A_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 1000,
+          "definite_nonalarm": 0,
+          "ambiguous": 0,
+          "rate_envelope": [
+            1.0,
+            1.0
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.9942482838251078,
+            1.0
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.9963179161031344,
+            1.0
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_1_seed": {
+          "draws": 1000,
+          "definite_alarm": 41,
+          "definite_nonalarm": 957,
+          "ambiguous": 2,
+          "rate_envelope": [
+            0.041,
+            0.043
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.025825024889095584,
+            0.06360984149569017
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.02958016853403611,
+            0.05748625796197233
+          ],
+          "failed_draw_indices": []
+        },
+        "B_batch_2_seed": {
+          "draws": 1000,
+          "definite_alarm": 32,
+          "definite_nonalarm": 967,
+          "ambiguous": 1,
+          "rate_envelope": [
+            0.032,
+            0.033
+          ],
+          "simultaneous_adjusted_ci_envelope": [
+            0.018792405213086227,
+            0.05160388179061128
+          ],
+          "descriptive_95pct_ci_envelope": [
+            0.021988849605642426,
+            0.046033981817023194
+          ],
+          "failed_draw_indices": []
+        }
+      },
+      "A_pooled": {
+        "draws": 2000,
+        "definite_alarm": 2000,
+        "ambiguous": 0,
+        "rate_envelope": [
+          1.0,
+          1.0
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.9971199946972821,
+          1.0
+        ]
+      },
+      "B_pooled": {
+        "draws": 2000,
+        "definite_alarm": 73,
+        "ambiguous": 3,
+        "rate_envelope": [
+          0.0365,
+          0.038
+        ],
+        "simultaneous_adjusted_ci_envelope": [
+          0.026026800013666803,
+          0.05122515293931178
+        ]
+      },
+      "precommitted_L": 0.27299998139004844
+    }
+  ],
+  "complete": true,
+  "certificate_sha256": "20eefee1057de59f366252bebce47275aae6758cf32ad5260242b4e15e1f7df7",
+  "wall_seconds": 3212.173205500003,
+  "certificate_gate_met": true,
+  "multiclass_nonempty_certificate_gate_met": true,
+  "task_consequence_gate_met": true,
+  "original_N4_status": "failed; unchanged",
+  "stop_rule": "confirmation complete; no further upgrade or tuning",
+  "execution_amendment_sha256": "4aa2bc59318ae91a34c440ddcd3bec2bdfc18a9a683e7d1db9abc1d3a8749c19"
+}

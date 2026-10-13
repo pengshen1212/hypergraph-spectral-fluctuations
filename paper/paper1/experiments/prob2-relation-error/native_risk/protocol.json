@@ -1,0 +1,52 @@
+{
+  "protocol_id": "paper1-native-risk-feasibility-n0-n2-20261011-v1",
+  "status": "frozen feasibility pilot; not a formal validation protocol",
+  "frozen_at": "2026-10-11",
+  "scope": "N0-N2 only. No formal 5-percent risk claim and no access to any future N4 validation samples.",
+  "model": {
+    "node_law": "independent node predictions under supplied categorical P",
+    "retention": "a_e=1 iff all predicted labels in edge slot e agree",
+    "edge_marginal": "p_e=sum_c product_{u in e} P[u,c]",
+    "centered_A": "X_A=sum_e (a_e-p_e) H_e",
+    "centered_B": "X_B=sum_e (b_e-p_e) H_e, independent b_e~Bernoulli(p_e)",
+    "atom": "H_e=1_e 1_e^T/|e|",
+    "edge_slots": "Preserve every input slot, including duplicate node sets; A duplicates share the node event, B duplicates are independent Bernoulli slots."
+  },
+  "native_inputs": {
+    "datasets": ["cora-cc", "dblp-ca"],
+    "profiles": "majority-versus-rest binary flip model",
+    "epsilon": [0.05, 0.15],
+    "groups": "Both the maximum hyperedge-degree singleton and its maximum sum(1/edge_size) shared-edge partner pair on each graph; smallest node id breaks ties.",
+    "selection_uses": "Hyperedge supports only; no predicted perturbation draws or result statistics.",
+    "structure_edits": "None. Use the complete supplied hyperedge slot list."
+  },
+  "analytic_calculation": {
+    "states": "Enumerate all positive-probability states of each selected singleton/pair.",
+    "conditional_moments": "Compute conditional edge rates exactly by products, and conditional directional variances by all edge pairs sharing at least one unpinned node. Include every edge with nonzero quadratic witness weight, even when the edge misses the conditioned group.",
+    "witness": "For each state, choose the numerically largest-absolute-eigenvalue direction of M_U(z), computed before any A draw; record Rayleigh value, eigen residual, and support.",
+    "tail_lower": "Mixture of one-sided Cantelli bounds over every group state. Pilot threshold is an empirical B quantile, so the resulting L is exploratory only.",
+    "numerics": "Float64 feasibility estimates; no outward-rounded rigorous certificate is claimed at N2."
+  },
+  "pilot": {
+    "draws_per_arm_per_cell": 256,
+    "arms": ["B calibration", "A evaluation", "independent B evaluation"],
+    "pilot_B_quantile": "NumPy empirical 0.95 quantile with method=higher, used only to diagnose scale and never described as a guaranteed 5-percent threshold.",
+    "independence": "Distinct deterministic seed blocks for B calibration, A evaluation, and B evaluation; every full prediction draw is one unit.",
+    "seed_namespace": "native-risk-feasibility-20261011",
+    "seeds": {
+      "cora-epsilon-005": {"B_calibration": 9100001, "A_evaluation": 9200001, "B_evaluation": 9300001},
+      "cora-epsilon-015": {"B_calibration": 9101001, "A_evaluation": 9201001, "B_evaluation": 9301001},
+      "dblp-epsilon-005": {"B_calibration": 9102001, "A_evaluation": 9202001, "B_evaluation": 9302001},
+      "dblp-epsilon-015": {"B_calibration": 9103001, "A_evaluation": 9203001, "B_evaluation": 9303001}
+    },
+    "selection_bias_control": "All groups and state-specific witnesses are frozen from the graph and P before the pilot A draws. All states are included in analytic mixtures.",
+    "not_formal": "No confirmatory interval, model deployment claim, data-dependent group search, or method upgrade is established by this pilot."
+  },
+  "stop_gate": {
+    "time_budget_hours": 24,
+    "primary_feasibility_gate": "At least two native binary cells, covering both Cora and DBLP, have exploratory L_U(tau_B)>=0.07 under the frozen groups and direction rule; otherwise stop analytic-certificate upgrade.",
+    "impossibility_diagnostic": "For any cell where the sum of probabilities of states with mu_z>tau_B is <=0.05, the current conditional-mean Cantelli route cannot certify risk above 5 percent at that threshold, even with zero conditional variance.",
+    "limited_route": "If only one native graph passes, record a graph-specific result; do not claim cross-structure prediction or proceed to the full multiclass formal-validation grid.",
+    "empirical_downgrade": "Only if independently evaluated pilot A false-alarm rate is at least 0.15 may a separately documented, at-most-16-hour empirical-consequence route be proposed; it is not a large theory upgrade."
+  }
+}

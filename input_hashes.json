@@ -1,0 +1,55 @@
+{
+  "redistributed": false,
+  "inputs": [
+    {
+      "path": "data/cora-cc/features.pickle",
+      "bytes": 404937,
+      "sha256": "a20ab3c4903d6cf97d277f5ce8d26735e31d08c888cdd11e3f0a5bb78d7c0602"
+    },
+    {
+      "path": "data/cora-cc/hypergraph.pickle",
+      "bytes": 101905,
+      "sha256": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80"
+    },
+    {
+      "path": "data/cora-cc/labels.pickle",
+      "bytes": 5436,
+      "sha256": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527"
+    },
+    {
+      "path": "data/dblp-ca/features.pickle",
+      "bytes": 12988709,
+      "sha256": "7d48e64c921fe380402066553a5a1b84c919388b2b6b5efe73a6719f3f394998"
+    },
+    {
+      "path": "data/dblp-ca/hypergraph.pickle",
+      "bytes": 750549,
+      "sha256": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278"
+    },
+    {
+      "path": "data/dblp-ca/labels.pickle",
+      "bytes": 82711,
+      "sha256": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+    },
+    {
+      "path": "data/web-hypergraphs/walmart-trips/hyperedges-walmart-trips.txt",
+      "bytes": 2484156,
+      "sha256": "641e580c64710d30da7621ae326137dbdcf503f10cf06fd39ab20b0e1b39ec00"
+    },
+    {
+      "path": "data/web-hypergraphs/walmart-trips/label-names-walmart-trips.txt",
+      "bytes": 248,
+      "sha256": "20ab1f4c2b6ec85b54b1da71e7f5339b804375d6d6df5db7d1deb1910bf2e761"
+    },
+    {
+      "path": "data/web-hypergraphs/walmart-trips/node-labels-walmart-trips.txt",
+      "bytes": 185665,
+      "sha256": "6799bfdc85df02f62a9f8b8ae8c34a61763e69eb3c4799cee12461cefacc58ed"
+    },
+    {
+      "path": "data/web-hypergraphs/walmart-trips/README.txt",
+      "bytes": 448,
+      "sha256": "aa52b97fcc97110a8baaed0f6e5b7c1190214e8ad2e0223ee56b31231cd5ef5c"
+    }
+  ]
+}

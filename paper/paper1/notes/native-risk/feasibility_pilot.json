@@ -1,0 +1,709 @@
+{
+  "protocol_id": "paper1-native-risk-feasibility-n0-n2-20261011-v1",
+  "protocol_sha256": "44819f828d5e5196442e3593d4036916585a599e30d0a5bd262601a526f23064",
+  "status": "exploratory N2 pilot; float64 analytic moments and independent pilot draws",
+  "started_unix": 1791728249.6104739,
+  "inputs": {
+    "cora-cc": {
+      "hypergraph_sha256": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+      "labels_sha256": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+      "n_nodes": 2708,
+      "n_edge_slots": 1579,
+      "selected_hub": 163,
+      "selected_degree": 145,
+      "selected_partner": 793,
+      "partner_score": 4.383333333333333,
+      "groups": [
+        [
+          163
+        ],
+        [
+          163,
+          793
+        ]
+      ]
+    },
+    "dblp-ca": {
+      "hypergraph_sha256": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+      "labels_sha256": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8",
+      "n_nodes": 41302,
+      "n_edge_slots": 22363,
+      "selected_hub": 27,
+      "selected_degree": 18,
+      "selected_partner": 1388,
+      "partner_score": 6.588690476190476,
+      "groups": [
+        [
+          27
+        ],
+        [
+          27,
+          1388
+        ]
+      ]
+    }
+  },
+  "settings": [
+    {
+      "tag": "cora-cc",
+      "epsilon": 0.05,
+      "majority_label": 3,
+      "draws_per_arm": 256,
+      "groups": [
+        {
+          "group": [
+            163
+          ],
+          "state_probability_sum": 1.0,
+          "mean_mixture_max_abs_entry": 1.9984014443252818e-15,
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability": 0.95,
+              "conditional_mean_direction": 2.1653561280207336,
+              "mu_abs": 2.1653561280207336,
+              "conditional_direction_variance": 6.709876502293306,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 2.1653561280207336,
+              "rayleigh_value": 2.165356128020734,
+              "eigen_residual": 1.4221719380659492e-15,
+              "eigen_gap_estimate": 1.943342933272607,
+              "witness_support_size": 155,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability": 0.05,
+              "conditional_mean_direction": -41.1417664323939,
+              "mu_abs": 41.1417664323939,
+              "conditional_direction_variance": 1.7938456031984926,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 41.14176643239389,
+              "rayleigh_value": -41.14176643239387,
+              "eigen_residual": 3.2131779513077896e-14,
+              "eigen_gap_estimate": 36.92351573217948,
+              "witness_support_size": 160,
+              "cantelli_at_tau": 0.9987024851815134,
+              "active_for_tail": true
+            }
+          ],
+          "active_state_mass_upper_cap": 0.05,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.049935124259075675
+        },
+        {
+          "group": [
+            163,
+            793
+          ],
+          "state_probability_sum": 1.0,
+          "mean_mixture_max_abs_entry": 1.5404344466674047e-15,
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability": 0.9025,
+              "conditional_mean_direction": 2.436224828170994,
+              "mu_abs": 2.436224828170994,
+              "conditional_direction_variance": 5.598829946126842,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 2.4362248281709933,
+              "rayleigh_value": 2.436224828170991,
+              "eigen_residual": 3.9564334835309994e-15,
+              "eigen_gap_estimate": 1.951341776664548,
+              "witness_support_size": 159,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability": 0.0475,
+              "conditional_mean_direction": -8.704153371028461,
+              "mu_abs": 8.704153371028461,
+              "conditional_direction_variance": 0.2878446670138057,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 8.704153371028465,
+              "rayleigh_value": -8.704153371028458,
+              "eigen_residual": 7.582915203965668e-15,
+              "eigen_gap_estimate": 7.305269617787541,
+              "witness_support_size": 159,
+              "cantelli_at_tau": 0.987247482397562,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability": 0.0475,
+              "conditional_mean_direction": -41.20050191355274,
+              "mu_abs": 41.20050191355274,
+              "conditional_direction_variance": 1.7245990666061939,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 41.20050191355273,
+              "rayleigh_value": -41.20050191355276,
+              "eigen_residual": 3.621463360509879e-14,
+              "eigen_gap_estimate": 37.0313676897237,
+              "witness_support_size": 164,
+              "cantelli_at_tau": 0.9987564392946998,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability": 0.0025000000000000005,
+              "conditional_mean_direction": -40.04208218589324,
+              "mu_abs": 40.04208218589324,
+              "conditional_direction_variance": 1.7963809930066155,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 40.042082185893236,
+              "rayleigh_value": -40.04208218589325,
+              "eigen_residual": 2.5804841501889704e-14,
+              "eigen_gap_estimate": 34.2935243309371,
+              "witness_support_size": 164,
+              "cantelli_at_tau": 0.9986203032666218,
+              "active_for_tail": true
+            }
+          ],
+          "active_state_mass_upper_cap": 0.0975,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.09683173703854898
+        }
+      ],
+      "pilot_B_threshold": {
+        "value": 3.9835865954372682,
+        "method": "empirical 0.95 quantile, higher order statistic",
+        "draws": 256,
+        "explicitly_not_a_finite_sample_guarantee": true
+      },
+      "pilot_A_false_alarm": {
+        "draws": 256,
+        "exceedances": 249,
+        "rate": 0.97265625,
+        "exact_95_ci": [
+          0.9444754094525949,
+          0.9889372131915019
+        ],
+        "mean_norm": 9.351158724420497
+      },
+      "pilot_B_false_alarm": {
+        "draws": 256,
+        "exceedances": 20,
+        "rate": 0.078125,
+        "exact_95_ci": [
+          0.04837229150657752,
+          0.1180801247846344
+        ],
+        "mean_norm": 2.9098104131310865
+      }
+    },
+    {
+      "tag": "cora-cc",
+      "epsilon": 0.15,
+      "majority_label": 3,
+      "draws_per_arm": 256,
+      "groups": [
+        {
+          "group": [
+            163
+          ],
+          "state_probability_sum": 1.0,
+          "mean_mixture_max_abs_entry": 9.769962616701378e-15,
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability": 0.85,
+              "conditional_mean_direction": 4.939354651442781,
+              "mu_abs": 4.939354651442781,
+              "conditional_direction_variance": 14.841677717370718,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 4.939354651442792,
+              "rayleigh_value": 4.9393546514427955,
+              "eigen_residual": 4.7610338496100125e-15,
+              "eigen_gap_estimate": 4.448698840359726,
+              "witness_support_size": 155,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability": 0.15,
+              "conditional_mean_direction": -27.98967635817575,
+              "mu_abs": 27.98967635817575,
+              "conditional_direction_variance": 5.245384671016269,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 27.98967635817572,
+              "rayleigh_value": -27.989676358175736,
+              "eigen_residual": 1.9092419850789077e-14,
+              "eigen_gap_estimate": 25.20929342870502,
+              "witness_support_size": 155,
+              "cantelli_at_tau": 0.9894563839808903,
+              "active_for_tail": true
+            }
+          ],
+          "active_state_mass_upper_cap": 0.15,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.14841845759713354
+        },
+        {
+          "group": [
+            163,
+            793
+          ],
+          "state_probability_sum": 0.9999999999999999,
+          "mean_mixture_max_abs_entry": 6.994405055138486e-15,
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability": 0.7224999999999999,
+              "conditional_mean_direction": 5.646584763146555,
+              "mu_abs": 5.646584763146555,
+              "conditional_direction_variance": 12.767646546479725,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 5.646584763146556,
+              "rayleigh_value": 5.646584763146561,
+              "eigen_residual": 5.678971031942854e-15,
+              "eigen_gap_estimate": 4.517798476369864,
+              "witness_support_size": 159,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability": 0.1275,
+              "conditional_mean_direction": -5.5013662120117495,
+              "mu_abs": 5.5013662120117495,
+              "conditional_direction_variance": 0.24064424544225083,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 5.501366212011744,
+              "rayleigh_value": -5.501366212011748,
+              "eigen_residual": 3.935134486153769e-15,
+              "eigen_gap_estimate": 2.542117674588143,
+              "witness_support_size": 159,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability": 0.1275,
+              "conditional_mean_direction": -28.197249109105584,
+              "mu_abs": 28.197249109105584,
+              "conditional_direction_variance": 4.943468997235228,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 28.19724910910558,
+              "rayleigh_value": -28.197249109105595,
+              "eigen_residual": 2.4878377413008852e-14,
+              "eigen_gap_estimate": 25.492296560794106,
+              "witness_support_size": 159,
+              "cantelli_at_tau": 0.9902388976562251,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability": 0.0225,
+              "conditional_mean_direction": -26.849068121499716,
+              "mu_abs": 26.849068121499716,
+              "conditional_direction_variance": 5.309088793120216,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 26.849068121499723,
+              "rayleigh_value": -26.8490681214997,
+              "eigen_residual": 3.34315021664633e-14,
+              "eigen_gap_estimate": 23.271314353281785,
+              "witness_support_size": 159,
+              "cantelli_at_tau": 0.9881558587052202,
+              "active_for_tail": true
+            }
+          ],
+          "active_state_mass_upper_cap": 0.15,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.14848896627203614
+        }
+      ],
+      "pilot_B_threshold": {
+        "value": 5.80300204688922,
+        "method": "empirical 0.95 quantile, higher order statistic",
+        "draws": 256,
+        "explicitly_not_a_finite_sample_guarantee": true
+      },
+      "pilot_A_false_alarm": {
+        "draws": 256,
+        "exceedances": 249,
+        "rate": 0.97265625,
+        "exact_95_ci": [
+          0.9444754094525949,
+          0.9889372131915019
+        ],
+        "mean_norm": 12.366850242336367
+      },
+      "pilot_B_false_alarm": {
+        "draws": 256,
+        "exceedances": 5,
+        "rate": 0.01953125,
+        "exact_95_ci": [
+          0.00637142045482626,
+          0.04498832111637435
+        ],
+        "mean_norm": 3.9296018495032294
+      }
+    },
+    {
+      "tag": "dblp-ca",
+      "epsilon": 0.05,
+      "majority_label": 2,
+      "draws_per_arm": 256,
+      "groups": [
+        {
+          "group": [
+            27
+          ],
+          "state_probability_sum": 1.0,
+          "mean_mixture_max_abs_entry": 2.220446049250313e-16,
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability": 0.95,
+              "conditional_mean_direction": 0.5926784408397708,
+              "mu_abs": 0.5926784408397708,
+              "conditional_direction_variance": 8.4952168091885,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 0.5926784408397704,
+              "rayleigh_value": 0.5926784408397708,
+              "eigen_residual": 2.841367704660191e-16,
+              "eigen_gap_estimate": 0.526028117823273,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability": 0.05,
+              "conditional_mean_direction": -11.260890375955631,
+              "mu_abs": 11.260890375955631,
+              "conditional_direction_variance": 4.570183230059862,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 11.26089037595563,
+              "rayleigh_value": -11.260890375955634,
+              "eigen_residual": 3.702756592675391e-15,
+              "eigen_gap_estimate": 9.994534238642181,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.9334255086424558,
+              "active_for_tail": true
+            }
+          ],
+          "active_state_mass_upper_cap": 0.05,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.046671275432122794
+        },
+        {
+          "group": [
+            27,
+            1388
+          ],
+          "state_probability_sum": 1.0,
+          "mean_mixture_max_abs_entry": 7.218618064408489e-16,
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability": 0.9025,
+              "conditional_mean_direction": 1.2423736778846333,
+              "mu_abs": 1.2423736778846333,
+              "conditional_direction_variance": 0.49587005389049665,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 1.2423736778846335,
+              "rayleigh_value": 1.2423736778846333,
+              "eigen_residual": 3.839983902095584e-16,
+              "eigen_gap_estimate": 1.1050865132471477,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability": 0.0475,
+              "conditional_mean_direction": -11.7517960989858,
+              "mu_abs": 11.7517960989858,
+              "conditional_direction_variance": 8.218841519203813e-06,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 11.751796098985793,
+              "rayleigh_value": -11.751796098985794,
+              "eigen_residual": 4.703531164925431e-15,
+              "eigen_gap_estimate": 10.476553207558386,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.9999998861304924,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability": 0.0475,
+              "conditional_mean_direction": -11.7517960989858,
+              "mu_abs": 11.7517960989858,
+              "conditional_direction_variance": 8.218841519203813e-06,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 11.751796098985793,
+              "rayleigh_value": -11.751796098985794,
+              "eigen_residual": 4.703531164925431e-15,
+              "eigen_gap_estimate": 10.476553207558386,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.9999998861304924,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability": 0.0025000000000000005,
+              "conditional_mean_direction": -2.946047325331475,
+              "mu_abs": 2.946047325331475,
+              "conditional_direction_variance": 0.016561386593149978,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 2.9460473253314747,
+              "rayleigh_value": -2.9460473253314756,
+              "eigen_residual": 6.391320217330162e-16,
+              "eigen_gap_estimate": 2.3270957122117952,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            }
+          ],
+          "active_state_mass_upper_cap": 0.095,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.09499998918239679
+        }
+      ],
+      "pilot_B_threshold": {
+        "value": 3.2560493710481992,
+        "method": "empirical 0.95 quantile, higher order statistic",
+        "draws": 256,
+        "explicitly_not_a_finite_sample_guarantee": true
+      },
+      "pilot_A_false_alarm": {
+        "draws": 256,
+        "exceedances": 256,
+        "rate": 1.0,
+        "exact_95_ci": [
+          0.9856936372709615,
+          1.0
+        ],
+        "mean_norm": 6.354960918900956
+      },
+      "pilot_B_false_alarm": {
+        "draws": 256,
+        "exceedances": 11,
+        "rate": 0.04296875,
+        "exact_95_ci": [
+          0.021642040604322493,
+          0.07558093377042922
+        ],
+        "mean_norm": 2.5468752424029293
+      }
+    },
+    {
+      "tag": "dblp-ca",
+      "epsilon": 0.15,
+      "majority_label": 2,
+      "draws_per_arm": 256,
+      "groups": [
+        {
+          "group": [
+            27
+          ],
+          "state_probability_sum": 1.0,
+          "mean_mixture_max_abs_entry": 6.661338147750939e-16,
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability": 0.85,
+              "conditional_mean_direction": 1.3318359699999869,
+              "mu_abs": 1.3318359699999869,
+              "conditional_direction_variance": 19.637067288507833,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 1.3318359699999864,
+              "rayleigh_value": 1.331835969999987,
+              "eigen_residual": 3.36205482081792e-16,
+              "eigen_gap_estimate": 1.2215499921638724,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability": 0.15,
+              "conditional_mean_direction": -7.547070496666585,
+              "mu_abs": 7.547070496666585,
+              "conditional_direction_variance": 12.752557515278452,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 7.547070496666582,
+              "rayleigh_value": -7.547070496666584,
+              "eigen_residual": 1.7579520292125063e-15,
+              "eigen_gap_estimate": 6.922116622261937,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.551072511313296,
+              "active_for_tail": true
+            }
+          ],
+          "active_state_mass_upper_cap": 0.15,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.0826608766969944
+        },
+        {
+          "group": [
+            27,
+            1388
+          ],
+          "state_probability_sum": 0.9999999999999999,
+          "mean_mixture_max_abs_entry": 4.614364446098307e-16,
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability": 0.7224999999999999,
+              "conditional_mean_direction": 3.163628883465398,
+              "mu_abs": 3.163628883465398,
+              "conditional_direction_variance": 0.722207202680807,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 3.163628883465397,
+              "rayleigh_value": 3.1636288834653983,
+              "eigen_residual": 1.0500036306894789e-15,
+              "eigen_gap_estimate": 2.920576467808794,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability": 0.1275,
+              "conditional_mean_direction": -9.050144052803166,
+              "mu_abs": 9.050144052803166,
+              "conditional_direction_variance": 1.599522459469184e-06,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 9.050144052803164,
+              "rayleigh_value": -9.050144052803162,
+              "eigen_residual": 2.288761869502135e-15,
+              "eigen_gap_estimate": 8.40943884596665,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.9999999463379275,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability": 0.1275,
+              "conditional_mean_direction": -9.050144052803166,
+              "mu_abs": 9.050144052803166,
+              "conditional_direction_variance": 1.599522459469184e-06,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 9.050144052803164,
+              "rayleigh_value": -9.050144052803162,
+              "eigen_residual": 2.288761869502135e-15,
+              "eigen_gap_estimate": 8.40943884596665,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.9999999463379275,
+              "active_for_tail": true
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability": 0.0225,
+              "conditional_mean_direction": 1.4902978158644835,
+              "mu_abs": 1.4902978158644835,
+              "conditional_direction_variance": 0.03340293696992357,
+              "variance_roundoff_clipped": 0.0,
+              "mean_operator_norm_eigen_estimate": 1.4902978158644835,
+              "rayleigh_value": 1.4902978158644837,
+              "eigen_residual": 6.678403765619414e-16,
+              "eigen_gap_estimate": 0.5238422352803809,
+              "witness_support_size": 19,
+              "cantelli_at_tau": 0.0,
+              "active_for_tail": false
+            }
+          ],
+          "active_state_mass_upper_cap": 0.255,
+          "weighted_Cantelli_lower_at_pilot_tau": 0.25499998631617155
+        }
+      ],
+      "pilot_B_threshold": {
+        "value": 3.5905363337402196,
+        "method": "empirical 0.95 quantile, higher order statistic",
+        "draws": 256,
+        "explicitly_not_a_finite_sample_guarantee": true
+      },
+      "pilot_A_false_alarm": {
+        "draws": 256,
+        "exceedances": 256,
+        "rate": 1.0,
+        "exact_95_ci": [
+          0.9856936372709615,
+          1.0
+        ],
+        "mean_norm": 5.860883280443176
+      },
+      "pilot_B_false_alarm": {
+        "draws": 256,
+        "exceedances": 14,
+        "rate": 0.0546875,
+        "exact_95_ci": [
+          0.030217175352924418,
+          0.09005479783406266
+        ],
+        "mean_norm": 2.785783940066454
+      }
+    }
+  ],
+  "finished_unix": 1791730630.4500833,
+  "wall_seconds": 2380.8396093845367,
+  "code_sha256": {
+    "conditional_moments.py": "05e1506a716d89c21019a1df4f7a23656c034b8a91c606bcbaf86f1b146082a1",
+    "native_protocol.py": "6c536a788a939ec31958f41b267b80e60772969cb98643d3b36bd039b071f55e",
+    "risk_certificate.py": "b44e9e3fa0b3fe43ddd6b38700b3099cf904a529e7d1439c075be7d79206967a",
+    "run_feasibility.py": "828a6bb49fc0695e1ca0829b95b2823ed586ecbbec06f1987ad6a14fdf1297f5"
+  },
+  "git_head": null
+}

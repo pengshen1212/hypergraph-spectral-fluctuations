@@ -1,0 +1,61 @@
+{
+ "checks": [
+  {
+   "name": "cora-native-star-recompute",
+   "status": "PASS",
+   "detail": "d=20, L_A=3.44; Gamma(center-excl)=14.28, Gamma(no-excl)=40.86; saved JSON 31.3, paper text 40.9; certification fails either way"
+  },
+  {
+   "name": "star-joint-mc",
+   "status": "PASS",
+   "detail": "p=0.05 d=100 draws=1000 L_A=23.44 U_B=19.93 sep_fail=0.0070 allow=0.0259 meanA=28.90 meanB=4.27 (paper 5000 draws: 23.44/19.93, means 29.00/4.25)"
+  },
+  {
+   "name": "cyclic-overlap",
+   "status": "PASS",
+   "detail": "d=200 t=50 Q=4d-2=798 L_A^ov=42.71 U_B=24.59 empirical sep: 60/60, allowance 1-(1-p)^t+slack=0.873 (paper t=100: 42.71/24.59, 100%)"
+  },
+  {
+   "name": "insertion-marginal",
+   "status": "PASS",
+   "detail": "MC P[all same] = 0.0896 vs closed form 0.09"
+  },
+  {
+   "name": "insertion-conditional",
+   "status": "PASS",
+   "detail": "MC P[all same | center wrong->1] = 0.8132 vs 0.81 (1.6 MC standard errors tolerance)"
+  },
+  {
+   "name": "matched-marginal-edge0",
+   "status": "PASS",
+   "detail": "edge (0, 1, 2): MC E[a_e]=0.7298 closed=0.7300"
+  },
+  {
+   "name": "matched-marginal-edge1",
+   "status": "PASS",
+   "detail": "edge (0, 3, 4): MC E[a_e]=0.0893 closed=0.0900"
+  },
+  {
+   "name": "matched-marginal-edge2",
+   "status": "PASS",
+   "detail": "edge (3, 4, 5): MC E[a_e]=0.0908 closed=0.0900"
+  },
+  {
+   "name": "matched-marginal-edge3",
+   "status": "PASS",
+   "detail": "edge (1, 2, 5): MC E[a_e]=0.0898 closed=0.0900"
+  },
+  {
+   "name": "matched-marginal-edge4",
+   "status": "PASS",
+   "detail": "edge (0, 1): MC E[a_e]=0.8196 closed=0.8200"
+  },
+  {
+   "name": "s-min-legality",
+   "status": "PASS",
+   "detail": "p=0.05,d=50:S_min=39.1>dq_r=7.1; p=0.05,d=100:S_min=84.6>dq_r=14.3; p=0.05,d=150:S_min=131.0>dq_r=21.4; p=0.05,d=190:S_min=168.6>dq_r=27.1; p=0.1,d=50:S_min=38.8>dq_r=13.5; p=0.1,d=100:S_min=83.8>dq_r=27.0; p=0.1,d=150:S_min=129.9>dq_r=40.5; p=0.1,d=190:S_min=167.2>dq_r=51.3 | cor:local statement lacks S_min>0 and 2*o_e<=S_min^2 conditions"
+  }
+ ],
+ "seed_note": "fresh seeds, disjoint from all saved runs",
+ "wall_seconds": 14.066417932510376
+}

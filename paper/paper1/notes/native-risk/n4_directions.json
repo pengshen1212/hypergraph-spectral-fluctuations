@@ -1,0 +1,4346 @@
+{
+  "protocol_id": "paper1-native-risk-n4-formal-validation-20261012-v1",
+  "status": "directions prepared before any N4 sampling",
+  "protocol_sha256": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652",
+  "data_sha256": {
+    "cora-cc/hypergraph.pickle": "49abc7fff72a07de24e50d9d740d5cc63a32a40b2508995c16816fcb2729de80",
+    "cora-cc/labels.pickle": "0e6edd0d971dde22c1116fa662362262163a7a6d557eafd60ac6857de4569527",
+    "dblp-ca/hypergraph.pickle": "a8dbbed2041a8c1b836cbc29986ca777128eb9d75f2e006da899a801971f3278",
+    "dblp-ca/labels.pickle": "8c95becadfa803f4dcfa56d535758619622a5f80ed18b481ab854754cd5927c8"
+  },
+  "amendment_sha256": "126fcf069e40d6269e5b86d6fc4b24f67fe385c10c2c1fb7738610b356e2de95",
+  "code_sha256": {
+    "n4_runner.py": "edf57b3b57f0d77546d22b130d8787bcc047815e77af0c7f6bfde918e43719a6",
+    "verified_norm.py": "0665046e10b70b12925907ffc462f7f0df9f5fb0f44cf8a772877bb64bbc10b0",
+    "exact_certificate.py": "e2e280f0f529892741ead86af5d5744f0fba1506c025b103123a3e6fc1f15a0f",
+    "conditional_moments.py": "05e1506a716d89c21019a1df4f7a23656c034b8a91c606bcbaf86f1b146082a1",
+    "native_protocol.py": "6c536a788a939ec31958f41b267b80e60772969cb98643d3b36bd039b071f55e",
+    "finite_sample.py": "42a9a65c97dcf087d9060f2848e9c343e9ae183b65a187a345bf9fe9c4c5cc4f",
+    "influence_families.py": "2799a8e21082fabb695a577bc811f28b28cb7f17e75858dd3487295daf3b800c"
+  },
+  "cells": [
+    {
+      "id": "cora-binary-e005",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.05,
+      "groups": [
+        {
+          "nodes": [
+            163
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "19/20",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "9/400",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.022499999999999964,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "1/20",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "32d68cb1315b1223c18cb7acbed7b2279ed6ed612e544dac15cb893db7f2a2c7",
+              "conditional_mean_exact": "171/400",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4275,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            163,
+            793
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "361/400",
+              "direction_nodes": [
+                422
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "a838c358cb575b57677f4dc4062b378823abcee7eea53d64b5369dea3e486d07",
+              "conditional_mean_exact": "37/1200",
+              "conditional_variance_exact": "19/3600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.03083333333333334,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "19/400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "171/400",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4275,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "19/400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "32d68cb1315b1223c18cb7acbed7b2279ed6ed612e544dac15cb893db7f2a2c7",
+              "conditional_mean_exact": "171/400",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4275,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "1/400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "32d68cb1315b1223c18cb7acbed7b2279ed6ed612e544dac15cb893db7f2a2c7",
+              "conditional_mean_exact": "171/400",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4275,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cora-binary-e015",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.15,
+      "groups": [
+        {
+          "nodes": [
+            163
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "17/20",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "21/400",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.05250000000000005,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "3/20",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "32d68cb1315b1223c18cb7acbed7b2279ed6ed612e544dac15cb893db7f2a2c7",
+              "conditional_mean_exact": "119/400",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.29749999999999993,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            163,
+            793
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "289/400",
+              "direction_nodes": [
+                422
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "a838c358cb575b57677f4dc4062b378823abcee7eea53d64b5369dea3e486d07",
+              "conditional_mean_exact": "31/400",
+              "conditional_variance_exact": "17/1200",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.07750000000000001,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "51/400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "119/400",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.29749999999999993,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "51/400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "32d68cb1315b1223c18cb7acbed7b2279ed6ed612e544dac15cb893db7f2a2c7",
+              "conditional_mean_exact": "119/400",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.29749999999999993,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "9/400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "32d68cb1315b1223c18cb7acbed7b2279ed6ed612e544dac15cb893db7f2a2c7",
+              "conditional_mean_exact": "119/400",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.29749999999999993,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cora-multiclass-e005",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.05,
+      "groups": [
+        {
+          "nodes": [
+            163
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "19/20",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9465a035e5e47c4d0674b5f334519ca5be14345c2ace0964e025939d449c1763",
+              "conditional_mean_exact": "113/4800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.023541666666666627,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "1/120",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2
+              ],
+              "probability_exact": "1/120",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3
+              ],
+              "probability_exact": "1/120",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4
+              ],
+              "probability_exact": "1/120",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5
+              ],
+              "probability_exact": "1/120",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6
+              ],
+              "probability_exact": "1/120",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666666,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            163,
+            793
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "361/400",
+              "direction_nodes": [
+                422
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "a838c358cb575b57677f4dc4062b378823abcee7eea53d64b5369dea3e486d07",
+              "conditional_mean_exact": "1067/34560",
+              "conditional_variance_exact": "19/3600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.030873842592592553,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                2
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                3
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                4
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                5
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                6
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666666,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                2
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                3
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                4
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                5
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                6
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                0
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                1
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                2
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                3
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                4
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                5
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                6
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                0
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                1
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                2
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                3
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                4
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                5
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                6
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                0
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                1
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                2
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                3
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                4
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                5
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                6
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "13447/28800",
+              "conditional_variance_exact": "19/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4669097222222222,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                0
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                1
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                2
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                3
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                4
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                5
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                6
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                0
+              ],
+              "probability_exact": "19/2400",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666666,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                1
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                2
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                3
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                4
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                5
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666667,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                6
+              ],
+              "probability_exact": "1/14400",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "2147/4800",
+              "conditional_variance_exact": "119/57600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.4472916666666666,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cora-multiclass-e015",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.15,
+      "groups": [
+        {
+          "nodes": [
+            163
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "17/20",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9465a035e5e47c4d0674b5f334519ca5be14345c2ace0964e025939d449c1763",
+              "conditional_mean_exact": "99/1600",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.06187500000000007,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "1/40",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2
+              ],
+              "probability_exact": "1/40",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3
+              ],
+              "probability_exact": "1/40",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4
+              ],
+              "probability_exact": "1/40",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5
+              ],
+              "probability_exact": "1/40",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6
+              ],
+              "probability_exact": "1/40",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            163,
+            793
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "289/400",
+              "direction_nodes": [
+                422
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "a838c358cb575b57677f4dc4062b378823abcee7eea53d64b5369dea3e486d07",
+              "conditional_mean_exact": "503/6400",
+              "conditional_variance_exact": "17/1200",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.07859375000000009,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                2
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                3
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                4
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                5
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                6
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                2
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                3
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                4
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                5
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                6
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                0
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                1
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                2
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                3
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                4
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                5
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                6
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                0
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                1
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                2
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                3
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                4
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                5
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                6
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                0
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                1
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                2
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                3
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                4
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                5
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                6
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                262
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "4b8bfd9a231fa296d50ac9ead83ddb011afd0bc3719ae1e8d39fc157c42a4665",
+              "conditional_mean_exact": "1287/3200",
+              "conditional_variance_exact": "51/1600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.4021875,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                0
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                1
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                2
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                3
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                4
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                5
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.3506249999999999,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                6
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                0
+              ],
+              "probability_exact": "17/800",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                1
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                2
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                3
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                4
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                5
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1850
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "722febcf882013c65f8661fc2968fc4a6cfcc429ea0453664bad1bcbe16d1d7b",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                6,
+                6
+              ],
+              "probability_exact": "1/1600",
+              "direction_nodes": [
+                1167
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "9a16b47283e2e1ab29e453e259912cbd4e7e17f9465d8f3a0ea9dd3b0b89d0d0",
+              "conditional_mean_exact": "561/1600",
+              "conditional_variance_exact": "39/6400",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.35062499999999996,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dblp-binary-e005",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.05,
+      "groups": [
+        {
+          "nodes": [
+            27
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "19/20",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "3/200",
+              "conditional_variance_exact": "4693/480000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.015000000000000013,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "1/20",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "57/200",
+              "conditional_variance_exact": "133/480000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.285,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            27,
+            1388
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "361/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "37/1200",
+              "conditional_variance_exact": "19/3600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.03083333333333334,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "19/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "343/1200",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28583333333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "19/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "343/1200",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28583333333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "1/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "323/1200",
+              "conditional_variance_exact": "19/3600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2691666666666666,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dblp-binary-e015",
+      "profile": "binary_majority_vs_rest",
+      "epsilon": 0.15,
+      "groups": [
+        {
+          "nodes": [
+            27
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "17/20",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "7/200",
+              "conditional_variance_exact": "10693/480000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.034999999999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "3/20",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "119/600",
+              "conditional_variance_exact": "391/160000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.19833333333333333,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            27,
+            1388
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "289/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "31/400",
+              "conditional_variance_exact": "17/1200",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.07750000000000001,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "51/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "247/1200",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2058333333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "51/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "247/1200",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2058333333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "9/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "187/1200",
+              "conditional_variance_exact": "17/1200",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.1558333333333333,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dblp-multiclass-e005",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.05,
+      "groups": [
+        {
+          "nodes": [
+            27
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "1/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "893/3125",
+              "conditional_variance_exact": "1111/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28575999999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "1/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "893/3125",
+              "conditional_variance_exact": "1111/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28575999999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2
+              ],
+              "probability_exact": "1/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "893/3125",
+              "conditional_variance_exact": "1111/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28575999999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3
+              ],
+              "probability_exact": "19/20",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "47/3125",
+              "conditional_variance_exact": "4693/480000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.015040000000000017,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4
+              ],
+              "probability_exact": "1/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "893/3125",
+              "conditional_variance_exact": "1111/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28575999999999996,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5
+              ],
+              "probability_exact": "1/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "893/3125",
+              "conditional_variance_exact": "1111/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28575999999999996,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            27,
+            1388
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "14123/50000",
+              "conditional_variance_exact": "11/10000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28246,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                2
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                3
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                4
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                5
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "14123/50000",
+              "conditional_variance_exact": "11/10000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28246,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                2
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                3
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                4
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                5
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                0
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                1
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                2
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "14123/50000",
+              "conditional_variance_exact": "11/10000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28246,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                3
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                4
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                5
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                0
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                1
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                2
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                3
+              ],
+              "probability_exact": "361/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "4631/150000",
+              "conditional_variance_exact": "19/3600",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.030873333333333346,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                4
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                5
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                0
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                1
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                2
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                3
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                4
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "14123/50000",
+              "conditional_variance_exact": "11/10000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28246,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                5
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                0
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                1
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                2
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                3
+              ],
+              "probability_exact": "19/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                4
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "42869/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2857933333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                5
+              ],
+              "probability_exact": "1/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "14123/50000",
+              "conditional_variance_exact": "11/10000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.28246,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dblp-multiclass-e015",
+      "profile": "symmetric_multiclass",
+      "epsilon": 0.15,
+      "groups": [
+        {
+          "nodes": [
+            27
+          ],
+          "states": [
+            {
+              "state": [
+                0
+              ],
+              "probability_exact": "3/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "7667/37500",
+              "conditional_variance_exact": "9991/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2044533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1
+              ],
+              "probability_exact": "3/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "7667/37500",
+              "conditional_variance_exact": "9991/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2044533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2
+              ],
+              "probability_exact": "3/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "7667/37500",
+              "conditional_variance_exact": "9991/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2044533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3
+              ],
+              "probability_exact": "17/20",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "451/12500",
+              "conditional_variance_exact": "10693/480000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.03608,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4
+              ],
+              "probability_exact": "3/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "7667/37500",
+              "conditional_variance_exact": "9991/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2044533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5
+              ],
+              "probability_exact": "3/100",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "7667/37500",
+              "conditional_variance_exact": "9991/100000000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.2044533333333333,
+              "overlap_pair_count": 0
+            }
+          ]
+        },
+        {
+          "nodes": [
+            27,
+            1388
+          ],
+          "states": [
+            {
+              "state": [
+                0,
+                0
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "29213/150000",
+              "conditional_variance_exact": "97/30000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.1947533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                1
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                2
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                3
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                4
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                0,
+                5
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                0
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                1
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "29213/150000",
+              "conditional_variance_exact": "97/30000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.1947533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                2
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                3
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                4
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                1,
+                5
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                0
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                1
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                2
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "29213/150000",
+              "conditional_variance_exact": "97/30000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.1947533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                3
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                4
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                2,
+                5
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                0
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                1
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                2
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                3
+              ],
+              "probability_exact": "289/400",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "0bf619ed2b95fe58357d8d32c9fbeb35f99296ce1fbcf05f089d61677cfa824f",
+              "conditional_mean_exact": "3929/50000",
+              "conditional_variance_exact": "17/1200",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": 0.07858000000000002,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                4
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                3,
+                5
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                0
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                1
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                2
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                3
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                4
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "29213/150000",
+              "conditional_variance_exact": "97/30000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.1947533333333333,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                4,
+                5
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                0
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                1
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                2
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                3
+              ],
+              "probability_exact": "51/2000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                4
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "30713/150000",
+              "conditional_variance_exact": "0/1",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.20475333333333331,
+              "overlap_pair_count": 0
+            },
+            {
+              "state": [
+                5,
+                5
+              ],
+              "probability_exact": "9/10000",
+              "direction_nodes": [
+                36
+              ],
+              "direction_float_hex": [
+                "-0x1.0000000000000p+0"
+              ],
+              "direction_sha256": "8298c4e0d76681dc14d16a0e600a47314cc564bd312287df343a1547044873ce",
+              "conditional_mean_exact": "29213/150000",
+              "conditional_variance_exact": "97/30000",
+              "direction_norm_squared_exact": "1/1",
+              "coordinate_diagonal_proposal": -0.1947533333333333,
+              "overlap_pair_count": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 251.4982750415802
+}

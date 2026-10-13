@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-11",
+  "scope": "Paper1 native spectral-risk upgrade N0-N2 only",
+  "decision": "N2 exploratory feasibility gate met on both native graphs; stop here and propose N3 for separate authorization",
+  "protocol_id": "paper1-native-risk-feasibility-n0-n2-20261011-v1",
+  "git_head": null,
+  "runtime_seconds": 2380.8396093845367,
+  "verification": {
+    "native_risk_tests": "PASS: 14 tests",
+    "legacy_node_influence_tests": "PASS: 10 tests",
+    "manuscript_evidence_verifier": "PASS: 12 protected theorem/proof blocks, mixed certificate, references, typesetting log, four frozen hashes, and six result tables",
+    "protected_baseline_files": "PASS: all 11 manuscript, legacy protocol/results/source, and data hashes match baseline_manifest.json",
+    "decision_log_jsonl": "PASS: every line parses as JSON"
+  },
+  "sha256": {
+    "notes/native-risk/baseline_manifest.json": "0a462b35c76d4e032b1b0f15988eae8776888b4c9484899f0de3dbe4bcc8ac8f",
+    "notes/native-risk/research-question-card.md": "485eb0ced0806274f96b3f17310fdcad3bf52c5284447231d04b027cc6bd4a04",
+    "notes/native-risk/feasibility_pilot.json": "6d16e976e68afc005954cf1d13e5123dca60aa231a9e5d3b6463ff51e28869e0",
+    "notes/native-risk/feasibility.md": "fd8c88c277dd0326ad00f2fd85397f6aa63c50f98890661f4c92711539a56c11",
+    "notes/native-risk/decision_log.jsonl": "cff37587d0d0692c7f5dce1dd76211fe78d8fe4bac9fc2f2129b2e1323cff69a",
+    "experiments/prob2-relation-error/native_risk/protocol.json": "44819f828d5e5196442e3593d4036916585a599e30d0a5bd262601a526f23064",
+    "experiments/prob2-relation-error/native_risk/conditional_moments.py": "05e1506a716d89c21019a1df4f7a23656c034b8a91c606bcbaf86f1b146082a1",
+    "experiments/prob2-relation-error/native_risk/native_protocol.py": "6c536a788a939ec31958f41b267b80e60772969cb98643d3b36bd039b071f55e",
+    "experiments/prob2-relation-error/native_risk/risk_certificate.py": "b44e9e3fa0b3fe43ddd6b38700b3099cf904a529e7d1439c075be7d79206967a",
+    "experiments/prob2-relation-error/native_risk/run_feasibility.py": "828a6bb49fc0695e1ca0829b95b2823ed586ecbbec06f1987ad6a14fdf1297f5",
+    "experiments/prob2-relation-error/native_risk/test_conditional_moments.py": "edb2249b518551f6fae8cd11586da8dd97baf2b05e23fbab97b32c5cd5e64d15"
+  },
+  "protected_baseline_hashes": {
+    "main.tex": "6c0ceb1d93a7338c88d63765b42d811a9f7d0ae7fee44a945c6ca86acd6af84d",
+    "main.pdf": "5e8145cc6ea4055810f1a39d516b11854776e75befea03ad114396cb8d69a82a",
+    "legacy_protocol": "105cf15ee9f52a8c759eecbcaec45e0d32fb43b7f352687daff7e4830d1676e3",
+    "legacy_native_results": "3584de7d61e944ae685d197c7f9189489a67d4b4e70f5c2274fe822d710ce188"
+  },
+  "limitations": [
+    "N2 pilot threshold uses 256 B-calibration draws and is not a finite-sample guarantee.",
+    "Analytic moments/eigen-directions are float64 feasibility calculations, not outward-rounded formal certificates.",
+    "No N3/N4 formal validation, multiclass pilot, threshold correction, or manuscript edit was performed.",
+    "Git HEAD is unavailable because the supplied workspace files are untracked in this checkout."
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "paper1-n3-norm-enclosure-20261012-v1",
+  "date": "2026-10-12",
+  "status": "norm routine implemented, independently reviewed, findings repaired, and numerical preflight passed; formal N4 runner remains to be frozen",
+  "n4_samples_generated": false,
+  "parent_formal_design_sha256": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652",
+  "arithmetic_contract": "IEEE binary64 round-to-nearest, gradual underflow, finite intermediates, ordinary sparse/BLAS arithmetic with the documented operation budgets; runtime smoke probes are supplemental checks, not a binary-library proof",
+  "parameters": {
+    "square_path_cap": 20000000,
+    "relative_goal": 0.002,
+    "positive_weight_iterations": 32,
+    "positive_weight_floor": 0.000001,
+    "eigenvector_initialization_seed": 41011,
+    "eigensolver_tolerance": 1e-9,
+    "eigensolver_maxiter": 50000,
+    "eigensolver_failure_fallback": "coordinate of maximum absolute diagonal entry",
+    "upper_fallback": "weighted absolute-row bound when squared path budget is exceeded"
+  },
+  "formal_use": {
+    "calibration": "upper norm endpoint as the conservative score, keeping the original tolerance order-statistic design",
+    "validation": "lo > tau is a definite alarm; hi <= tau is a definite nonalarm; all other intervals are ambiguous and retained in the registered count envelope",
+    "precondition": "Freeze/test/hash the full runner and record a protocol amendment before generating formal N4 streams"
+  },
+  "verification": {
+    "new_tests": "11/11 passed, including three review regressions",
+    "native_risk_suite": "31/31 passed",
+    "native_preflight": "8 cells, 32 matrices; same preflight seeds rerun after fixes",
+    "independent_review": "intended canonical builder pipeline has no identified enclosure violation under the declared arithmetic contract; public CSR duplication, dense failure fallback, and empty-builder issues reproduced and repaired",
+    "protected_artifacts": "17 existing N3 manifest hashes preserved; no formal seed used"
+  },
+  "sha256": {
+    "experiments/prob2-relation-error/native_risk/verified_norm.py": "0665046e10b70b12925907ffc462f7f0df9f5fb0f44cf8a772877bb64bbc10b0",
+    "experiments/prob2-relation-error/native_risk/test_verified_norm.py": "5d0dbe06c4258cc31dd91c89b3cb9394f3389ec6f8a3c3c447aa79e94234bfd5",
+    "experiments/prob2-relation-error/native_risk/run_norm_preflight.py": "3294cc6c4b1c2b3d70b59d623c5d7f44a390885de0c3e76899739f88189ac377",
+    "notes/native-risk/norm_enclosure.md": "df05760e9defbca056d8fb345d87e11f8978e3ab82ab0a5888f97ba9ceb6db20",
+    "notes/native-risk/norm_preflight.json": "fc3d86a310dffd4cbc5cdb3d2a9d9b33ebdf8c3ae65b7b8e6ec337ec4cecc850"
+  }
+}

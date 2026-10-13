@@ -1,0 +1,565 @@
+{
+ "protocol": "3 fully disjoint outer split batches (cal/eval seeds 33000+/36000+, 41000+/44000+, 49000+/52000+; disjoint from the original 31000+/32000+); same full-propagation bootstrap as full_bootstrap.py (1000 replicates, per-replicate independent substreams); spectral norm by 25-step fully reorthogonalized Lanczos validated against eigsh on real-configuration matrices",
+ "batches": [
+  "batch0",
+  "batch1",
+  "batch2"
+ ],
+ "n_boot": 1000,
+ "settings": [
+  {
+   "name": "Cora-all",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "results": [
+    {
+     "n_cal": 20,
+     "ratio": 2.4384338524125537,
+     "ci": [
+      2.0754002947475114,
+      3.1981644951793986
+     ],
+     "lanczos_check_relerr": 1.1456257499679111e-15
+    },
+    {
+     "n_cal": 40,
+     "ratio": 2.3454054415441896,
+     "ci": [
+      2.0599088687143627,
+      3.0294419131086108
+     ],
+     "lanczos_check_relerr": 1.8866326081226136e-15
+    },
+    {
+     "n_cal": 80,
+     "ratio": 2.5199825078869535,
+     "ci": [
+      1.985652804761249,
+      3.1474383252224376
+     ],
+     "lanczos_check_relerr": 1.8866326081226136e-15
+    }
+   ]
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "results": [
+    {
+     "n_cal": 20,
+     "ratio": 2.211038337387745,
+     "ci": [
+      1.892466167581647,
+      3.0089034972215045
+     ],
+     "lanczos_check_relerr": 1.7557927469729646e-13
+    },
+    {
+     "n_cal": 40,
+     "ratio": 2.207994642238272,
+     "ci": [
+      1.8532924298711053,
+      2.9322003502551124
+     ],
+     "lanczos_check_relerr": 1.7557927469729646e-13
+    },
+    {
+     "n_cal": 80,
+     "ratio": 2.1881959548473713,
+     "ci": [
+      1.9357490682457146,
+      2.827484314986852
+     ],
+     "lanczos_check_relerr": 1.751802308911663e-13
+    }
+   ]
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "results": [
+    {
+     "n_cal": 20,
+     "ratio": 2.667479175182605,
+     "ci": [
+      2.089097332075691,
+      3.773424148626035
+     ],
+     "lanczos_check_relerr": 2.86885367079242e-15
+    },
+    {
+     "n_cal": 40,
+     "ratio": 2.6224729782999354,
+     "ci": [
+      2.0419837010358894,
+      3.4175521246061566
+     ],
+     "lanczos_check_relerr": 3.4836080288193653e-15
+    },
+    {
+     "n_cal": 80,
+     "ratio": 2.5253331361732596,
+     "ci": [
+      2.0736750364733068,
+      3.298170277627312
+     ],
+     "lanczos_check_relerr": 2.663935551450105e-15
+    }
+   ]
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "results": [
+    {
+     "n_cal": 20,
+     "ratio": 1.7536799914104388,
+     "ci": [
+      1.4348276452307787,
+      2.139360098085051
+     ],
+     "lanczos_check_relerr": 1.259518735573585e-15
+    },
+    {
+     "n_cal": 40,
+     "ratio": 1.5848694066851015,
+     "ci": [
+      1.3756455685868934,
+      1.9804747851913616
+     ],
+     "lanczos_check_relerr": 1.259518735573585e-15
+    },
+    {
+     "n_cal": 80,
+     "ratio": 1.5847208523856562,
+     "ci": [
+      1.3860392948300795,
+      1.9949904064440922
+     ],
+     "lanczos_check_relerr": 1.4169585775202827e-15
+    }
+   ]
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "results": [
+    {
+     "n_cal": 20,
+     "ratio": 1.5345260079415728,
+     "ci": [
+      1.3891313790571709,
+      2.0743581805840647
+     ],
+     "lanczos_check_relerr": 4.245407776896851e-11
+    },
+    {
+     "n_cal": 40,
+     "ratio": 1.6621466170161268,
+     "ci": [
+      1.4200472921159881,
+      2.0365754025922316
+     ],
+     "lanczos_check_relerr": 1.0006348461021233e-11
+    },
+    {
+     "n_cal": 80,
+     "ratio": 1.7289097895232952,
+     "ci": [
+      1.4188012564888848,
+      1.958356492137825
+     ],
+     "lanczos_check_relerr": 1.7886576710935606e-11
+    }
+   ]
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "results": [
+    {
+     "n_cal": 20,
+     "ratio": 2.1365582921763204,
+     "ci": [
+      1.6078427062150489,
+      2.5172379299203946
+     ],
+     "lanczos_check_relerr": 9.570072291046102e-16
+    },
+    {
+     "n_cal": 40,
+     "ratio": 1.7246320462099733,
+     "ci": [
+      1.5097136289583402,
+      2.1570092212918133
+     ],
+     "lanczos_check_relerr": 1.4355108436569146e-15
+    },
+    {
+     "n_cal": 80,
+     "ratio": 1.735597176220853,
+     "ci": [
+      1.5329644266018145,
+      2.086705997269314
+     ],
+     "lanczos_check_relerr": 1.4567527310881955e-15
+    }
+   ]
+  }
+ ],
+ "cells": [
+  {
+   "name": "Cora-all",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 20,
+   "ratio": 2.4384338524125537,
+   "ci": [
+    2.0754002947475114,
+    3.1981644951793986
+   ],
+   "lanczos_check_relerr": 1.1456257499679111e-15
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 40,
+   "ratio": 2.3454054415441896,
+   "ci": [
+    2.0599088687143627,
+    3.0294419131086108
+   ],
+   "lanczos_check_relerr": 1.8866326081226136e-15
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 80,
+   "ratio": 2.5199825078869535,
+   "ci": [
+    1.985652804761249,
+    3.1474383252224376
+   ],
+   "lanczos_check_relerr": 1.8866326081226136e-15
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 20,
+   "ratio": 2.211038337387745,
+   "ci": [
+    1.892466167581647,
+    3.0089034972215045
+   ],
+   "lanczos_check_relerr": 1.7557927469729646e-13
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 40,
+   "ratio": 2.207994642238272,
+   "ci": [
+    1.8532924298711053,
+    2.9322003502551124
+   ],
+   "lanczos_check_relerr": 1.7557927469729646e-13
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 80,
+   "ratio": 2.1881959548473713,
+   "ci": [
+    1.9357490682457146,
+    2.827484314986852
+   ],
+   "lanczos_check_relerr": 1.751802308911663e-13
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 20,
+   "ratio": 2.667479175182605,
+   "ci": [
+    2.089097332075691,
+    3.773424148626035
+   ],
+   "lanczos_check_relerr": 2.86885367079242e-15
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 40,
+   "ratio": 2.6224729782999354,
+   "ci": [
+    2.0419837010358894,
+    3.4175521246061566
+   ],
+   "lanczos_check_relerr": 3.4836080288193653e-15
+  },
+  {
+   "name": "Cora-all",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 80,
+   "ratio": 2.5253331361732596,
+   "ci": [
+    2.0736750364733068,
+    3.298170277627312
+   ],
+   "lanczos_check_relerr": 2.663935551450105e-15
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 20,
+   "ratio": 1.7536799914104388,
+   "ci": [
+    1.4348276452307787,
+    2.139360098085051
+   ],
+   "lanczos_check_relerr": 1.259518735573585e-15
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 40,
+   "ratio": 1.5848694066851015,
+   "ci": [
+    1.3756455685868934,
+    1.9804747851913616
+   ],
+   "lanczos_check_relerr": 1.259518735573585e-15
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 80,
+   "ratio": 1.5847208523856562,
+   "ci": [
+    1.3860392948300795,
+    1.9949904064440922
+   ],
+   "lanczos_check_relerr": 1.4169585775202827e-15
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 20,
+   "ratio": 1.5345260079415728,
+   "ci": [
+    1.3891313790571709,
+    2.0743581805840647
+   ],
+   "lanczos_check_relerr": 4.245407776896851e-11
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 40,
+   "ratio": 1.6621466170161268,
+   "ci": [
+    1.4200472921159881,
+    2.0365754025922316
+   ],
+   "lanczos_check_relerr": 1.0006348461021233e-11
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 80,
+   "ratio": 1.7289097895232952,
+   "ci": [
+    1.4188012564888848,
+    1.958356492137825
+   ],
+   "lanczos_check_relerr": 1.7886576710935606e-11
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 20,
+   "ratio": 2.1365582921763204,
+   "ci": [
+    1.6078427062150489,
+    2.5172379299203946
+   ],
+   "lanczos_check_relerr": 9.570072291046102e-16
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 40,
+   "ratio": 1.7246320462099733,
+   "ci": [
+    1.5097136289583402,
+    2.1570092212918133
+   ],
+   "lanczos_check_relerr": 1.4355108436569146e-15
+  },
+  {
+   "name": "Cora-tri",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 80,
+   "ratio": 1.735597176220853,
+   "ci": [
+    1.5329644266018145,
+    2.086705997269314
+   ],
+   "lanczos_check_relerr": 1.4567527310881955e-15
+  },
+  {
+   "name": "DBLP-all",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 20,
+   "ratio": 1.8239058681081395,
+   "ci": [
+    1.5743237499594427,
+    2.187903296240797
+   ],
+   "lanczos_check_relerr": 6.675966968825868e-12
+  },
+  {
+   "name": "DBLP-all",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 20,
+   "ratio": 1.763938254262153,
+   "ci": [
+    1.5461923059843352,
+    2.093252614017948
+   ],
+   "lanczos_check_relerr": 4.203366978716351e-11
+  },
+  {
+   "name": "DBLP-all",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 20,
+   "ratio": 2.147436871264578,
+   "ci": [
+    1.786136806507185,
+    2.4398165078289344
+   ],
+   "lanczos_check_relerr": 2.5077978909180048e-15
+  },
+  {
+   "name": "DBLP-tri",
+   "batch": "batch0",
+   "cal_seed": 33000,
+   "eval_seed": 36000,
+   "boot_seed_base": 3000,
+   "n_cal": 20,
+   "ratio": 1.6705688676693522,
+   "ci": [
+    1.3691207538972514,
+    2.1682274602905585
+   ],
+   "lanczos_check_relerr": 4.013406607050764e-09
+  },
+  {
+   "name": "DBLP-tri",
+   "batch": "batch1",
+   "cal_seed": 41000,
+   "eval_seed": 44000,
+   "boot_seed_base": 4000,
+   "n_cal": 20,
+   "ratio": 1.3771315210949906,
+   "ci": [
+    1.118601921021183,
+    1.7796498072171445
+   ],
+   "lanczos_check_relerr": 1.4952502225273897e-07
+  },
+  {
+   "name": "DBLP-tri",
+   "batch": "batch2",
+   "cal_seed": 49000,
+   "eval_seed": 52000,
+   "boot_seed_base": 5000,
+   "n_cal": 20,
+   "ratio": 1.276627946060253,
+   "ci": [
+    1.0162857886569532,
+    1.7100880606582243
+   ],
+   "lanczos_check_relerr": 2.5444444329287763e-08
+  }
+ ]
+}

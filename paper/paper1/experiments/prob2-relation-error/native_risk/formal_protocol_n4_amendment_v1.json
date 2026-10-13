@@ -1,0 +1,41 @@
+{
+  "amendment_id": "paper1-native-risk-n4-execution-20261012-v1",
+  "status": "frozen; N4 execution authorized",
+  "authorized_by": "User instruction: ok开始N4",
+  "authorized_at": "2026-10-12",
+  "parent_protocol": "formal_protocol_n4.json",
+  "parent_protocol_sha256": "5020dca74d038ab990979c2c4fa65d0c165a782690790d7f8ecf05ca89fe8652",
+  "scope": "Execute the already frozen N4 calibration, precommit certificate, native validation, and secondary controlled-boundary validation. No manuscript edits or new sampling cells.",
+  "design_changes": [],
+  "implementation_clarifications": [
+    "The majority-vs-rest binary probability rows use the existing native_protocol coding: majority nodes have class-1 probability 1-epsilon; other nodes have class-1 probability epsilon.",
+    "The existing family_A_amplification generator leaves P[:,0] at zero for non-hub nodes; the N4 adapter sets P[:,0]=1-P[:,1], matching the documented binary probability law and making every row stochastic. The family generator and its legacy results are not modified.",
+    "For each positive-probability group state, the frozen witness is a unit coordinate vector. Among nodes with nonzero conditional-mean diagonal, choose minimum native hypergraph degree, then largest absolute diagonal, then smallest node id. If all diagonal entries vanish, choose the minimum-degree node in the conditional-mean support, then smallest id; if the mean is zero, choose the globally minimum-degree node. This deterministic sparse direction is selected before formal draws and uses the protocol's explicit allowance for any deterministic nonzero direction rather than the preferred eigenvector, because exact moments for dense Ritz vectors made N4 preparation computationally infeasible. It can only weaken, not invalidate, the one-direction lower certificate.",
+    "Exact directional moment evaluation now skips edge slots whose quadratic-form weight is exactly zero. This is an algebraic sparsity reduction; the exact moments, shared-slot treatment, and certificate formula are unchanged.",
+    "Each numerical failure retries the identical indicators once, with a deterministic coordinate witness. A second failure remains an ambiguous interval [0, float64_max]; no redraw or deletion is allowed."
+  ],
+  "runner_code_sha256": {
+    "n4_runner.py": "edf57b3b57f0d77546d22b130d8787bcc047815e77af0c7f6bfde918e43719a6",
+    "verified_norm.py": "0665046e10b70b12925907ffc462f7f0df9f5fb0f44cf8a772877bb64bbc10b0",
+    "exact_certificate.py": "e2e280f0f529892741ead86af5d5744f0fba1506c025b103123a3e6fc1f15a0f",
+    "conditional_moments.py": "05e1506a716d89c21019a1df4f7a23656c034b8a91c606bcbaf86f1b146082a1",
+    "native_protocol.py": "6c536a788a939ec31958f41b267b80e60772969cb98643d3b36bd039b071f55e",
+    "finite_sample.py": "42a9a65c97dcf087d9060f2848e9c343e9ae183b65a187a345bf9fe9c4c5cc4f",
+    "influence_families.py": "2799a8e21082fabb695a577bc811f28b28cb7f17e75858dd3487295daf3b800c"
+  },
+  "verification_before_sampling": {
+    "native_risk_tests": "42 passed",
+    "one_draw_per_arm_per_cell_smoke": "26 enclosures; no failures; numerical preflight seed namespace only",
+    "independent_enclosure_review": "completed; identified public CSR-duplicate loophole, solver fallback gap, and empty-operator edge case; all repaired and regression-tested",
+    "seed_plan": "55 distinct streams validated by runner",
+    "paper_files_modified": false
+  },
+  "formal_order": [
+    "prepare and hash all deterministic directions before sampling",
+    "run all B calibration streams and lock thresholds and exact directional Cantelli certificates",
+    "save the precommit certificate before opening any A/B validation stream",
+    "run all native A/B validation streams and controlled-boundary streams",
+    "report every registered cell, including ambiguous and failed draws"
+  ],
+  "arithmetic_assumptions": "IEEE-754 binary64 round-to-nearest operations and gradual underflow as documented in notes/native-risk/norm_enclosure.md; a runtime probe is not treated as a proof of vendor BLAS implementation behavior."
+}

@@ -1,0 +1,59 @@
+{
+  "status": "completed",
+  "estimand": "equal-weight mean of three batch-specific conditional rates",
+  "prospective_registration": false,
+  "seed_base": 20271021,
+  "batches": [
+    {
+      "batch": 1,
+      "seed": 20271021,
+      "alpha": 0.05,
+      "reference_n": 200,
+      "calibration_n": 500,
+      "evaluation_n": 1000,
+      "threshold": 0.7898157911233732,
+      "exceedance_count": 69,
+      "exceedance_rate": 0.069,
+      "cp95_lower": 0.05407933579325631,
+      "cp95_upper": 0.08651510934571154,
+      "elapsed_seconds": 15.54
+    },
+    {
+      "batch": 2,
+      "seed": 20271038,
+      "alpha": 0.05,
+      "reference_n": 200,
+      "calibration_n": 500,
+      "evaluation_n": 1000,
+      "threshold": 0.7638149589817063,
+      "exceedance_count": 33,
+      "exceedance_rate": 0.033,
+      "cp95_lower": 0.022822383349459557,
+      "cp95_upper": 0.046033981817023194,
+      "elapsed_seconds": 15.7
+    },
+    {
+      "batch": 3,
+      "seed": 20271055,
+      "alpha": 0.05,
+      "reference_n": 200,
+      "calibration_n": 500,
+      "evaluation_n": 1000,
+      "threshold": 0.781741508176359,
+      "exceedance_count": 49,
+      "exceedance_rate": 0.049,
+      "cp95_lower": 0.03646705917204783,
+      "cp95_upper": 0.06426605314016964,
+      "elapsed_seconds": 18.8
+    }
+  ],
+  "aggregate_count": 151,
+  "aggregate_n": 3000,
+  "aggregate_rate": 0.050333333333333334,
+  "batch_cp95_endpoint_envelope": [
+    0.022822383349459557,
+    0.08651510934571154
+  ],
+  "elapsed_seconds": 50.05,
+  "csv": "cora_calibration_batches_20271021.csv"
+}

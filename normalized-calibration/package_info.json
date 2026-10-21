@@ -1,0 +1,28 @@
+{
+  "package": "paper1-visual-alarm-20261021",
+  "status": "code and reproducibility release; manuscript not submitted by this release",
+  "repository": "https://github.com/pengshen1212/hypergraph-spectral-fluctuations",
+  "repository_directory": "normalized-calibration",
+  "mainline": "normalized influence -> law-specific calibration -> whole-run mismatch diagnosis",
+  "manuscript": "paper/paper1/main.pdf",
+  "pages": 27,
+  "third_party_data_included": false,
+  "training_rerun": true,
+  "visual_validation": "658 formal runs, one 30/99/200 batch per dataset; cross-domain calibration and internal threshold-sensitivity analysis; no new training during revision",
+  "visual_run_cache_included": false,
+  "analysis_from_cache_rebuildable_from_package": false,
+  "cache_manifest": "experiments/spectral-risk-calibration/results/visual_alarm_v1/cache_manifest.json",
+  "scientific_limits": [
+    "historical DBLP spectral-norm accuracy not independently certified",
+    "Cora L1 rerun is descriptive and not prospectively registered",
+    "no new prospective L3 confirmation on Cora/DBLP",
+    "visual L3 conditional FPR was 14.0% on NTU at 99 calibration runs",
+    "visual threshold resplit and PAC diagnostics are internal/exploratory",
+    "equal-FPR ROC is retrospective and in-sample",
+    "fixed refinement is structurally class-preserving, not an efficacy test",
+    "visual full three-batch confirmation budget was not run",
+    "visual fixed fallback is inert because lambda=0",
+    "auxiliary v2 scientific experiments not rerun"
+  ],
+  "verification": "paper/paper1/notes/calibration-integration/verification.json"
+}

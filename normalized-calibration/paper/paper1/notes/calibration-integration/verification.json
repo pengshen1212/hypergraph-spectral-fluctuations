@@ -1,0 +1,498 @@
+{
+  "status": "PASS",
+  "scope": "manuscript assembly and saved-evidence audit; visual calibration validation integrated; no predictor retraining during packaging",
+  "original_blocks_preserved": 19,
+  "original_figures_preserved": 1,
+  "block_types": {
+    "corollary": 1,
+    "lemma": 1,
+    "proof": 6,
+    "proposition": 1,
+    "table": 7,
+    "theorem": 3
+  },
+  "main_tables": 5,
+  "total_tables": 12,
+  "citations": 17,
+  "source_labels": 62,
+  "abstract_word_count": 198,
+  "pdf_pages": 27,
+  "preserved_result_files": 19,
+  "protected_paper2_and_submission_files": 4,
+  "latex_unresolved_or_overflow": [],
+  "main_source_sha256": "5de32470753964cf0868ca24078a85469cf3c4f0e5c21e142217ab1d6f573090",
+  "expanded_source_sha256": "c179e26762dff033f386e513e5633da51c8de092ce7b9e7a8456e82cea1ed492",
+  "source_tree_hashes": {
+    "main.tex": "5de32470753964cf0868ca24078a85469cf3c4f0e5c21e142217ab1d6f573090",
+    "references.bib": "6cf61c304cdcdee5f7a1e12f81f91d74ac270d3e9187084474615c6f9f8ccfa8",
+    "sections\\calibration-appendix.tex": "f3c13bcc61a2cdd47521a24d6bfb6f55664def33fff78169850614e6b3841360",
+    "sections\\calibration-main.tex": "6437d7a551d917c096b49f1e3abc1043b98f484d1579d6ff8e54e6c23e248f3e",
+    "tables\\cora-rerun.tex": "0c9368499a358c3ddb07cf8ef07a17971e8121e710390d3dcfdecd35547275bb",
+    "tables\\node-calibration.tex": "f948f53a456efef17b02b571bef57b045e5481c03548fe84e3c19838bf4e69e4",
+    "tables\\normalization.tex": "97abc015278396857a64bab6b0adc157e6dc9e9390be70883ce74d0a5053a639",
+    "tables\\run-calibration.tex": "6ef1adf48e7309a956c370d86768f9bb1e49b0d028ff9b1ca3ceb1effcc096b5",
+    "tables\\visual-alarm.tex": "82f1270dec8090774dfb1ad75a7a6397fb949edae969468eed6e77792c2ad93a"
+  },
+  "pdf_sha256": "f2f79c4236eb2f7b7b0de6d8a0a34db8d8d2cdc25e822647070ef9922c1affb7",
+  "pages": [
+    {
+      "page": 1,
+      "words": 364,
+      "first_lines": [
+        "Calibrating Normalized Hypergraph Spectral Risk under Node-Induced",
+        "Dependence",
+        "Shen Penga,∗, Rui Wanga, Yunchao Hea"
+      ],
+      "last_lines": [
+        "dence induced by a shared training run. These distinctions concern the same question: how does",
+        "∗Corresponding author.",
+        "Email address: shen.peng23@student.xjtlu.edu.cn (Shen Peng)"
+      ],
+      "content_bottom": 719.1435546875,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 2,
+      "words": 466,
+      "first_lines": [
+        "node-induced dependence change normalized spectral risk, and which prediction law must calibration",
+        "preserve?",
+        "We answer this question by connecting normalized conditional influence, law-specific calibration,"
+      ],
+      "last_lines": [
+        "S(a) = D(a)−1/2A(a)D(a)−1/2.",
+        "(1)",
+        "2"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 3,
+      "words": 368,
+      "first_lines": [
+        "The experiments use κ = 1 and unit edge weights.",
+        "Degrees are recomputed for every draw:",
+        "dv(a) = κ + P"
+      ],
+      "last_lines": [
+        "from dynamic degree recomputation, while each prediction law supplies complete relation draws to",
+        "the same normalized scoring pipeline.",
+        "3"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 4,
+      "words": 441,
+      "first_lines": [
+        "B(a)",
+        "raw relation operator",
+        "Operator comparison"
+      ],
+      "last_lines": [
+        "than interpreting a common-center difference as fluctuation alone. Local derivative channels and a",
+        "general perturbation bound are given in Appendix H as supporting analysis.",
+        "4"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 5,
+      "words": 460,
+      "first_lines": [
+        "4. Calibration under a Stated Prediction Law",
+        "4.1. Reference, calibration, and evaluation",
+        "The input is a fixed candidate hypergraph, its prediction-to-relation map, a specified prediction"
+      ],
+      "last_lines": [
+        "have a common success probability. We report batch-specific intervals or their explicitly labeled",
+        "endpoint envelope.",
+        "5"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 6,
+      "words": 496,
+      "first_lines": [
+        "5. Experiments",
+        "The main experiments ask three consecutive questions: what normalization changes, whether the",
+        "chosen law supports calibration, and whether a fitted node product reproduces complete training"
+      ],
+      "last_lines": [
+        "influence estimates used selected high-impact and background nodes; no full-native energy closure is",
+        "claimed.",
+        "6"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 7,
+      "words": 456,
+      "first_lines": [
+        "5.2. Model-law calibration and separate-seed reanalysis",
+        "Preserving node-induced relations sharply changed calibration under known node laws (Table 2).",
+        "At target α = 5%, native node-calibrated batch means ranged from 3.9% to 5.9%, while independent-"
+      ],
+      "last_lines": [
+        "The product of empirical node frequencies produced zero observed exceedances in every displayed",
+        "L3 setting (Table 4). Whole-run thresholds instead produced nonzero exceedances with broad",
+        "7"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 8,
+      "words": 537,
+      "first_lines": [
+        "conditional intervals. In the two fixed-training-set GCN settings, the run-pool counts at 5% were 1/60",
+        "on Cora and 1/40 on DBLP; the corresponding node-product counts were zero. These observations",
+        "support using complete runs as the practical calibration baseline for the tested mechanisms. They"
+      ],
+      "last_lines": [
+        "Its frozen threshold yielded 28/200 (14.0%) exceedances on NTU and 11/200 (5.5%) on ModelNet.",
+        "Proposition 4.1 averages over the calibration sample and the next exchangeable run; it does not",
+        "8"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 9,
+      "words": 432,
+      "first_lines": [
+        "Dataset",
+        "Clean exceedance (%; 95% CP interval)",
+        "Resplit"
+      ],
+      "last_lines": [
+        "the same evaluation runs this gives 19/200 (9.5%) on NTU and 3/200 (1.5%) on ModelNet. These",
+        "realized rates remain distinct from the rule’s probability statement over calibration samples. The",
+        "9"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 10,
+      "words": 483,
+      "first_lines": [
+        "tolerance comparison reuses the observed evaluation data; the original thresholds and counts are",
+        "retained. Appendix H.2 gives the criterion, numerical sensitivity, and secondary feature-perturbation",
+        "comparisons."
+      ],
+      "last_lines": [
+        "distinguish marginal validity from the conditional behavior of a frozen threshold. These results",
+        "guide the construction and interpretation of upstream operator-deviation alarms.",
+        "10"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 11,
+      "words": 284,
+      "first_lines": [
+        "Data and Code Availability",
+        "The complete source code, frozen configurations, certificates, saved measurements, and re-",
+        "producibility instructions for both the normalized calibration experiments and the raw-operator"
+      ],
+      "last_lines": [
+        "hypergraph neural networks, in: International Conference on Learning Representations, 2022.",
+        "URL https://openreview.net/forum?id=hpBTIv2uy_E",
+        "11"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 12,
+      "words": 375,
+      "first_lines": [
+        "[3] J. A. Tropp, User-friendly tail bounds for sums of random matrices, Found. Comput. Math.",
+        "12 (4) (2012) 389–434. doi:10.1007/s10208-011-9099-z.",
+        "[4] D. Paulin, L. Mackey, J. A. Tropp, Efron–Stein inequalities for random matrices, Ann. Probab."
+      ],
+      "last_lines": [
+        "in: International Conference on Learning Representations, 2023.",
+        "URL https://arxiv.org/abs/2207.06680",
+        "12"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 13,
+      "words": 30,
+      "first_lines": [
+        "[17] I. Amburg, N. Veldt, A. R. Benson, Clustering in graphs and hypergraphs with categorical",
+        "edge labels, in: Proceedings of The Web Conference 2020, 2020, pp. 706–717. doi:10.1145/",
+        "3366423.3380152."
+      ],
+      "last_lines": [
+        "edge labels, in: Proceedings of The Web Conference 2020, 2020, pp. 706–717. doi:10.1145/",
+        "3366423.3380152.",
+        "13"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 14,
+      "words": 416,
+      "first_lines": [
+        "Appendix A.",
+        "Raw-Operator Model and Mechanism",
+        "The following raw-operator theory supplies the mechanism foundation. Its matched expectations"
+      ],
+      "last_lines": [
+        "\u0002(1 −p)r−1 −pr−1\u0003 for every member of a homogeneous edge. The general influence theory",
+        "allows heterogeneous categorical laws.",
+        "14"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 15,
+      "words": 482,
+      "first_lines": [
+        "A.1.",
+        "Node-Influence Decomposition",
+        "The decomposition, its second-moment identity, and the variance lower bound form one chain"
+      ],
+      "last_lines": [
+        "i",
+        "(1 −mi) −η −η2,",
+        "15"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 16,
+      "words": 532,
+      "first_lines": [
+        "with",
+        "Linf",
+        "A = min"
+      ],
+      "last_lines": [
+        "pairs sharing multiple nodes, these terms can retain pair covariance despite flat single-node profiles.",
+        "Norm separation is certified when coherent drift exceeds the remainder and co-occurrence penalties.",
+        "16"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 17,
+      "words": 574,
+      "first_lines": [
+        "A.2.3.",
+        "Conditional influence and tail-risk certification",
+        "The same conditioning idea permits a native-structure risk judgment without the overlap"
+      ],
+      "last_lines": [
+        "frequency is 55.5% at this endpoint. Thus fixed star topology admits both amplification and",
+        "cancellation, while certification also depends on overlap structure.",
+        "17"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 18,
+      "words": 486,
+      "first_lines": [
+        "d",
+        "Φ",
+        "LA"
+      ],
+      "last_lines": [
+        "Empirical amplification also appears with trained predictors: the node-driven arm has larger",
+        "mean centered norms in every displayed setting (Table B.4). Real predictions vary with training",
+        "18"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 19,
+      "words": 436,
+      "first_lines": [
+        "Graph",
+        "Error law",
+        "ε"
+      ],
+      "last_lines": [
+        "permits a unique reference subspace that may be perturbation-sensitive. With k fixed, the subspace",
+        "readout separates the arms on Cora and remains unresolved on DBLP.",
+        "19"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 20,
+      "words": 566,
+      "first_lines": [
+        "Appendix C.",
+        "Proofs of the Influence Theorems",
+        "Proof of Theorem A.1. Fix u and z. Given ˆyu = z, the events {ae = 1} for e ∋u depend on"
+      ],
+      "last_lines": [
+        "so D = ±(1 −mi)Φi and |D| ≥(1 −mi)B ≥minj(1 −mj)B. First-order rest. Every other hub",
+        "has ψuj(xi) ≡0 (no edge contains both ui and uj), so S runs over non-hub nodes only: their",
+        "20"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 21,
+      "words": 639,
+      "first_lines": [
+        "ψu are functions of the independent ˆyu, whose laws the conditioning does not touch, and each",
+        "is centered (Theorem A.1), bounded |ψu| ≤|Φu(xi)| ≤ϕ−",
+        "max by Lemma A.3, with variance sum"
+      ],
+      "last_lines": [
+        "\u0001/r −¯κ on the first-wrong-center",
+        "event (conditional probability ≥1 −η −η2), and if minv(LA −Γv) > UB then Pr{ eβA > eβB} ≥",
+        "21"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 22,
+      "words": 591,
+      "first_lines": [
+        "1 −(1 −p)t −η −η2 −δB. The center-local refinement replaces oe by the explicit witness entries be =",
+        "21{v ∈e} + 2o2",
+        "e/S2"
+      ],
+      "last_lines": [
+        "streams; threshold-dependent bounds were saved before validation. Protocols, raw intervals, and",
+        "the unsuccessful original experiment remain in notes/native-risk/, indexed by the README.",
+        "22"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 23,
+      "words": 514,
+      "first_lines": [
+        "Earlier native variance diagnostics. Under binary majority-versus-rest flips at p = 0.05/0.15, the",
+        "maximum-degree witness is chosen from structure only. Cora’s witness (degree 145) carries 94.7%",
+        "of V1 at its coordinate direction; DBLP’s top two nodes share the same edges and carry 98%."
+      ],
+      "last_lines": [
+        "DBLP-GCN configuration exists in the saved record (ratio 2.15) at near-chance accuracy (0.31) and",
+        "is not tabled.",
+        "23"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 24,
+      "words": 447,
+      "first_lines": [
+        "Controlled-family and native protocol. Family A uses two-sided concentration constants and realized",
+        "co-occurrences, first certifying at d = 250. The 30-draw samples describe observed norm fluctuations.",
+        "The structure and native experiments run under the frozen protocol upgrade/protocol.json (hash"
+      ],
+      "last_lines": [
+        "0",
+        ".",
+        "24"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 25,
+      "words": 525,
+      "first_lines": [
+        "Proof. Insert D−1/2A′D−1/2 and split the remaining normalization difference into a left and a right",
+        "factor. The scalar mean-value bound |x−1/2 −y−1/2| ≤|x −y|/(2d3/2",
+        "0"
+      ],
+      "last_lines": [
+        "Pr",
+        "C {r(C) > α | reference} ≤δ",
+        "25"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 26,
+      "words": 393,
+      "first_lines": [
+        "[12]. This high-probability statement requires the independent-run population model, rather than",
+        "only the finite exchangeability used for the marginal rank argument.",
+        "At α = δ = .05, the smallest admissible index is 98 for M = 99 (binomial tail 0.039), 195 for"
+      ],
+      "last_lines": [
+        "do not themselves imply an isotropic operator perturbation. These measurements do not establish",
+        "an advantage for T under localized or coherent changes, which would require a separate comparison.",
+        "26"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    },
+    {
+      "page": 27,
+      "words": 108,
+      "first_lines": [
+        "0.0",
+        "0.1",
+        "0.2"
+      ],
+      "last_lines": [
+        "ranking rather than calibrated deployment rules. The displayed interval is the low-false-positive-rate portion of each",
+        "curve; AUC values refer to the full curve.",
+        "27"
+      ],
+      "content_bottom": 752.2847900390625,
+      "page_width": 612.0,
+      "page_height": 792.0
+    }
+  ]
+}

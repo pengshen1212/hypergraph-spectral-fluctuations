@@ -1,0 +1,11 @@
+dataset,sigma,alarm,tp,fp,fn,tn,detection_rate,false_alarm_rate,precision
+modelnet40,0.0,spectral,0,11,0,189,nan,0.055,0.0
+modelnet40,0.0,entropy,0,9,0,191,nan,0.045,0.0
+modelnet40,0.1,spectral,0,14,0,186,nan,0.07,0.0
+modelnet40,0.1,entropy,0,10,0,190,nan,0.05,0.0
+modelnet40,0.25,spectral,0,33,0,167,nan,0.165,0.0
+modelnet40,0.25,entropy,0,14,0,186,nan,0.07,0.0
+modelnet40,0.5,spectral,0,68,0,132,nan,0.34,0.0
+modelnet40,0.5,entropy,0,57,0,143,nan,0.285,0.0
+modelnet40,1.0,spectral,0,125,0,75,nan,0.625,0.0
+modelnet40,1.0,entropy,0,200,0,0,nan,1.0,0.0

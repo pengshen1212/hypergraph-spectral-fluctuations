@@ -1,0 +1,70 @@
+{
+  "check1_rate_recovery": {
+    "mc_draws": 200000,
+    "max_abs_rate_dev": 0.0012599999999999834,
+    "tol": 0.005,
+    "pass": true
+  },
+  "check2_dynamic_degree": {
+    "max_abs_degree_dev": 4.440892098500626e-16,
+    "states_enumerated": 64,
+    "pass": true
+  },
+  "check3_influence_decomposition": {
+    "E_Fu_maxabs": 3.441691376337985e-16,
+    "E[R|Y_u=z]_maxabs": 2.830851872359653e-15,
+    "energy_X": 0.29805589520235776,
+    "energy_first_order": 0.07786166260996183,
+    "energy_residual": 0.22019423259239593,
+    "energy_identity_gap_frac": 0.0,
+    "cross_FuFv_abs": 1.5516552319384877e-18,
+    "cross_FuR_abs": 1.6241901407776635e-16,
+    "pass": true
+  },
+  "check4_mean_separation": {
+    "raw_EB_gap": 1.1102230246251565e-16,
+    "fixed_degree_mean_gap": 1.1102230246251565e-15,
+    "dynamic_mean_shift_spectral": 0.04602545041637438,
+    "pass": true
+  },
+  "check5_dense_vs_lanczos": {
+    "n": 290,
+    "exact": 0.04631250709634402,
+    "lanczos": 0.046312507096344074,
+    "residual": 2.1783951014434842e-11,
+    "relerr": 1.1986211654613698e-15,
+    "pass": true
+  },
+  "check6_rank_threshold": {
+    "exchange": [
+      {
+        "alpha": 0.01,
+        "mean_exceed": 0.0,
+        "cp95": [
+          0.0,
+          0.08809730287880237
+        ]
+      },
+      {
+        "alpha": 0.05,
+        "mean_exceed": 0.045,
+        "cp95": [
+          0.006113646599350841,
+          0.16919686395941763
+        ]
+      },
+      {
+        "alpha": 0.1,
+        "mean_exceed": 0.061125,
+        "cp95": [
+          0.006113646599350841,
+          0.16919686395941763
+        ]
+      }
+    ],
+    "k_gt_M_returns_inf": true,
+    "tie_threshold": 0.0,
+    "pass": true
+  },
+  "all_pass": true
+}

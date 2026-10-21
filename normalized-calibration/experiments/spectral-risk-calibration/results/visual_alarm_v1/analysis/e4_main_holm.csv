@@ -1,0 +1,3 @@
+dataset,sigma,comparison,estimate,ci_lo,ci_hi,p_raw,p_holm
+ntu2012,0.5,spec_minus_refine,0.0,0.0,0.0,1.0,1.0
+modelnet40,0.5,spec_minus_refine,0.0,0.0,0.0,1.0,1.0

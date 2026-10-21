@@ -1,0 +1,13 @@
+dataset,sigma,comparison,estimate,ci_lo,ci_hi,p_signflip,n_runs,fallback_fraction_spectral,fallback_fraction_entropy
+modelnet40,0.0,spec_minus_refine,0.0,0.0,0.0,1.0,200,0.055,0.045
+modelnet40,0.0,spec_minus_base,0.0,0.0,0.0,1.0,200,0.055,0.045
+modelnet40,0.0,ent_minus_refine,0.0,0.0,0.0,1.0,200,0.055,0.045
+modelnet40,0.0,refine_minus_base,0.0,0.0,0.0,1.0,200,0.055,0.045
+modelnet40,0.5,spec_minus_refine,0.0,0.0,0.0,1.0,200,0.34,0.285
+modelnet40,0.5,spec_minus_base,0.0,0.0,0.0,1.0,200,0.34,0.285
+modelnet40,0.5,ent_minus_refine,0.0,0.0,0.0,1.0,200,0.34,0.285
+modelnet40,0.5,refine_minus_base,0.0,0.0,0.0,1.0,200,0.34,0.285
+modelnet40,1.0,spec_minus_refine,0.0,0.0,0.0,1.0,200,0.625,1.0
+modelnet40,1.0,spec_minus_base,0.0,0.0,0.0,1.0,200,0.625,1.0
+modelnet40,1.0,ent_minus_refine,0.0,0.0,0.0,1.0,200,0.625,1.0
+modelnet40,1.0,refine_minus_base,0.0,0.0,0.0,1.0,200,0.625,1.0

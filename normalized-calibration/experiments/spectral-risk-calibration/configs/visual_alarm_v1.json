@@ -1,0 +1,126 @@
+{
+  "protocol_version": "visual_alarm_v1",
+  "material_date": "2026-10-21",
+  "datasets": {
+    "ntu2012": {
+      "content": "data/vision-hypergraphs/NTU2012.content",
+      "edges": "data/vision-hypergraphs/NTU2012.edges",
+      "content_sha256": "f59d6f62c94d1ef4861a95ddcd76c24411d7deb6fd4f2777e40ea83563630d2c",
+      "edges_sha256": "3de34493d0e37b2d1b7d5df35e0d9246e4d3dff0de39ec4fa7f16abdfacee8b8",
+      "n_objects": 2012,
+      "n_classes": 67,
+      "label_offset": 0,
+      "feature_dim": 100,
+      "edge_size": 5,
+      "dataset_index": 1
+    },
+    "modelnet40": {
+      "content": "data/vision-hypergraphs/ModelNet40.content",
+      "edges": "data/vision-hypergraphs/ModelNet40.edges",
+      "content_sha256": "51565c050db09532ea16457bb04958aa5dec8acaab1f9009df47771ce76b8604",
+      "edges_sha256": "e6e0ae37a39369b4a55a230554148e0187c58ee47f6e650b62f5436c6eac4048",
+      "n_objects": 12311,
+      "n_classes": 40,
+      "label_offset": 1,
+      "feature_dim": 100,
+      "edge_size": 5,
+      "dataset_index": 2
+    }
+  },
+  "split": {
+    "seed": 202610210,
+    "fractions": [0.6, 0.2, 0.2]
+  },
+  "predictor": {
+    "hidden": 64,
+    "epochs": null,
+    "epoch_candidates": [100, 200, 400],
+    "learning_rate_candidates": [0.01, 0.003, 0.001],
+    "lr": 0.01,
+    "weight_decay": 0.0005,
+    "dropout": 0.0,
+    "beta1": 0.9,
+    "beta2": 0.999,
+    "adam_eps": 1e-08,
+    "val_every": 5,
+    "init": "glorot_normal",
+    "batch": "full",
+    "grad_clip": 0.0
+  },
+  "monitoring": {
+    "kappa": 1.0,
+    "alpha": 0.05,
+    "alpha_sensitivity": [0.1],
+    "alpha_grid": [0.01, 0.025, 0.05, 0.1, 0.2],
+    "score_primary": "T",
+    "score_baselines": ["T", "frob", "entropy", "active_dev"]
+  },
+  "stress": {
+    "sigmas": [0.0, 0.1, 0.25, 0.5, 1.0],
+    "primary_sigma": 0.5,
+    "secondary_sigma": 1.0,
+    "claim": "non-train objective-feature perturbation on a fixed candidate hypergraph; not raw point-cloud geometry"
+  },
+  "application": {
+    "lambda": null,
+    "lambda_candidates": [0.0, 0.25, 0.5, 0.75, 1.0],
+    "task_event_drop": 0.03,
+    "damage_event_drop": 0.01,
+    "main_sigma": 0.5,
+    "secondary_sigma": 1.0,
+    "bootstrap_reps": 10000,
+    "bootstrap_seed": 20261024,
+    "random_fallback_draws": 1000,
+    "holm_family": ["ntu2012", "modelnet40"]
+  },
+  "budgets": {
+    "dev": {
+      "runs_per_dataset": 10,
+      "batch": 0
+    },
+    "pilot": {
+      "ref": 10,
+      "cal": 19,
+      "eval": 20,
+      "batches": 1
+    },
+    "formal_full": {
+      "ref": 50,
+      "cal": 199,
+      "eval": 400,
+      "batches": 3
+    },
+    "formal_resource": {
+      "ref": 30,
+      "cal": 99,
+      "eval": 200,
+      "batches": 1
+    }
+  },
+  "budget_decision": {
+    "rule": "After both pilots and before any formal run: choose formal_full iff projected wall-clock <= 8.0 hours and projected cache <= 6.0 GB, else formal_resource. Projection uses measured medians with a 1.25 multiplier.",
+    "max_full_hours": 8.0,
+    "max_full_cache_gb": 6.0,
+    "margin": 1.25
+  },
+  "seed_base": 2026102100,
+  "noise_seed_base": 20261023,
+  "bootstrap_seed": 20261024,
+  "roles": {
+    "ref": 1,
+    "cal": 2,
+    "eval": 3,
+    "dev": 8,
+    "pilot": 9
+  },
+  "timeout_seconds_per_run": 1200,
+  "output_root": "experiments/spectral-risk-calibration/results/visual_alarm_v1",
+  "analysis": {
+    "confidence": 0.95,
+    "fpr_primary_alpha": 0.05,
+    "segments": {
+      "task_event": "test accuracy drop >= 0.03 vs the same run's clean prediction",
+      "damage_event": "always-refine test accuracy <= base - 0.01"
+    }
+  }
+}

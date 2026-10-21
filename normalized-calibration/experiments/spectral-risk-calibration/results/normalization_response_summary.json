@@ -1,0 +1,62 @@
+{
+  "familyA_coherent/fixed": {
+    "ratio_raw_S2": 2.9282318468545907,
+    "ratio_S_S2": 0.24335870521055422,
+    "ratio_R1_first_order": 1.075348908023809,
+    "ratio_J": 0.4493418624522333,
+    "ratio_true_common_base": 1.2904375605840126,
+    "canc_frac_node": 0.5329529791001102,
+    "canc_frac_edge": -0.11772026131631463,
+    "resid_frac_node": 1.1515465245840877,
+    "cos_R1_Rdeg_node": -17.818904637365193,
+    "secs": 140.7
+  },
+  "familyB_flat/gamma=0.05_cancel": {
+    "ratio_raw_S2": 1.0100541166095467,
+    "ratio_S_S2": 1.0002995223556028,
+    "ratio_R1_first_order": 1.0069570815889355,
+    "ratio_J": 1.005843974494742,
+    "ratio_true_common_base": 0.9981321001504346,
+    "canc_frac_node": -0.0710680597367157,
+    "canc_frac_edge": -0.07225334640730074,
+    "resid_frac_node": 0.9093078758949886,
+    "cos_R1_Rdeg_node": -4.466953817564151,
+    "secs": 62.4
+  },
+  "familyB_flat/gamma=0.95_max": {
+    "ratio_raw_S2": 2.277386240525575,
+    "ratio_S_S2": 0.5285471632389552,
+    "ratio_R1_first_order": 0.9484402665157324,
+    "ratio_J": 0.5286383202689791,
+    "ratio_true_common_base": 1.1821202353326143,
+    "canc_frac_node": 0.4023511780769121,
+    "canc_frac_edge": -0.07225334640730052,
+    "resid_frac_node": 1.0322749486855671,
+    "cos_R1_Rdeg_node": -9.371260804385377,
+    "secs": 65.3
+  },
+  "cora-cc/binary-eps0.05": {
+    "ratio_raw_S2": 3.2457273616950286,
+    "ratio_S_S2": 1.2372070659575303,
+    "ratio_R1_first_order": 1.3783523163594156,
+    "ratio_J": 1.3891003547445187,
+    "ratio_true_common_base": 1.2845966530329385,
+    "canc_frac_node": -0.14752756545027323,
+    "canc_frac_edge": -0.13864867467805686,
+    "resid_frac_node": 1.1456986637998594,
+    "cos_R1_Rdeg_node": -10.907371340438953,
+    "secs": 81.0
+  },
+  "dblp-ca/binary-eps0.05": {
+    "ratio_raw_S2": 2.4816192937978006,
+    "ratio_S_S2": 1.1336042485442142,
+    "ratio_R1_first_order": 1.7670930280427462,
+    "ratio_J": 1.5852942870974953,
+    "ratio_true_common_base": 1.1964545943525435,
+    "canc_frac_node": -0.007978147653753709,
+    "canc_frac_edge": -0.12357129627935581,
+    "resid_frac_node": 1.847137822796908,
+    "cos_R1_Rdeg_node": -89.13564569160094,
+    "secs": 778.3
+  }
+}

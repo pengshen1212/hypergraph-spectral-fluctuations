@@ -1,0 +1,245 @@
+{
+  "normalization_rows": 12,
+  "calibration_summaries": [
+    {
+      "graph": "cora-cc",
+      "law": "binary-eps0.05",
+      "arm": "node",
+      "rate": 0.052333333333333336,
+      "envelope_lo": 0.0373353976046618,
+      "envelope_hi": 0.07210774628325271
+    },
+    {
+      "graph": "cora-cc",
+      "law": "binary-eps0.05",
+      "arm": "edge-iid",
+      "rate": 0.995,
+      "envelope_lo": 0.9829842169301054,
+      "envelope_hi": 0.9999746825125088
+    },
+    {
+      "graph": "cora-cc",
+      "law": "binary-eps0.15",
+      "arm": "node",
+      "rate": 0.049666666666666665,
+      "envelope_lo": 0.03646705917204783,
+      "envelope_hi": 0.06651346159493485
+    },
+    {
+      "graph": "cora-cc",
+      "law": "binary-eps0.15",
+      "arm": "edge-iid",
+      "rate": 0.9773333333333333,
+      "envelope_lo": 0.9562849149937611,
+      "envelope_hi": 0.9937844744404047
+    },
+    {
+      "graph": "cora-cc",
+      "law": "hetero-0.02/0.30",
+      "arm": "node",
+      "rate": 0.05933333333333333,
+      "envelope_lo": 0.03043470626314002,
+      "envelope_hi": 0.0931084469614991
+    },
+    {
+      "graph": "cora-cc",
+      "law": "hetero-0.02/0.30",
+      "arm": "edge-iid",
+      "rate": 0.47533333333333333,
+      "envelope_lo": 0.40499237518055003,
+      "envelope_hi": 0.5493776625307845
+    },
+    {
+      "graph": "cora-cc",
+      "law": "multiclass-eps0.05",
+      "arm": "node",
+      "rate": 0.04800000000000001,
+      "envelope_lo": 0.033009625431148756,
+      "envelope_hi": 0.06539048791549364
+    },
+    {
+      "graph": "cora-cc",
+      "law": "multiclass-eps0.05",
+      "arm": "edge-iid",
+      "rate": 0.997,
+      "envelope_lo": 0.9869865767290255,
+      "envelope_hi": 0.9999746825125088
+    },
+    {
+      "graph": "cora-cc",
+      "law": "multiclass-eps0.15",
+      "arm": "node",
+      "rate": 0.055,
+      "envelope_lo": 0.0287276252858908,
+      "envelope_hi": 0.08320605046140273
+    },
+    {
+      "graph": "cora-cc",
+      "law": "multiclass-eps0.15",
+      "arm": "edge-iid",
+      "rate": 0.9899999999999999,
+      "envelope_lo": 0.9753802999029588,
+      "envelope_hi": 0.9993809000683505
+    },
+    {
+      "graph": "dblp-ca",
+      "law": "binary-eps0.05",
+      "arm": "node",
+      "rate": 0.04555555555555555,
+      "envelope_lo": 0.013807819555525978,
+      "envelope_hi": 0.09317029607198862
+    },
+    {
+      "graph": "dblp-ca",
+      "law": "binary-eps0.05",
+      "arm": "edge-iid",
+      "rate": 1.0,
+      "envelope_lo": 0.9877790253057065,
+      "envelope_hi": 1.0
+    },
+    {
+      "graph": "dblp-ca",
+      "law": "binary-eps0.15",
+      "arm": "node",
+      "rate": 0.05111111111111111,
+      "envelope_lo": 0.013807819555525978,
+      "envelope_hi": 0.10108564521140825
+    },
+    {
+      "graph": "dblp-ca",
+      "law": "binary-eps0.15",
+      "arm": "edge-iid",
+      "rate": 0.9677777777777777,
+      "envelope_lo": 0.9068297039280113,
+      "envelope_hi": 0.9979329927649077
+    },
+    {
+      "graph": "dblp-ca",
+      "law": "hetero-0.02/0.30",
+      "arm": "node",
+      "rate": 0.03888888888888889,
+      "envelope_lo": 0.00943150206179463,
+      "envelope_hi": 0.08918040443416299
+    },
+    {
+      "graph": "dblp-ca",
+      "law": "hetero-0.02/0.30",
+      "arm": "edge-iid",
+      "rate": 0.9966666666666667,
+      "envelope_lo": 0.9710554887443074,
+      "envelope_hi": 1.0
+    },
+    {
+      "graph": "familyA_coherent",
+      "law": "fixed",
+      "arm": "node",
+      "rate": 0.0,
+      "envelope_lo": 0.0,
+      "envelope_hi": 0.0023028939205774358
+    },
+    {
+      "graph": "familyA_coherent",
+      "law": "fixed",
+      "arm": "edge-iid",
+      "rate": 0.091875,
+      "envelope_lo": 0.07816790761670842,
+      "envelope_hi": 0.10709997149350939
+    }
+  ],
+  "runs": [
+    {
+      "graph": "cora-cc",
+      "predictor": "LP",
+      "n_ref": 50,
+      "n_cal": 100,
+      "n_eval": 100,
+      "run_exceedances": 4
+    },
+    {
+      "graph": "dblp-ca",
+      "predictor": "LP",
+      "n_ref": 40,
+      "n_cal": 80,
+      "n_eval": 80,
+      "run_exceedances": 5
+    },
+    {
+      "graph": "cora-cc",
+      "predictor": "proto",
+      "n_ref": 30,
+      "n_cal": 100,
+      "n_eval": 150,
+      "run_exceedances": 5
+    },
+    {
+      "graph": "dblp-ca",
+      "predictor": "proto",
+      "n_ref": 20,
+      "n_cal": 50,
+      "n_eval": 80,
+      "run_exceedances": 5
+    },
+    {
+      "graph": "cora-cc",
+      "predictor": "gcn5f",
+      "n_ref": 20,
+      "n_cal": 40,
+      "n_eval": 60,
+      "run_exceedances": 4
+    },
+    {
+      "graph": "cora-cc",
+      "predictor": "gcn-fixedsplit-init",
+      "n_ref": 20,
+      "n_cal": 40,
+      "n_eval": 60,
+      "run_exceedances": 1
+    },
+    {
+      "graph": "dblp-ca",
+      "predictor": "gcn-fixedsplit-init",
+      "n_ref": 15,
+      "n_cal": 25,
+      "n_eval": 40,
+      "run_exceedances": 1
+    }
+  ],
+  "source_hashes": {
+    "normalization_pilot.csv": "4f53115d269b6e3593c78b2f5b2be226f3e712ebc372c3eec81833e7a104c713",
+    "calibration_baselines.csv": "3570ac0b4b1e61419208a07bb57ced281b2df785b04aa12e063c843a00536a6e",
+    "l3_run_pool.csv": "8ae2473f1ae3d23c0f444dc151ef687483b11fee05969d959430c9234d63b660",
+    "l3_fixed_split.csv": "1a420817f42cdbeff9b1e3004adc4774e9aba31d859edf930642a5a194e1c499",
+    "confirm_results.csv": "a1efad6e0f80bd93391cb363707c55bab73e12f75a68e246ecf51f562a15df25",
+    "evidence_audit.json": "b71606df213c985ffee96b614ec10afbe65590a2bdcaa783bad4258b5c78bb73",
+    "influence_residual.csv": "3ad02739bf87239e17e9f6829193e70bfe579c2daff1db1fd86cd1c244867f4f",
+    "l2_fitted_law.csv": "2aa8bf5889a95aeda1b78e00cebc44fa822befc46921fae6cf3128b2fe33cc4a",
+    "cora_calibration_batches_20271021.csv": "86239b63b8d2dd2d8d43473e97855e1ce9596e35a58043109902a94394bfaf24",
+    "cora_calibration_batches_20271021.json": "bc199a65b8bd4a553c0138026fdc1ab1358d0fc969ffbfafab0f080edb97e40a"
+  },
+  "visual_source_hashes": {
+    "protocol_frozen.json": "8e4a0b8687a19bcca44cbc3ee31d50c7895a7cf0158d089a1b5f88fb06faf16c",
+    "analysis/analysis_summary.json": "0e99f0b2fbf4eba167081819910faefd4cc7872f45a7d88e89c7ad659621dceb",
+    "analysis/e1_calibration_aggregate_ntu2012.csv": "df3b16a72dcc25555d5b1a276dc9b7f06ee8eecf4de6b02627864974d23fec06",
+    "analysis/e1_calibration_aggregate_modelnet40.csv": "0390044e4ddb6e29d618df054410d84d0dee8bf4a16a0d196526fa53acbd3756",
+    "analysis/e2_detection_aggregate_ntu2012.csv": "e11e49b846755ca43e1320588d9c2da8a90ceb28cacf013015150dbaaf28cff6",
+    "analysis/e2_detection_aggregate_modelnet40.csv": "a23167ede8a39cf680e79ff2449b58a186c6cf24f6c8054e23c491b42f950948",
+    "analysis/e3_task_association_ntu2012.csv": "4de8d14cfaff827569884a97df5187e724a99fc133b19859ba110f6841e8f412",
+    "analysis/e3_task_association_modelnet40.csv": "1b9d9217bbea8caccf19c6b03b28ef41b7e0a9344d41a9c54fb5ca3950a1d732",
+    "analysis/e4_main_comparison_ntu2012.csv": "95756cd9bb330239af7244dc7bc39fdc68568d818166942eb35ea42fdfa68519",
+    "analysis/e4_main_comparison_modelnet40.csv": "6108c303d5bf983ed16dac0f84f8080623b8a689f0bf7188d7f2aa69d8a27f71",
+    "analysis/threshold_stability_ntu2012.json": "b9968952987218206010bbb3a227b3b940cf75cf9eeb37710f104ecccc7bd908",
+    "analysis/threshold_stability_modelnet40.json": "bcf6925d492e0fe36e628dd37e46947414d7ae9edb6ba0da5c0087091f538865",
+    "analysis/equal_fpr_roc.csv": "7964b65794b8cb2f458c2bfc7c8a999e6cbd16499258b89b790b03ccc8515c10",
+    "analysis/equal_fpr_bootstrap.json": "b670d0082b532621de6e8816aa83262c7beb9d40239dcd9f2fd2c7d6ed7d04ca",
+    "analysis/reproducibility.json": "b43cd9c838b0bcdc0963c1b80d16c060f4f2815e71a5f582f1b337fea67abe53",
+    "cache_manifest.json": "9080038dc4784267a0f30f41cbb09cb5b8a1d28a3e00ce46b3329ecb1dc6a0f9",
+    "report/verification.json": "bcf274656b15f6fd8515d25c8b4a4279f149efc1667e451c97a846a6aba67fcc"
+  },
+  "generated_hashes": {
+    "cora-rerun.tex": "0c9368499a358c3ddb07cf8ef07a17971e8121e710390d3dcfdecd35547275bb",
+    "node-calibration.tex": "f948f53a456efef17b02b571bef57b045e5481c03548fe84e3c19838bf4e69e4",
+    "normalization.tex": "97abc015278396857a64bab6b0adc157e6dc9e9390be70883ce74d0a5053a639",
+    "run-calibration.tex": "6ef1adf48e7309a956c370d86768f9bb1e49b0d028ff9b1ca3ceb1effcc096b5",
+    "visual-alarm.tex": "82f1270dec8090774dfb1ad75a7a6397fb949edae969468eed6e77792c2ad93a"
+  }
+}

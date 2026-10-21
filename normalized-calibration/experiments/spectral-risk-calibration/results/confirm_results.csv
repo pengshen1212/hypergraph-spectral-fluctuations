@@ -1,0 +1,8 @@
+claim,structure,metric,estimate,cp_lo,cp_hi,n,batches,q_mean
+C1_S3_calibration_recovery,cora-cc,node_cal_exceedance_alpha05,0.037333333333333336,0.030837509650781685,0.044750124349205854,3000,3,0.7819714483725795
+C3_S10b_two_sided_norm_dial0,cora-cc,norm_power_one,0.0,,,400,1,
+C3_S10b_two_sided_norm_dial0,cora-cc,norm_power_two,0.985,,,400,1,
+C2_S9b_M2hubs_detection,dblp-ca,M2_hubs_power_inf,0.316,0.2588611541270129,0.3775655361849006,250,1,4.181734629165238
+C2_S9b_M2hubs_detection,dblp-ca,M2_hubs_power_var,0.004,0.00010126610417905015,0.022083865000633206,250,1,4.872158198306812
+C2_S9b_M2hubs_detection,dblp-ca,M2_hubs_power_rand,1.0,0.9853528113643196,1.0,250,1,2.3385672390338614
+C2_S9b_M2hubs_detection,dblp-ca,M2_hubs_power_norm,0.24,0.18842644738383382,0.29785183581116437,250,1,0.8199249878257806

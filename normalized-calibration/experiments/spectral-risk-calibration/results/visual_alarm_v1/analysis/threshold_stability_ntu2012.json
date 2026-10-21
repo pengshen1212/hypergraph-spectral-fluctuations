@@ -1,0 +1,106 @@
+{
+  "alpha": 0.05,
+  "caveat": "All numbers condition on the frozen reference center and the existing 299 runs. They do not establish a new independent confirmation or identify a unique cause for the original 28/200.",
+  "dataset": "ntu2012",
+  "delta": 0.05,
+  "n_cal": 99,
+  "n_eval": 200,
+  "original": {
+    "count": 28,
+    "rate": 0.14,
+    "threshold": 0.7157675951067025
+  },
+  "pac_k_table": [
+    {
+      "M": 99,
+      "calibration_exceedances_allowed": 1,
+      "k": 98,
+      "tail_probability": 0.03870484476451038
+    },
+    {
+      "M": 199,
+      "calibration_exceedances_allowed": 4,
+      "k": 195,
+      "tail_probability": 0.027344192384949333
+    },
+    {
+      "M": 499,
+      "calibration_exceedances_allowed": 16,
+      "k": 483,
+      "tail_probability": 0.035025449310682494
+    },
+    {
+      "M": 999,
+      "calibration_exceedances_allowed": 38,
+      "k": 961,
+      "tail_probability": 0.04399039145626406
+    }
+  ],
+  "pac_rule": {
+    "calibration_exceedances": 1,
+    "count": 19,
+    "k": 98,
+    "note": "Vovk-type tolerance rule evaluated post hoc on the old evaluation set; exploratory, not a pre-registered fix, and not evidence that the old 14% result is repaired",
+    "rate": 0.095,
+    "tail_probability": 0.03870484476451038,
+    "threshold": 0.7212519992152672
+  },
+  "precision_sensitivity": [
+    {
+      "count": 27,
+      "decimals": 6,
+      "rate": 0.135,
+      "threshold": 0.715768
+    },
+    {
+      "count": 27,
+      "decimals": 8,
+      "rate": 0.135,
+      "threshold": 0.7157676
+    },
+    {
+      "count": 27,
+      "decimals": 10,
+      "rate": 0.135,
+      "threshold": 0.7157675951
+    },
+    {
+      "count": 27,
+      "decimals": 12,
+      "rate": 0.135,
+      "threshold": 0.715767595107
+    },
+    {
+      "count": 27,
+      "decimals": 14,
+      "rate": 0.135,
+      "threshold": 0.7157675951067
+    }
+  ],
+  "repeated_split": {
+    "fpr_frac_gt_10": 0.044,
+    "fpr_frac_gt_15": 0.0016,
+    "fpr_frac_gt_20": 0.0,
+    "fpr_max": 0.2,
+    "fpr_mean": 0.0501865,
+    "fpr_median": 0.045,
+    "fpr_min": 0.0,
+    "fpr_p2_5": 0.01,
+    "fpr_p97_5": 0.11012499999999818,
+    "fpr_sd": 0.02673778615874671,
+    "frac_q_above_original": 0.9949,
+    "frac_q_below_original": 0.0036,
+    "note": "repeated 99/200 splits of the same 299 existing runs; internal split-sensitivity only, not new independent runs or a new population-level confirmation",
+    "pooled_gap_above_original_threshold": 1.1102230246251565e-16,
+    "q_max": 0.8333333333333333,
+    "q_mean": 0.7526561631377768,
+    "q_median": 0.741132403175929,
+    "q_min": 0.6835347341088269,
+    "q_p2_5": 0.7197602124401378,
+    "q_p97_5": 0.8300727093577126,
+    "q_sd": 0.025347482577263075,
+    "unique_thresholds": 38
+  },
+  "reps": 10000,
+  "seed": 20261022
+}

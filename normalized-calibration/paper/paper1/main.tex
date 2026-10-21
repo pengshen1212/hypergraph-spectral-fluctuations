@@ -1,0 +1,1037 @@
+\documentclass[preprint,11pt]{elsarticle}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage{needspace}
+\usepackage{microtype}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{graphicx}
+\usetikzlibrary{arrows.meta,positioning}
+\usepackage[hidelinks]{hyperref}
+\usepackage[margin=1in]{geometry}
+\raggedbottom
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.1}
+\setlength{\textfloatsep}{14pt plus 2pt minus 2pt}
+\setlength{\floatsep}{12pt plus 2pt minus 2pt}
+\makeatletter
+% Paragraph headings in this source already include their final punctuation.
+\let\paragraph\elsparagraph
+\setlength{\@fptop}{0pt}
+\setlength{\@fpsep}{16pt}
+\setlength{\@fpbot}{0pt plus 1fil}
+\makeatother
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\ind}[1]{\mathbf{1}\{#1\}}
+\journal{Neurocomputing}
+\biboptions{sort&compress}
+\hypersetup{pdftitle={Calibrating Normalized Hypergraph Spectral Risk under Node-Induced Dependence},
+  pdfauthor={Shen Peng, Rui Wang, Yunchao He}}
+
+\begin{document}
+\begin{frontmatter}
+\title{Calibrating Normalized Hypergraph Spectral Risk under Node-Induced Dependence}
+\author[a]{Shen Peng\corref{corresponding}}
+\ead{shen.peng23@student.xjtlu.edu.cn}
+\author[a]{Rui Wang}
+\author[a]{Yunchao He}
+\cortext[corresponding]{Corresponding author.}
+\address[a]{Academy of Artificial Intelligence and Advanced Technology,
+Xi'an Jiaotong-Liverpool University, Suzhou 215412, China}
+
+\begin{abstract}
+Prediction-constructed hypergraphs couple incident relations through
+shared node predictions, making edge marginals insufficient for spectral-risk
+assessment. We connect normalized conditional influence, calibration under a
+declared prediction law, and complete-run diagnostics. Conditional
+expectations decompose the normalized operator into orthogonal node
+responses and a remainder; a three-operator comparison separates fixed
+degree weighting from dynamic normalization. On Cora-CC and DBLP-CA,
+computed centered-norm ratios between node-induced and independent-edge
+models decreased from 2.15--3.47 before normalization to 1.03--1.26
+afterward, while a coherent controlled family reversed the comparison.
+Under specified node laws at a 5\% target, node-calibrated native
+exceedance means were 3.9\%--5.9\%, compared with 47.5\%--100\% for
+independent-edge thresholds. With trained predictors, fitted node-product
+thresholds instead yielded zero observed exceedances in the tested
+settings. This conservative direction extended to NTU2012 and ModelNet40,
+with zero exceedances in 200 evaluation runs per visual dataset;
+independent-edge calibration yielded 26.5\% on ModelNet40. Complete-run
+and split-sensitivity comparisons distinguish marginal rank validity
+from the conditional behavior of a frozen threshold. A standard rank
+argument supplies finite-sample validity under the declared exchangeable
+score law. Together, the analysis and cross-domain comparisons identify
+which joint dependence a calibration model must preserve and separate
+the probability targets needed for upstream operator monitoring.
+\end{abstract}
+\begin{keyword}
+Hypergraph learning \sep Relation estimation \sep Node influence \sep
+Spectral fluctuation \sep Dependent errors \sep Risk calibration
+\end{keyword}
+\end{frontmatter}
+
+\input{sections/calibration-main}
+
+\section*{Data and Code Availability}
+The complete source code, frozen configurations, certificates, saved
+measurements, and reproducibility instructions for both the normalized
+calibration experiments and the raw-operator mechanism checks are publicly
+available at\\
+\url{https://github.com/pengshen1212/hypergraph-spectral-fluctuations}.
+The normalized calibration materials are also provided in the accompanying
+submission package.
+Cora-CC and DBLP-CA inputs are available through
+\href{https://github.com/jianhao2016/AllSet}{AllSet}; preprocessed
+NTU2012 and ModelNet40 visual hypergraphs are obtained from the public
+\href{https://github.com/Graph-COM/ED-HNN}{ED-HNN benchmark repository}~\cite{wang2023edhnn}.
+The retained raw
+Walmart experiments use
+\href{https://www.cs.cornell.edu/~arb/data/walmart-trips/}{Austin R. Benson's dataset collection}.
+Third-party inputs are not redistributed in the revision package.
+
+\section*{CRediT Authorship Contribution Statement}
+\textbf{Shen Peng:} Conceptualization, Methodology, Formal analysis,
+Validation, Software, Investigation, Data curation.
+\textbf{Rui Wang:} Investigation, Data curation.
+\textbf{Yunchao He:} Writing -- original draft, Writing -- review and editing.
+
+\section*{Funding}
+This work received no specific funding from public, commercial, or
+non-profit funding agencies.
+
+\section*{Declaration of Competing Interest}
+The authors declare that they have no competing interests.
+
+\section*{Declaration of Generative AI and AI-Assisted Technologies
+in the Manuscript Preparation Process}
+ChatGPT (OpenAI) was used for literature discovery, assistance with
+intermediate mathematical derivations, and language revision.
+Codex (OpenAI) assisted manuscript organization, reference verification,
+language revision, and preparation of the explanatory diagram's source.
+The authors are responsible for checking the derivations, references,
+and final manuscript and for the content of the published article.
+
+\section*{Acknowledgements}
+The authors thank Jianjia Wang for guidance during this research.
+
+\bibliographystyle{elsarticle-num}
+\bibliography{references}
+
+\clearpage
+\appendix
+% Keep appendix references as letters; add the prefix only to section headings.
+\renewcommand{\thesection}{\Alph{section}}
+\makeatletter
+\renewcommand{\@seccntformat}[1]{\ifstrequal{#1}{section}{Appendix~}{}\csname the#1\endcsname.\quad}
+\makeatother
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\numberwithin{equation}{section}
+
+\section{Raw-Operator Model and Mechanism}\label{sec:raw-mechanism}\label{sec:model}
+The following raw-operator theory supplies the mechanism foundation. Its matched expectations and separation claims concern the unnormalized operator; the normalized analysis in Section~\ref{sec:normalized-influence} does not assume that these conclusions transfer.
+
+
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}[>=Stealth, font=\small,
+  source/.style={circle,draw,minimum size=9mm,inner sep=1pt},
+  edge/.style={draw,minimum width=10mm,minimum height=7mm,inner sep=2pt}]
+\node at (3,0.7) {\textbf{A: shared-node source}};
+\node[source,draw=red!65!black] (u) at (0.8,-0.8) {$\hat y_u$};
+\node[align=center] at (0.8,-1.8) {one prediction};
+\foreach \i/\y in {1/0,2/-0.8,3/-1.6} {
+  \node[edge] (a\i) at (3.4,\y) {$a_\i$};
+  \draw[->,red!65!black] (u) -- (a\i);
+}
+\node[align=left,text width=23mm] at (5.3,-0.8) {incident\\retentions};
+\node at (10.7,0.7) {\textbf{B: independent-edge source}};
+\foreach \i/\y in {1/0,2/-0.8,3/-1.6} {
+  \node[source,minimum size=7mm,draw=blue!65!black] (b\i) at (9.5,\y) {$b_\i$};
+  \node[edge] (e\i) at (12.3,\y) {$e_\i$};
+  \draw[->,blue!65!black] (b\i) -- (e\i);
+}
+\node[align=center] at (3,-2.6) {Aligned responses reinforce influence;\\flat influence removes the first-order term.};
+\node[align=center] at (10.8,-2.6) {Same per-edge retention probabilities;\\same expected operator.};
+\end{tikzpicture}
+\caption{Shared predictions couple incident relations even when each
+edge has the same marginal retention probability as an independent
+draw. Coherent influence measures their combined response. Norm
+separation also requires the stated overlap conditions; exact
+directional-variance cancellation requires every shared node to be
+flat and edge pairs to share at most one node. The explanatory diagram
+was drafted with Codex (OpenAI) assistance and rendered from its TikZ source.}
+\label{fig:shared-source}
+\end{figure}
+
+Fix a candidate hypergraph $E$ with edge sizes $r_e\ge2$ and true
+labels $y$. Node predictions $\hat y_u$ are independent with
+categorical laws $P[u,c]$. These laws define the controlled
+relation-construction model; Appendix~\ref{app:identification}
+describes conditioning on a shared training state. Write
+\[
+H_e=\mathbf 1_e\mathbf 1_e^\top/r_e,\qquad
+a_e=\ind{\text{all predictions on }e\text{ agree}},\qquad
+p_e=\mathbb E\,a_e=\sum_c\prod_{u\in e}P[u,c].
+\]
+The estimated relation operator is $B(\hat a)=\sum_ea_eH_e$, an
+unnormalized sum of rank-one clique contributions. With the true-label
+indicator $a_e^*$, the error operator is $\Delta B_A=\sum_e(a_e-a_e^*)H_e$
+and $\mathbb E\Delta B_A=\sum_e(p_e-a_e^*)H_e=:M_0$. Both arms below
+are centered on this common mean, so all statements concern
+\[
+X_A=\sum_e(a_e-p_e)H_e,\qquad
+X_B=\sum_e(b_e-p_e)H_e,\qquad b_e\sim\mathrm{Bern}(p_e)
+\ \text{independently,}
+\]
+with $\widetilde\beta_M=\|X_M\|_2$. The conditional retention kernel
+\[
+g_{e,u}(z):=\mathbb E[a_e\mid \hat y_u=z]
+=\prod_{v\in e\setminus\{u\}}P[v,z]
+\]
+is defined by re-multiplying over the remaining nodes, so zero
+probability classes are handled without division. For binary laws set
+$\phi_{u,e}:=g_{e,u}(1)-g_{e,u}(0)$ and, for a fixed unit vector $x$,
+\[
+h_e(x):=x^\top H_ex=\Bigl(\textstyle\sum_{u\in e}x_u\Bigr)^2\!/r_e\ \ge0,
+\qquad
+\Phi_u(x):=\sum_{e\ni u}\phi_{u,e}\,h_e(x).
+\]
+$\Phi_u(x)$ is node $u$'s \emph{coherent influence} at $x$: the amount
+by which its prediction moves the incident weighted retention sum.
+
+The homogeneous submodel has all
+candidate edges $r$-uniform and homogeneous, i.i.d.\ binary flips
+$W_u\sim\mathrm{Bernoulli}(p)$, $q_r=1-(1-p)^r-p^r$. There,
+$g_{e,u}(1)=(1-p)^{r-1}$, $g_{e,u}(0)=p^{r-1}$, and
+$\phi_{u,e}=\pm\bigl[(1-p)^{r-1}-p^{r-1}\bigr]$ for every member of a
+homogeneous edge. The general influence theory allows heterogeneous
+categorical laws.
+
+
+
+\subsection{Node-Influence Decomposition}\label{sec:decomp}
+
+The decomposition, its second-moment identity, and the variance lower
+bound form one chain and are stated together.
+
+\begin{theorem}[Influence decomposition and variance identity]
+\label{thm:decomp}
+Define $F_u(z):=\sum_{e\ni u}\bigl[g_{e,u}(z)-p_e\bigr]H_e$. Then:
+\begin{enumerate}
+\item[\textup{(i)}] $X_A=\sum_uF_u(\hat y_u)+R$ with $\mathbb
+E[R\mid\hat y_u]=0$ for every $u$; moreover $\mathbb EF_u(\hat y_u)=0$,
+the components are entrywise orthogonal
+($\mathbb E[F_u(\hat y_u)F_v(\hat y_v)]=0$ and $\mathbb E[F_u(\hat
+y_u)R]=0$ as matrices for $u\ne v$), and
+\[
+\mathbb E[X_A^2]=\sum_u\mathbb E\bigl[F_u(\hat y_u)^2\bigr]+\mathbb E[R^2],
+\qquad
+\mathbb E[X_B^2]=\sum_ep_e(1-p_e)H_e .
+\]
+\item[\textup{(ii)}] For every fixed unit $x$,
+\[
+\operatorname{Var}(x^\top X_Ax)=V_1(x)+\operatorname{Var}(x^\top Rx)
+\ \ge\ V_1(x),\qquad
+V_1(x)=\sum_u\operatorname{Var}_{Z\sim P[u,\cdot]}
+\Bigl[\sum_{e\ni u}g_{e,u}(Z)h_e(x)\Bigr],
+\]
+and in the binary case $V_1(x)=\sum_uP[u,1]P[u,0]\,\Phi_u(x)^2$ with
+the single-term bound
+$V_1(x)\ge m_u(1-m_u)\Phi_u(x)^2$, $m_u=\min_cP[u,c]$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proposition}[Covariance form of the A/B gap]\label{prop:cov}
+$\mathbb E[X_A^2]-\mathbb E[X_B^2]
+=\sum_{e\ne f}\operatorname{Cov}(a_e,a_f)\,H_eH_f$, a symmetric
+operator identity; $\operatorname{Cov}(a_e,a_f)=0$ whenever
+$e\cap f=\varnothing$, and for a pair sharing exactly one node $u$,
+$\operatorname{Cov}(a_e,a_f)
+=\mathbb E_{Z\sim P[u,\cdot]}\bigl[g_{e,u}(Z)g_{f,u}(Z)\bigr]-p_ep_f$.
+For every fixed unit $x$,
+\[
+\operatorname{Var}(x^\top X_Ax)-\operatorname{Var}(x^\top X_Bx)
+=2\!\!\sum_{e<f,\,e\cap f\ne\varnothing}\!\!
+\operatorname{Cov}(a_e,a_f)\,h_eh_f .
+\]
+\end{proposition}
+
+The proofs (Appendix~\ref{app:proofs-influence}) use
+$F_u(\hat y_u)=\mathbb E[X_A\mid\hat y_u]$ per
+Theorem~\ref{thm:decomp},
+and orthogonality follows from independence and zero means. No
+structure assumption is made on $E$---sizes, overlaps, and label
+compositions are arbitrary. The classical star variance amplification
+is the special case $x=\mathbf e_v$ at a disjoint-leaf
+star: $\Phi_v=d\bigl[(1-p)^{r-1}-p^{r-1}\bigr]/r$ gives
+$\operatorname{Var}_A/\operatorname{Var}_B=1+(d-1)\kappa$ with
+$\kappa=p(1-p)\bigl[(1-p)^{r-1}-p^{r-1}\bigr]^2/\bigl(q_r(1-q_r)\bigr)$;
+e.g.\ $(r,p,d)=(3,0.05,20)$ gives $6.98$.
+
+\begin{lemma}[Deterministic single-node deviation]\label{lem:dev}
+In the binary case $x^\top F_u(\hat y_u)x=\psi_u$ takes exactly two
+values, $\psi_u(1)=P[u,0]\,\Phi_u(x)$ and
+$\psi_u(0)=-P[u,1]\,\Phi_u(x)$; hence
+$|\psi_u|\ge m_u|\Phi_u(x)|$ surely.
+\end{lemma}
+
+\subsection{Influence Separation and Its Boundary}\label{sec:theory}
+
+\subsubsection{Certified separation under conditioned influence}
+
+The norm-level statement needs one structural quantity beyond
+$\Phi_u$. For a fixed direction $x$ let
+$L_u(x):=\sum_{e\ni u}h_e(x)$ (only edges containing the witness node
+contribute when $x$ is supported on it).
+
+\begin{theorem}[Influence separation, conditioned]\label{thm:sep}
+Binary laws. Let $B_1,\dots,B_t$ be pairwise node-disjoint blocks, each
+containing a hub $u_i$ with amplifying value $z_i$
+($m_i=P[u_i,z_i]\le\tfrac12$), and assume \emph{no edge contains two
+hubs}. Fix witnesses $x_i=\mathbf e_{u_i}$ and
+assume, for every $i$:
+(i) \emph{coherent influence}: with
+$\Phi_i:=\sum_{e\ni u_i}\phi_{u_i,e}h_e(x_i)$ (all edges containing
+$u_i$ contribute, whatever block or environment they belong to),
+$|\Phi_i|\ge B$;
+(ii) \emph{incoherent rest}:
+$V^-=\max_i\sum_{u\ne u_i}P[u,1]P[u,0]\Phi_u(x_i)^2$ and
+$\phi^-_{\max}=\max_{i,u\ne u_i}|\Phi_u(x_i)|$;
+(iii) \emph{bounded co-occurrence}:
+$\Lambda^2=\max_i\sum_{u\ne u_i}L_u(x_i)^2$. Then
+\[
+\Pr\Bigl\{\widetilde\beta_A\ \ge\ L_A^{\mathrm{inf}}\Bigr\}
+\ \ge\ 1-\prod_i(1-m_i)-\eta-\eta_2 ,
+\]
+with
+\[
+L_A^{\mathrm{inf}}=\min_i(1-m_i)\,B
+-\sqrt{2V^-\log(2/\eta)}-\tfrac{\phi^-_{\max}}3\log(2/\eta)
+-\sqrt{2\Lambda^2\log(2/\eta_2)} .
+\]
+The B arm satisfies, with probability $\ge1-\delta_B$,
+$\widetilde\beta_B\le U_B=\sqrt{2v_BL_n}+2L_n/3$ with
+$v_B=\bigl\|\sum_ep_e(1-p_e)H_e\bigr\|_2$, $L_n=\log(2n/\delta_B)$
+(the conservative Bernstein form; the tight ${+}L_n/3$ inversion also
+holds);
+if the deterministic condition
+$L_A^{\mathrm{inf}}>U_B$
+holds, then
+$\Pr\{\widetilde\beta_A>\widetilde\beta_B\}\ge
+1-\prod_i(1-m_i)-\eta-\eta_2-\delta_B$.
+\end{theorem}
+
+Edges may have mixed labels, arbitrary sizes, and shared co-members;
+their witness co-occurrence mass enters $\Lambda^2$. At the coordinate
+witness $x_i$, only edges containing $u_i$ contribute. The one-hub-per-edge
+condition keeps conditioned means unchanged by other hubs. All witnesses
+are fixed before sampling.
+For homogeneous stars the leading constant is
+$(1-p)d[(1-p)^{r-1}-p^{r-1}]/r$; cyclic overlap enters through
+$\Lambda^2$. Their verification grids are in
+Appendix~\ref{app:protocol}. The complementary budget certificate
+for a star core with an overlapping environment is in
+Appendix~\ref{app:mixed}.
+
+\begin{corollary}[Scale separation]\label{cor:scale}
+Binary laws, arbitrary overlap. If $|\Phi_{u^\ast}(x)|\ge B$ at a unit
+$x$, then with $m=\min_cP[u^\ast,c]$, $\theta\in(0,1)$, and
+$Z_{\max}:=\sum_eh_e(x)\ge|x^\top X_Ax|$,
+\[
+\Pr\Bigl\{|x^\top X_Ax|\ \ge\ \sqrt{\theta\,m(1-m)}\,B\Bigr\}
+\ \ge\ (1-\theta)^2\,\frac{m(1-m)B^2}{Z_{\max}^2},
+\]
+by Paley--Zygmund applied to Theorem~\ref{thm:decomp}(ii) (proof in
+Appendix~\ref{app:proofs-influence}); when the influence is coherent
+($Z_{\max}=O(B)$) this is a constant-probability, degree-linear bound
+on arbitrary overlapping structures, against
+$\widetilde\beta_B=O(\sqrt{v_B\log n})$ with high probability.
+\end{corollary}
+
+\subsubsection{Cancellation boundary}\label{sec:cancel}
+
+\begin{theorem}[Flat profiles and exact cancellation]\label{thm:cancel}
+Binary laws. (i) $\phi_{u,e}=0$ iff $u$'s prediction does not change
+the conditional retention of $e$; a flat edge drops out of $\Phi_u$
+for every $x$, and if all of $u$'s edges are flat then $u$ contributes
+nothing to $V_1(x)$ for any $x$. (ii) For a size-$3$ edge, if the two
+members
+$w,w'$ of $e\setminus\{u\}$ satisfy $P[w,1]=1-P[w',1]$ (a competing
+pair), then $\phi_{u,e}=0$: on a triple, one competing pair zeroes
+the third member's influence. (iii) If $r_e\ge3$, all members of $e$
+are flat, and every member has $P[u,1]P[u,0]>0$, then all members'
+laws are uniform on the two classes. (iv) If distinct edges share at
+most one node and every shared node is flat on both incident edges,
+then $\operatorname{Cov}(a_e,a_f)=0$ for all $e\ne f$, hence
+$\operatorname{Var}(x^\top X_Ax)=\operatorname{Var}(x^\top X_Bx)$
+\emph{for every} $x$: second-order cancellation is exact.
+\end{theorem}
+
+The homogeneous-star case $p=\tfrac12$ is a symmetric instance
+of flatness. A one-parameter knob makes the transition explicit: for edges
+$\{u,w,\ell\}$ with $P[w,1]=\beta$ and $P[\ell,1]=\gamma$,
+\[
+\phi_{u,e}=\beta+\gamma-1 ,
+\]
+so sweeping $\gamma$ from alignment ($\beta=\gamma$) to competition
+($\gamma=1-\beta$) drives the hub's influence linearly to the exact
+cancellation endpoint of part (iv). Section~\ref{sec:families} sweeps
+this knob.
+
+\paragraph{Higher-order dependence and norm-level separation.}
+The cancellation theorem identifies directional second moments.
+Spectral-norm distributions also depend on higher-order terms in $R$.
+For edge pairs sharing multiple nodes, these terms can retain pair
+covariance despite flat single-node profiles. Norm separation is
+certified when coherent drift exceeds the remainder and co-occurrence
+penalties.
+
+\subsubsection{Conditional influence and tail-risk certification}
+\label{sec:risk}
+
+The same conditioning idea permits a native-structure risk judgment
+without the overlap restrictions of Theorem~\ref{thm:sep}. Fix a
+small node group $U$ from structure alone and $\tau\ge0$. For each positive-probability
+state $z$, let $\pi_z=\Pr(\hat y_U=z)$ and
+$M_U(z)=\mathbb E[X_A\mid\hat y_U=z]$. A nonzero direction $q_z$
+is chosen from this conditional mean before evaluation; it may depend
+on $z$, since the states are disjoint. Write
+\[
+s_z=q_z^\top q_z,\qquad
+m_z=q_z^\top M_U(z)q_z,\qquad
+v_z=\operatorname{Var}(q_z^\top X_Aq_z\mid z),\qquad
+D_z=|m_z|-\tau s_z.
+\]
+Rayleigh's inequality and one-sided Cantelli give
+\begin{equation}\label{eq:risk-certificate}
+\Pr(\|X_A\|_2>\tau)\ \ge\ L_U(\tau)
+:=\sum_z\pi_z\ell_z(\tau),\qquad
+\ell_z(\tau)=
+\begin{cases}
+D_z^2/(v_z+D_z^2),&D_z>0,\\
+0,&D_z\le0.
+\end{cases}
+\end{equation}
+The bound uses exact conditional covariances, including overlaps
+outside $U$. Appendix~\ref{app:risk} gives the calculation and calibration
+guarantee. If $\tau_B$ controls B's tail at level $\alpha$ and
+$L_U(\tau_B)>\alpha$, dependence is certified to invalidate that
+threshold for A. When $L_U(\tau_B)\le\alpha$, the test is
+inconclusive. Calibrating a replacement threshold requires a tail
+upper bound or quantile analysis.
+
+
+\section{Raw-Operator Validation and Predictor Comparisons}\label{sec:raw-validation}
+These retained measurements concern the raw relation operator and the original per-edge calibration protocol. They are distinct from the normalized calibration experiments in Section~\ref{sec:exp}. The Walmart inputs use the categorical benchmark associated with \cite{amburg2020categorical}. All original result tables are retained below.
+
+\subsection{Controlled structure families}\label{sec:families}
+
+The controlled families separate the role of influence from topology
+(Figure~\ref{fig:shared-source}). Aligned responses amplify fluctuation
+on non-star structures; changing only the probability profile can
+remove that amplification on a fixed star. Both registered families
+use $256$ formal draws per point. Family A
+(\emph{amplification}): $t=60$ node-disjoint blocks, each with one weak
+hub ($P[u_i,1]=0.05$) and $d$ edges $\{u_i,w_j,\text{leaf}\}$ whose
+co-members are strongly class-1 ($P=0.95$), with $w_j$ drawn uniformly
+from a per-block pool of $d/5$; $\Lambda^2$ is computed from realized
+co-occurrences. Every edge
+at $u_i$ has $\phi_{u_i,e}=0.90$, so $\Phi_i=0.9\,d/3$ while all other
+nodes are exactly flat ($V^-=0$). Edges overlap through the pooled
+$w_j$'s, and the blocks combine heterogeneous probability profiles.
+Table~\ref{tab:familyA} reports the grid. The mean centered A norm
+grows linearly in $d$ (fitted slope $0.276$ on $d\in\{150,\dots,300\}$,
+within $8\%$ of the theoretical $0.9/3$) while B grows more slowly;
+separation frequency is $93.8$--$100\%$, above the registered
+allowance $1-0.95^{60}-\eta-\eta_2-\delta_B=0.924$ throughout. With
+two-sided constants and realized $\Lambda^2\in[47.6,250.0]$, the
+certificate activates at $d\ge250$ (at $d=200$: $L_A=14.4$ vs
+$U_B=19.7$). Disjoint-star and cyclic checks support the same
+mechanism (Appendix~\ref{app:protocol}).
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{rrrrrrr}
+\toprule
+$d$ & $\Phi$ & $L_A$ & $U_B$ & $\overline{\widetilde\beta}_A$ [CI] &
+$\overline{\widetilde\beta}_B$ & sep.\\
+\midrule
+50 & 15 & $-8.2$ & 13.7 & 16.3 $[15.8,16.8]$ & 2.36 & 93.8\%\\
+100 & 30 & $-1.7$ & 16.2 & 30.9 $[30.1,31.5]$ & 2.90 & 96.1\%\\
+150 & 45 & 6.0 & 18.1 & 43.9 $[42.5,45.1]$ & 3.33 & 94.1\%\\
+200 & 60 & 14.4 & 19.7 & 57.4 $[55.4,59.3]$ & 3.68 & 94.5\%\\
+250 & 75 & 23.75 & 21.0 & 72.5 $[70.8,74.1]$ & 4.05 & 98.0\%\\
+300 & 90 & 34.0 & 22.3 & 85.4 $[83.0,87.6]$ & 4.28 & 100\%\\
+\bottomrule
+\end{tabular}
+\caption{Family A (non-star amplification, $t{=}60$, pool $d/5$ with
+random reuse, $256$ draws per point). $\Phi=0.9d/3$ is the hub's
+coherent influence; $L_A$ uses two-sided constants and the realized
+co-occurrence $\Lambda^2$.
+Certification is nonempty from $d=250$; empirical separation exceeds
+the registered allowance $0.924$ everywhere.}
+\label{tab:familyA}
+\end{table}
+
+Family B (\emph{competition sweep}) fixes one hub with $d=300$ edges
+$\{u,w_j,\ell_j\}$, all co-members fresh. Its \emph{topology is a
+star}. Only the probability profile changes: $P[u,1]=0.05$,
+$P[w_j,1]=0.95$, and $P[\ell_j,1]=\gamma$, giving
+$\phi_{u,e}=\gamma-0.05$. In Table~\ref{tab:familyB}, influence
+falls linearly to zero and the mean centered-norm ratio falls
+from $3.36$ to $0.995$. At $\gamma=0.05$, the empirical directional
+variance ratio is $0.96$ with paired-bootstrap interval $[0.76,1.20]$,
+covering the exact prediction $1$. Edge pairs share only the flat
+hub, so Theorem~\ref{thm:cancel}(iv) gives equality in every
+direction. The empirical separation frequency is $55.5\%$ at this
+endpoint. Thus fixed star topology admits both amplification and
+cancellation, while certification also depends on overlap structure.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{rrrrrr}
+\toprule
+$\gamma$ & $\Phi_u$ & $\overline{\widetilde\beta}_A$ &
+$\overline{\widetilde\beta}_B$ & ratio & sep.\\
+\midrule
+0.95 & 90.0 & 8.02 & 2.39 & 3.36 & 100\%\\
+0.75 & 70.0 & 6.38 & 2.47 & 2.59 & 89.8\%\\
+0.55 & 50.0 & 5.03 & 2.36 & 2.13 & 79.7\%\\
+0.35 & 30.0 & 3.88 & 2.52 & 1.54 & 48.8\%\\
+0.15 & 10.0 & 2.76 & 2.41 & 1.14 & 42.6\%\\
+0.05 & $0.00$ & 2.39 & 2.40 & 1.00 & 55.5\%\\
+\bottomrule
+\end{tabular}
+\caption{Family B competition sweep on a star topology ($d{=}300$,
+$256$ draws per point). At $\gamma=0.05$ the hub is exactly flat
+($\phi_u=0$); the directional variance ratio is $0.96$ with CI
+$[0.76,1.20]$ covering the predicted equality.}
+\label{tab:familyB}
+\end{table}
+
+\subsection{Native applicability}\label{sec:native}
+
+On unmodified Cora-CC and DBLP-CA, conditional influence certifies
+excess alarm risk where the original concentration certificate is
+empty. Independent-edge thresholds frequently flag node-driven
+errors on the same fixed structure, although edge marginals and the
+expected operator are matched. Thus the alarm difference concerns
+the error law, rather than an underlying structural change.
+The frozen error laws are majority-versus-rest binary flips
+and symmetric multiclass errors: $P[u,y_u]=1-\varepsilon$, with
+remaining mass $\varepsilon/(C-1)$ per other class,
+$\varepsilon\in\{0.05,0.15\}$. In the binary case $y_u$ is the
+binarized label. Groups consist of the maximum-degree node and its
+largest weighted co-edge partner; state-specific directions follow
+the largest absolute eigenvalue of $M_U(z)$ on its nonzero support.
+Group-selection ties use node IDs; all positive-probability states
+are retained. Exact rational moments certify the saved directions
+even when eigenvectors are approximate. Groups, directions, and
+moments are fixed before fresh calibration; each threshold-dependent
+certificate precedes validation.
+
+Each cell uses 2,000 fresh B calibration draws, nominal tail $5\%$,
+and joint calibration confidence at least $99\%$ across eight cells.
+Two independent 1,000-draw validation batches per arm give the
+alarm-rate envelopes in Table~\ref{tab:native-risk}. Node-driven
+alarms occur in $93.9$--$100\%$ of validation draws, against a nominal
+$5\%$ independent-edge tail. All eight exact
+bounds exceed $5\%$; all eight Bonferroni-adjusted A confidence lower
+endpoints exceed $92\%$. Calibration confidence and familywise $95\%$
+validation intervals are separate guarantees. The alarm-rate envelopes
+include all 49 ambiguous norm intervals. B's $5.1\%$ endpoint is a
+finite-sample validation envelope; the calibration guarantee concerns
+the population tail.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llrrrr}
+\toprule
+Graph & Error law & $\varepsilon$ & $L_U(\tau_B)$ & A alarms (\%) & B alarms (\%)\\
+\midrule
+Cora & Binary & 0.05 & 0.0968 & $[95.85,96.00]$ & $[4.75,4.75]$\\
+Cora & Binary & 0.15 & 0.1485 & $[97.90,98.80]$ & $[3.10,3.15]$\\
+Cora & Multiclass & 0.05 & 0.0969 & $[93.90,94.05]$ & $[3.95,3.95]$\\
+Cora & Multiclass & 0.15 & 0.1513 & $[98.10,99.00]$ & $[3.80,3.80]$\\
+DBLP & Binary & 0.05 & 0.0950 & $[100,100]$ & $[3.65,3.65]$\\
+DBLP & Binary & 0.15 & 0.2550 & $[100,100]$ & $[4.15,4.20]$\\
+DBLP & Multiclass & 0.05 & 0.0970 & $[100,100]$ & $[5.00,5.10]$\\
+DBLP & Multiclass & 0.15 & 0.2730 & $[100,100]$ & $[3.65,3.80]$\\
+\bottomrule
+\end{tabular}
+\caption{Native tail-risk confirmation, 48,000 fresh draws in total.
+$L_U$ reports a rounded exact-model probability lower bound.
+Alarm-rate envelopes pool 2,000 validation draws per arm and span the
+counts allowed by ambiguous norm intervals.}
+\label{tab:native-risk}
+\end{table}
+
+Earlier variance diagnostics remain in Appendix~\ref{app:risk}.
+
+\subsection{Real predictors and per-edge calibration}
+\label{sec:pipeline}
+
+Empirical amplification also appears with trained predictors:
+the node-driven arm has larger mean centered norms in every displayed
+setting (Table~\ref{tab:real-main}). Real predictions vary with
+training partitions or seed labels on fixed
+feature matrices and hypergraphs. An independent calibration group
+estimates $\hat q_e$, and an evaluation group is compared with B draws
+at these rates; both arms are centered on $\hat M=\sum_es_e\hat q_eH_e$
+($s_e$ the per-edge error sign). We report the ratio of mean centered
+norms. The retained
+settings span citation (Cora-CC), co-authorship (DBLP-CA), and
+co-purchase (Walmart-trips, LP only---no node features) structures:
+all displayed bootstrap lower bounds exceed one. The predictor families provide varied
+sources of relation-construction errors. Calibration sensitivity and three
+disjoint-seed batches are in Appendix~\ref{app:protocol}; all $24$
+batch intervals remain above one (smallest lower endpoint $1.016$).
+
+A node-marginal resampling control checks whether shared-node
+construction can reproduce the observed amplification. Drawing each node's prediction
+independently from its cross-fit empirical distribution reproduces
+the real arm's centered norm ($3.80$ vs $3.87$ on Cora, ratio $0.98$
+$[0.86,1.12]$; $2.79$ vs $2.83$ on DBLP, $0.99$ $[0.94,1.03]$), with
+both arms exceeding the independent-edge arm ($\approx1.7$). On Cora,
+variance along the top eigenvector of $B(a^*)$ decomposes into
+$0.134$ within-edge, $0.320$ overlapping-pair, and $0.0003$
+disjoint-pair contributions. The resampling and variance decomposition
+are consistent with the shared-node amplification mechanism.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{llrrc}
+\toprule
+Dataset & Predictor & Accuracy & Centered A/B & 95\% interval\\
+\midrule
+Cora & Prototype & 0.69 & 2.359 & $[2.022,\;3.203]$ \\
+DBLP & Prototype & 0.76 & 1.960 & $[1.715,\;2.523]$ \\
+Cora & GCN & $0.67$ & $2.16$ & $[1.68,\;2.90]$\\
+Cora & LP & $0.57$ & $2.11$ & $[1.57,\;3.17]$\\
+DBLP & LP & $0.85$ & $2.08$ & $[1.67,\;2.48]$\\
+Walmart & LP & $0.64$ & $4.00$ & $[2.91,\;7.51]$\\
+\bottomrule
+\end{tabular}
+\caption{Centered A/B under per-edge calibration ($20$ calibration and
+$20$ evaluation runs per cell; prototype rows from the saved
+$1000$-replicate bootstrap at $N_{\mathrm{cal}}=20$, GCN/LP rows
+retained from the source runs). Pointwise intervals on fixed
+structures.}
+\label{tab:real-main}
+\end{table}
+
+\paragraph{Secondary spectral readout.}
+A fixed-$k$ projector-distance comparison to the common expected
+operator separates on Cora but not DBLP
+(Appendix~\ref{sec:subspace}). DBLP's positive but small gap at
+$p=0.15$ permits a unique reference subspace that may be
+perturbation-sensitive. With $k$ fixed, the subspace readout separates
+the arms on Cora and remains unresolved on DBLP.
+
+
+\clearpage
+\section{Proofs of the Influence Theorems}\label{app:proofs-influence}
+
+\begin{proof}[Proof of Theorem~\ref{thm:decomp}]
+Fix $u$ and $z$. Given $\hat y_u=z$, the events
+$\{a_e=1\}$ for $e\ni u$ depend on the other members through
+``all equal $z$'', of probability $\prod_{v\in e\setminus\{u\}}P[v,z]$;
+edges without $u$ have unchanged conditional mean. Hence
+$\mathbb E[X_A\mid\hat y_u=z]=F_u(z)$, i.e.\ $F_u(\hat y_u)
+=\mathbb E[X_A\mid\hat y_u]$ pathwise. Then for $R=X_A-\sum_vF_v(\hat y_v)$
+and every $u$,
+\[
+\mathbb E[R\mid\hat y_u]
+=\mathbb E[X_A\mid\hat y_u]-F_u(\hat y_u)
+-\sum_{v\ne u}\mathbb E\bigl[F_v(\hat y_v)\mid\hat y_u\bigr]=0,
+\]
+since $\hat y_v$ is independent of $\hat y_u$ and
+$\mathbb EF_v(\hat y_v)=\mathbb E\,\mathbb E[X_A\mid\hat y_v]=0$.
+Orthogonality holds entrywise, which is what the matrix identity
+needs: for $u\ne v$ and any entries $(i,k),(k,j)$,
+$\mathbb E[(F_u)_{ik}(F_v)_{kj}]
+=\mathbb E[(F_u)_{ik}]\,\mathbb E[(F_v)_{kj}]=0$ by independence
+(and likewise $\mathbb E[(F_u)_{ik}R_{kj}]
+=\mathbb E[(F_u)_{ik}\,\mathbb E[R_{kj}\mid\hat y_u]]=0$), so
+$\mathbb E[F_uF_v]=0$ and $\mathbb E[F_uR]=0$ as matrices; in
+particular the Frobenius inner products vanish.
+The matrix identity follows by expanding
+$\mathbb E[X_A^2]=\mathbb E[(\sum_uF_u+R)^2]$ and collecting the
+zero cross terms; for $X_B$, the summands $(b_e-p_e)H_e$ are
+independent, centered, and idempotent-scaled ($H_e^2=H_e$).
+\end{proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:cov}]
+Expand $\mathbb E[X_A^2]$ as
+\[
+\sum_{e,f}\mathbb E[(a_e-p_e)(a_f-p_f)]H_eH_f.
+\]
+The diagonal is $\sum_ep_e(1-p_e)H_e=\mathbb E[X_B^2]$, and
+$e\cap f=\varnothing$ makes $a_e,a_f$ independent (functions of
+disjoint node sets). For $e\cap f=\{u\}$, conditionally on $\hat y_u$
+the two events depend on disjoint node sets, so
+$\mathbb E[a_ea_f\mid\hat y_u]=g_{e,u}(\hat y_u)g_{f,u}(\hat y_u)$.
+The quadratic-form identity is the same expansion evaluated at $x$;
+$(H_eH_f)^\top=H_fH_e$ keeps the sum symmetric.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:decomp}(ii) and
+Lemma~\ref{lem:dev}]
+Write $x^\top X_Ax=\sum_u\psi_u+\rho$ with
+$\psi_u=x^\top F_u(\hat y_u)x$ and $\rho=x^\top Rx$. The pairs
+$(\psi_u,\psi_v)$ ($u\ne v$) and $(\psi_u,\rho)$ are uncorrelated by
+the orthogonality above, so the variance splits as claimed. In the
+binary case $\psi_u(z)=\sum_{e\ni u}(g_{e,u}(z)-p_e)h_e$ with
+$p_e=P[u,1]g_{e,u}(1)+P[u,0]g_{e,u}(0)$, giving
+$\psi_u(1)=P[u,0]\Phi_u(x)$, $\psi_u(0)=-P[u,1]\Phi_u(x)$, and
+$\operatorname{Var}(\psi_u)=P[u,1]P[u,0]\Phi_u(x)^2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:sep}]
+Let $E_i'=\{\hat y_{u_i}=z_i,\ \hat y_{u_j}\ne z_j\ \forall j<i\}$ be
+the \emph{first realized} block events; they are disjoint with
+$\bigcup_iE_i'=\{\exists i:\hat y_{u_i}=z_i\}$, of probability
+$1-\prod_i(1-m_i)$. Fix $i$ and work conditionally on $E_i'$; under
+this conditioning $\hat y_{u_i}=z_i$ and every earlier hub is pinned
+at its non-amplifying value, while every non-hub node's prediction
+keeps its unconditional law. By the no-shared-hub hypothesis, no edge
+at the witness $x_i$ contains any hub other than $u_i$ (edges without
+$u_i$ have $h_e(x_i)=0$), so pinned earlier hubs enter no term below.
+Decompose
+\[
+x_i^\top X_Ax_i
+=\underbrace{\sum_{e\ni u_i}\bigl(g_{e,u_i}(z_i)-p_e\bigr)h_e}_{=:D}
++\underbrace{\sum_{u\ne u_i}\psi_u}_{=:S}
++\underbrace{x_i^\top Rx}_{=:\rho},
+\]
+which is exact because $x_i^\top X_Ax_i=\psi_{u_i}+\sum_{u\ne
+u_i}\psi_u+\rho$ by Theorem~\ref{thm:decomp} and
+$\psi_{u_i}=D$ on $E_i'$.
+\emph{Drift.} From $p_e=m_ig_{e,u_i}(z_i)+(1-m_i)g_{e,u_i}(\bar z_i)$,
+\[
+g_{e,u_i}(z_i)-p_e=(1-m_i)\bigl(g_{e,u_i}(z_i)-g_{e,u_i}(\bar z_i)
+\bigr)=\pm(1-m_i)\phi_{u_i,e},
+\]
+so $D=\pm(1-m_i)\Phi_i$ and $|D|\ge(1-m_i)B\ge\min_j(1-m_j)B$.
+\emph{First-order rest.} Every other hub has
+$\psi_{u_j}(x_i)\equiv0$ (no edge contains both $u_i$ and $u_j$), so
+$S$ runs over non-hub nodes only: their $\psi_u$ are functions of the
+independent $\hat y_u$, whose laws the conditioning does not touch,
+and each is centered (Theorem~\ref{thm:decomp}), bounded
+$|\psi_u|\le|\Phi_u(x_i)|\le\phi^-_{\max}$ by
+Lemma~\ref{lem:dev}, with variance sum $\le V^-$; a one-sided
+Bernstein bound applied to $S$ and to $-S$, each at level $\eta/2$,
+gives
+$\Pr\{|S|>\sqrt{2V^-\log(2/\eta)}+\tfrac{\phi^-_{\max}}3
+\log(2/\eta)\mid E_i'\}\le\eta$.
+\emph{Remainder.} Since
+$x_i^\top X_Ax_i=\sum_{e\ni u_i}(a_e-p_e)h_e$, we can write
+$\rho=W-S$ with
+$W=\sum_{e\ni u_i}\bigl(a_e-g_{e,u_i}(z_i)\bigr)h_e$, which depends
+only on the non-hub members of $u_i$'s edges. Hence
+$\mathbb E[\rho\mid E_i']
+=\mathbb E[W\mid\hat y_{u_i}=z_i]-\mathbb E[S\mid E_i']=0-0$.
+Changing $\hat y_u$ for a non-hub $u$ changes
+$x_i^\top X_Ax_i$ by at most $\sum_{e\ni u,u_i}h_e\le L_u(x_i)$ and
+changes $\psi_u$ by exactly $|\Phi_u(x_i)|\le L_u(x_i)$
+(Lemma~\ref{lem:dev}); changing a hub $\hat y_{u_j}$ ($j\ne i$)
+changes neither $x_i^\top X_Ax_i$ nor any term above, so its
+Lipschitz constant is $0$. McDiarmid with constants $2L_u(x_i)$ gives
+$\Pr\{|\rho|>\sqrt{2\Lambda^2\log(2/\eta_2)}\mid E_i'\}\le\eta_2$.
+Combining by the reverse triangle inequality
+$|D+S+\rho|\ge|D|-|S|-|\rho|$: on $E_i'$, with conditional
+probability $\ge1-\eta-\eta_2$,
+\[
+\widetilde\beta_A\ \ge\ |x_i^\top X_Ax_i|\ \ge\ (1-m_i)B
+-\sqrt{2V^-\log(2/\eta)}-\tfrac{\phi^-_{\max}}3\log(2/\eta)
+-\sqrt{2\Lambda^2\log(2/\eta_2)} .
+\]
+The witness family $\{x_i\}$ is fixed before sampling; only the
+realized first block is used, through the bound above. Summing the
+failure probabilities over the disjoint $E_i'$,
+$\sum_i\Pr(E_i')(\eta+\eta_2)\le\eta+\eta_2$, and adding the B event
+(matrix Bernstein, independent summands
+$(b_e-p_e)H_e$ with $\norm{\cdot}_2\le1$ a.s.) gives the claim.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:scale}]
+$Z=x^\top X_Ax$ is centered with
+$\operatorname{Var}(Z)\ge V_1(x)\ge m(1-m)B^2$
+(Theorem~\ref{thm:decomp}(ii)) and $|Z|\le Z_{\max}$ surely. By
+Paley--Zygmund applied to $Z^2$,
+$\Pr\{Z^2\ge\theta\mathbb E Z^2\}\ge(1-\theta)^2(\mathbb EZ^2)^2/
+\mathbb EZ^4$, and since $\mathbb E Z^4\le Z_{\max}^2\,\mathbb E Z^2$,
+the ratio is at least $(1-\theta)^2\,\mathbb EZ^2/Z_{\max}^2\ge
+(1-\theta)^2\,m(1-m)B^2/Z_{\max}^2$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:cancel}]
+(i) is the definition of $\phi$. (ii) On a triple
+$e=\{u,w,w'\}$, flatness of $u$ reads
+$P[w,1]P[w',1]=P[w,0]P[w',0]$; with $P[w,1]=a$, $P[w',1]=1-a$ both
+sides equal $a(1-a)$. (For $r_e\ge4$, cancellation also depends on
+the probability product of the remaining members.) (iii) Flatness for
+every member imposes
+$\prod_{v\ne u}P[v,1]=\prod_{v\ne u}P[v,0]$ for all $u\in e$. Under
+positivity, dividing the identity for $u$ by that for $u'$ yields
+$P[u',1]P[u,0]=P[u',0]P[u,1]$, i.e.\ a common odds ratio
+$o=P[v,1]/P[v,0]$ across members; substituting back,
+$o^{\,r_e-1}\prod_{v\ne u}P[v,0]=\prod_{v\ne u}P[v,0]$ with a
+positive product forces $o^{\,r_e-1}=1$, hence $o=1$: uniform laws.
+(iv) For a single-shared pair with shared node $u$ flat on both
+edges, $\mathbb E[a_ea_f\mid\hat y_u]
+=g_{e,u}(\hat y_u)g_{f,u}(\hat y_u)=p_ep_f$; pairs sharing no node
+are independent; summing the variance
+expansion of Proposition~\ref{prop:cov} at any $x$ leaves only
+the diagonal, which equals $\operatorname{Var}(x^\top X_Bx)$.
+\end{proof}
+
+\section{Mixed-Edge Budget Certificate}\label{app:mixed}
+
+For environments with unbounded co-occurrence at a star core, the
+budget form below complements Theorem~\ref{thm:sep}. Binary labels,
+i.i.d.\ flips; $E=E_\ast\cup F$ with $E_\ast$ the disjoint-leaf
+homogeneous star cores and $F$ arbitrary environment edges not
+incident to any candidate center. With per-edge rates $q_e$ /
+$\pi_e$ (homogeneous / mixed), $\bar w_e,\hat w_e$ their positive
+centered magnitudes, and overlaps $o_e$ against a star support
+$\Omega_v$,
+\[
+\mu_v=\sum_{o_e>0}\bar w_e\frac{o_e}{k_e},\qquad
+\tilde Q_v=\sum_u\Bigl(\sum_{e\ni u,o_e>0}\hat w_e\frac{o_e}{k_e}
+\Bigr)^2,\qquad
+\Gamma_v=\mu_v+\sqrt{\tilde Q_v\log(1/\eta_2)/2},
+\]
+the A arm obeys $\widetilde\beta_A\ge L_A-\Gamma_{v_\ast}$ with
+$L_A=\bigl(dc_{r,p}-\sqrt{\tfrac d2\log(1/\eta)}\bigr)/r-\bar\kappa$
+on the first-wrong-center event (conditional probability
+$\ge1-\eta-\eta_2$), and if $\min_v(L_A-\Gamma_v)>U_B$ then
+$\Pr\{\widetilde\beta_A>\widetilde\beta_B\}\ge
+1-(1-p)^t-\eta-\eta_2-\delta_B$. The center-local refinement
+replaces $o_e$ by the explicit witness entries $b_e
+=2\ind{v\in e}+2o_e^2/S_{\min}^2$ under the standing assumptions
+$S_{\min}=d(1-p^{r-1})-\sqrt{\tfrac d2\log(1/\eta)}>dq_r$ and, for
+the comparison $\Gamma_v^{\rm loc}\le\Gamma_v$,
+$2o_e\le S_{\min}^2$; both hold with wide margin in the tested
+configurations. Given $W_v=1$ with flipped class $c$, an incident
+mixed edge with $n_c$ further members of true label $c$ is inserted
+with conditional probability $(1-p)^{n_c}p^{k_e-1-n_c}$ (e.g.\
+$(0,1,1)$ at $p=0.1$: $0.81$), which is why center-incident
+environment edges must be excluded structurally: their conditional
+rates differ from the unconditional $\bar w_e$. On binarized Cora and
+DBLP structures, observed separation frequency is $99$--$100\%$ across
+$100$ draws. Native star cores are scarce (Cora: one candidate at
+$d=20$, margin $3.4-14.3<0$ under the center-isolated budget; DBLP: none), and the
+implanted-core check identifies a conservative Cauchy--Schwarz budget
+($\Gamma\approx98$ versus measured positive overlap mass $0.058$),
+with the local budget $\Gamma^{\rm loc}\le0.1$ triggering certification
+at $d\ge100$ ($p=0.05$) and $d\ge150$ ($p=0.10$) on both datasets.
+Full proofs are retained in the repository record.
+
+\section{Conditioning Boundary}\label{app:identification}
+For a shared training state $\Theta$, the conditional variance
+identity holds only under conditional independence of node
+predictions given $\Theta$; total variance then separates
+within-state from across-state components. The real-predictor
+experiments condition on fixed features and vary training partitions
+or seed labels. They measure centered amplification under
+training-induced prediction variability; fresh-feature variability
+requires a separate sampling design.
+
+\section{Conditional Risk Calculation and Native Scope Checks}
+\label{app:risk}
+
+\paragraph{Exact conditional moments and tail bound.}
+For $g_e(z)=\Pr(a_e=1\mid\hat y_U=z)$, conflicting pinned labels
+give $g_e=0$; agreeing pinned labels $c$ give
+$g_e=\prod_{u\in e\setminus U}P[u,c]$; an edge not meeting $U$ has
+$g_e=p_e$. Thus $M_U(z)=\sum_e(g_e-p_e)H_e$. For
+$h_e(q_z)=(\sum_{u\in e}q_{z,u})^2/r_e$, the directional variance is
+\[
+v_z=\sum_{e,f}\left[\Pr(a_e=a_f=1\mid z)-g_e(z)g_f(z)\right]
+h_e(q_z)h_f(q_z).
+\]
+The joint probability enforces agreement within each edge, respecting
+pinned labels; a common label across the union is required only when
+the unpinned sets overlap. Disjoint unpinned sets have zero conditional
+covariance; remaining shared nodes and duplicate slots are retained.
+With $Y_z=\operatorname{sgn}(m_z)q_z^\top X_Aq_z$,
+$\mathbb E[Y_z\mid z]=|m_z|$. For $D_z>0$, Cantelli bounds
+$\Pr(Y_z\le\tau s_z\mid z)\le v_z/(v_z+D_z^2)$, and
+$Y_z>\tau s_z$ implies $\|X_A\|_2>\tau$.
+Summing over disjoint states proves Eq.~\eqref{eq:risk-certificate};
+zero variance gives bound one when $D_z>0$. Finite decimal model
+probabilities and saved dyadic directions are evaluated as exact
+rationals; an approximate eigenvector is a valid fixed witness.
+An identically zero mean uses a fixed coordinate witness.
+
+\paragraph{Finite calibration and confirmation.}
+For nominal tail $\alpha=0.05$, the threshold is the 1,929th ordered
+certified upper norm enclosure among 2,000 independent B draws.
+The exact binomial probability
+$\Pr\{\operatorname{Bin}(2000,0.95)\ge1929\}\le1/800$ bounds the
+chance that its true B tail exceeds $5\%$; a union bound over eight
+cells gives at least $99\%$ joint calibration confidence. Strict
+exceedance and upper enclosures make ties and numerical uncertainty
+conservative. Each validation realization consists of a complete
+node-prediction draw. Eight-cell adjusted exact
+binomial intervals retain ambiguous counts at both endpoints.
+The coordinate-only certificate was inconclusive. After developing
+group-based witnesses, we froze directions and exact moments before
+the new calibration and validation streams; threshold-dependent bounds
+were saved before validation. Protocols,
+raw intervals, and the unsuccessful original experiment remain in
+\texttt{notes/native-risk/}, indexed by the README.
+
+\paragraph{Earlier native variance diagnostics.}
+Under binary majority-versus-rest flips at $p=0.05/0.15$, the
+maximum-degree witness is chosen from structure only. Cora's witness
+(degree $145$) carries $94.7\%$ of $V_1$ at its coordinate direction;
+DBLP's top two nodes share the same edges and carry $98\%$. In the
+original $30$-draw probe, mean A/B norms were $7.88/2.62$ and
+$12.57/3.85$ on Cora, and $5.85/2.40$ and $5.96/2.74$ on DBLP.
+The exact independent-edge directional variances are $2.04/4.15$
+and $0.27/0.56$, with first-order lower-bound ratios
+$V_1/\operatorname{Var}_B=41.3/31.5$ and $12.0/8.8$, respectively.
+These comparisons use exact directional variances and first-order
+quantities.
+Theorem~\ref{thm:sep}'s concentration penalties leave the native
+norm-separation certificate inactive: $\Lambda^2=128.5$ on Cora and
+$45.6$ on DBLP leave insufficient drift. The mixed-edge budget also
+fails to certify a native star core. Conditional risk analysis
+provides a separate tail-risk certificate using exact group-conditioned
+moments.
+
+\paragraph{Fixed spectral-subspace readout.}\label{sec:subspace}
+The registered readout compares each realization's top-$k$
+eigenspace ($k=8$ fixed) with that of the common expected operator
+$\sum_ep_eH_e$, using projector distance
+$\|QQ^\top-Q_{\mathrm{ref}}Q_{\mathrm{ref}}^\top\|_F$.
+Table~\ref{tab:subspace} reports paired draw-level differences and
+reference eigengaps for $30$ draws per setting. Cora's intervals
+exclude zero at both noise levels; DBLP's include zero. At $p=0.15$
+its positive but small gap may make the unique reference subspace
+perturbation-sensitive. The readout uses the registered value $k=8$
+throughout.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{lrrrrc}
+\toprule
+Dataset & $p$ & Gap & Mean A & Mean B & A$-$B [95\% CI]\\
+\midrule
+Cora & 0.05 & 0.582 & 1.474 & 0.943 & $+0.531\;[+0.292,+0.781]$\\
+Cora & 0.15 & 0.641 & 2.075 & 1.502 & $+0.573\;[+0.373,+0.792]$\\
+DBLP & 0.05 & 0.589 & 1.394 & 1.642 & $-0.247\;[-0.648,+0.167]$\\
+DBLP & 0.15 & 0.017 & 2.475 & 2.524 & $-0.049\;[-0.266,+0.161]$\\
+\bottomrule
+\end{tabular}
+\caption{Fixed-$k$ projector-distance readout against the common
+expected operator. Means report projector distances; intervals describe
+paired draw-level differences on the fixed native structures.}
+\label{tab:subspace}
+\end{table}
+
+\section{Experimental Protocol and Sensitivity}\label{app:protocol}
+
+\paragraph{Prototype protocol.}
+Cora-CC: $2708$ nodes, $1579$ edges, $7$ classes; DBLP-CA: $41{,}302$
+nodes, $22{,}363$ edges, $6$ classes. Five-fold cross-fitting;
+calibration seeds $31000+$, evaluation seeds $32000+$, nested
+calibration sizes $\{20,40,80\}$; every bootstrap replicate resamples
+calibration runs, recomputes $\hat q_e$ and $\hat M$, regenerates
+$20$ B draws, and resamples the $20$ evaluation runs ($1000$
+replicates; bootstrap seeds $99{+}N_{\mathrm{cal}}$ per calibration
+size). All twelve fixed-split intervals have lower
+endpoints above one (range $1.165$--$3.274$). Three fully disjoint
+outer batches (seeds $33/36$k, $41/44$k, $49/52$k blocks, disjoint
+from all other blocks) repeat the protocol; all $24$ batch intervals
+have lower endpoints above one (smallest $1.016$, DBLP-tri batch 2),
+so ratio magnitudes vary across splits while sign evidence is stable.
+Spectral norms in the batch runs use a $25$-step reorthogonalized
+Lanczos estimator validated against \texttt{eigsh} (worst relative
+error $<10^{-7}$, recorded per cell).
+
+\paragraph{GCN and label propagation.}
+Cora GCN: row-normalized features, two layers of width $64$, $500$
+epochs, lr $0.2$, five-fold cross-fitting on the symmetric-normalized
+clique expansion (a width-$16$ configuration collapsed to one class
+and is excluded). LP: $20\%$ seeded true labels, $50$ iterations,
+propagation $0.9$, restart $0.1$. Walmart-trips: induced subgraph on
+the first $20{,}000$ original nodes ($19{,}965$ incident nodes,
+$18{,}034$ edges, $11$ categories, sizes $2$--$25$; no node features,
+LP only). A DBLP-GCN configuration exists in the saved record
+(ratio $2.15$) at near-chance accuracy ($0.31$) and is not tabled.
+
+\paragraph{Controlled-family and native protocol.}
+Family A uses two-sided concentration constants and realized
+co-occurrences, first certifying at $d=250$. The $30$-draw samples
+describe observed norm fluctuations.
+The structure and native experiments run under the frozen
+protocol \texttt{upgrade/protocol.json} (hash recorded in each result
+file); pilot records ($64$ draws) are kept separate from formal
+intervals ($256$ structure / $30$ native draws); seeds are disjoint
+from all earlier blocks; every registered unit including solver
+failures is recorded. Fresh-seed reproductions and the six canonical
+exhaustive checks are indexed in the accompanying README.
+
+\paragraph{Homogeneous-star and cyclic verification.}\label{sec:controlled}
+Tables~\ref{tab:joint-mc} and \ref{tab:cyclic-verify} give the star
+and cyclic grids ($r=3$, $t=100$). The star guarantee at $p=0.05$,
+$d=100$ is $\ge0.974$; empirical grid separation is $99.2$--$100\%$.
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{rrrrrrc}
+\toprule
+$p$ & $d$ & $L_A$ & $U_B$ & no center & $A$/$B$ fail & sep.\ fail [95\% CI]\\
+\midrule
+0.05 & 20 & 3.44 & 12.72 & 34/5000 & 0/0 & 31 $[.0044,.0088]$\\
+0.05 & 50 & 10.67 & 16.14 & 38/5000 & 0/0 & 38 $[.0055,.0104]$\\
+0.05 & 100 & 23.44 & 19.93 & 29/5000 & 0/0 & 19 $[.0024,.0059]$\\
+0.05 & 200 & 49.85 & 25.26 & 31/5000 & 0/0 & 6 $[.0006,.0026]$\\
+0.10 & 20 & 2.54 & 12.90 & 0/5000 & 0/0 & 0 $[.0000,.0008]$\\
+0.10 & 50 & 8.42 & 17.03 & 0/5000 & 0/0 & 0 $[.0000,.0008]$\\
+0.10 & 100 & 18.94 & 21.68 & 0/5000 & 0/0 & 0 $[.0000,.0008]$\\
+0.10 & 200 & 40.85 & 28.28 & 0/5000 & 0/0 & 0 $[.0000,.0008]$\\
+\bottomrule
+\end{tabular}
+\caption{Joint Monte Carlo on disjoint stars
+($5000$ draws/cell, $\eta=\delta_B=0.01$). ``no center'': no wrong
+center; ``$A$/$B$ fail'':
+$\widetilde\beta_A<L_A$ (given a wrong center) and
+$\widetilde\beta_B>U_B$; allowed separation-failure rates are $0.0259$
+($p=0.05$) and $0.0200$ ($p=0.10$).}
+\label{tab:joint-mc}
+\end{table}
+
+\begin{table}[htbp]
+\centering\small
+\begin{tabular}{rrrrrccrr}
+\toprule
+$d$ & $Q$ & $\lVert\Sigma H_e\rVert_2$ & $L_A^{\mathrm{ov}}$ & $U_B$ &
+Theory & Empirical &
+$\overline{\widetilde\beta}_A$ & $\overline{\widetilde\beta}_B$ \\
+\midrule
+20 & 78 & 8.0 & 1.23 & 12.43 & $\times$ & $100\%$ & 6.80 & 2.39 \\
+50 & 198 & 18.0 & 7.13 & 15.71 & $\times$ & $100\%$ & 15.35 & 3.32 \\
+100 & 398 & 34.7 & 18.41 & 19.39 & $\times$ & $99.8\%$ & 29.52 & 4.34 \\
+150 & 598 & 51.3 & 30.38 & 22.21 & $\checkmark$ & $99.8\%$ & 43.63 & 5.15 \\
+200 & 798 & 68.0 & 42.71 & 24.59 & $\checkmark$ & $100\%$ & 57.79 & 5.79 \\
+\bottomrule
+\end{tabular}
+\caption{Cyclic overlap verification ($r{=}3$, $t{=}100$, $p{=}0.05$,
+$\eta=\delta_B=0.01$, $500$ draws per $d$, seed 42). Structural
+quantities match $4d{-}2$ and $(d{+}4)/3$ exactly.}
+\label{tab:cyclic-verify}
+\end{table}
+
+\input{sections/calibration-appendix}
+\end{document}

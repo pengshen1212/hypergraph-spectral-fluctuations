@@ -1,0 +1,20 @@
+% Generated from frozen results by notes/calibration-integration/generate_tables.py
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lllrrr}
+\toprule
+Data & Mechanism & R/C/E & Run-pool (\%) & Node-fit & Edge-iid \\
+\midrule
+Cora & LP & 50/100/100 & 4.0 [1.1,9.9] & 0.0 & 0.0 \\
+DBLP & LP & 40/80/80 & 6.2 [2.1,14.0] & 0.0 & 0.0 \\
+Cora & Proto & 30/100/150 & 3.3 [1.1,7.6] & 0.0 & 9.3 \\
+DBLP & Proto & 20/50/80 & 6.2 [2.1,14.0] & 0.0 & 0.0 \\
+Cora & GCN-XF & 20/40/60 & 6.7 [1.8,16.2] & 0.0 & 0.0 \\
+Cora & GCN-init & 20/40/60 & 1.7 [0.0,8.9] & 0.0 & 0.0 \\
+DBLP & GCN-init & 15/25/40 & 2.5 [0.1,13.2] & 0.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\caption{Whole-run evaluation at $\alpha=5\%$. R/C/E are the reference/calibration/evaluation run counts. All rates are percentages; run-pool brackets are conditional 95\% binomial intervals for the realized threshold. LP varies labeled subsets, Proto varies a half split, GCN-XF uses five-fold cross-fitting, and GCN-init holds a 20\% labeled subset fixed. Zero node-fit counts do not imply zero population probability; their upper 95\% endpoints range from 2.4\% to 8.8\%. Every 5\% threshold displayed is finite.}
+\label{tab:run-calibration}
+\end{table}

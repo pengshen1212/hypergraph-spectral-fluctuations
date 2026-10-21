@@ -1,0 +1,162 @@
+# Visual alarm validation: machine report
+
+Budget: formal_resource {'batches': 1, 'cal': 99, 'eval': 200, 'ref': 30}
+
+## Checks
+
+- [x] E1 rows L3_full_run (1 batches)
+- [x] E1 rate matches count b1.0 L3_full_run
+- [x] E1 rows L2_node_product (1 batches)
+- [x] E1 rate matches count b1.0 L2_node_product
+- [x] E1 rows edge_iid (1 batches)
+- [x] E1 rate matches count b1.0 edge_iid
+- [x] E1/E2 clean FPR agree b1.0
+- [x] E2 strength grid ([0.0, 0.1, 0.25, 0.5, 1.0])
+- [x] E2 rate/count T b1.0 s0.0
+- [x] E2 rate/count T b1.0 s0.1
+- [x] E2 rate/count T b1.0 s0.25
+- [x] E2 rate/count T b1.0 s0.5
+- [x] E2 rate/count T b1.0 s1.0
+- [x] E2 rate/count frob b1.0 s0.0
+- [x] E2 rate/count frob b1.0 s0.1
+- [x] E2 rate/count frob b1.0 s0.25
+- [x] E2 rate/count frob b1.0 s0.5
+- [x] E2 rate/count frob b1.0 s1.0
+- [x] E2 rate/count entropy b1.0 s0.0
+- [x] E2 rate/count entropy b1.0 s0.1
+- [x] E2 rate/count entropy b1.0 s0.25
+- [x] E2 rate/count entropy b1.0 s0.5
+- [x] E2 rate/count entropy b1.0 s1.0
+- [x] E2 rate/count active_dev b1.0 s0.0
+- [x] E2 rate/count active_dev b1.0 s0.1
+- [x] E2 rate/count active_dev b1.0 s0.25
+- [x] E2 rate/count active_dev b1.0 s0.5
+- [x] E2 rate/count active_dev b1.0 s1.0
+- [x] E2 rate/count U_two_sided b1.0 s0.0
+- [x] E2 rate/count U_two_sided b1.0 s0.1
+- [x] E2 rate/count U_two_sided b1.0 s0.25
+- [x] E2 rate/count U_two_sided b1.0 s0.5
+- [x] E2 rate/count U_two_sided b1.0 s1.0
+- [x] E4 range policy_base b1.0 s0.0
+- [x] E4 range policy_refine b1.0 s0.0
+- [x] E4 range policy_spectral_fallback b1.0 s0.0
+- [x] E4 range policy_entropy_fallback b1.0 s0.0
+- [x] E4 range policy_random_fallback b1.0 s0.0
+- [x] E4 range policy_base b1.0 s0.1
+- [x] E4 range policy_refine b1.0 s0.1
+- [x] E4 range policy_spectral_fallback b1.0 s0.1
+- [x] E4 range policy_entropy_fallback b1.0 s0.1
+- [x] E4 range policy_random_fallback b1.0 s0.1
+- [x] E4 range policy_base b1.0 s0.25
+- [x] E4 range policy_refine b1.0 s0.25
+- [x] E4 range policy_spectral_fallback b1.0 s0.25
+- [x] E4 range policy_entropy_fallback b1.0 s0.25
+- [x] E4 range policy_random_fallback b1.0 s0.25
+- [x] E4 range policy_base b1.0 s0.5
+- [x] E4 range policy_refine b1.0 s0.5
+- [x] E4 range policy_spectral_fallback b1.0 s0.5
+- [x] E4 range policy_entropy_fallback b1.0 s0.5
+- [x] E4 range policy_random_fallback b1.0 s0.5
+- [x] E4 range policy_base b1.0 s1.0
+- [x] E4 range policy_refine b1.0 s1.0
+- [x] E4 range policy_spectral_fallback b1.0 s1.0
+- [x] E4 range policy_entropy_fallback b1.0 s1.0
+- [x] E4 range policy_random_fallback b1.0 s1.0
+- [x] E4 CI ordered spec_minus_refine s0.0
+- [x] E4 CI ordered spec_minus_base s0.0
+- [x] E4 CI ordered ent_minus_refine s0.0
+- [x] E4 CI ordered refine_minus_base s0.0
+- [x] E4 CI ordered spec_minus_refine s0.5
+- [x] E4 CI ordered spec_minus_base s0.5
+- [x] E4 CI ordered ent_minus_refine s0.5
+- [x] E4 CI ordered refine_minus_base s0.5
+- [x] E4 CI ordered spec_minus_refine s1.0
+- [x] E4 CI ordered spec_minus_base s1.0
+- [x] E4 CI ordered ent_minus_refine s1.0
+- [x] E4 CI ordered refine_minus_base s1.0
+- [x] E3 event counts (6.0 events)
+- [x] Holm adjusted >= raw
+- [x] Holm <= 1
+- [x] solver approximation diagnosed
+- [x] batch thresholds not pooled
+- [x] E1 rows L3_full_run (1 batches)
+- [x] E1 rate matches count b1.0 L3_full_run
+- [x] E1 rows L2_node_product (1 batches)
+- [x] E1 rate matches count b1.0 L2_node_product
+- [x] E1 rows edge_iid (1 batches)
+- [x] E1 rate matches count b1.0 edge_iid
+- [x] E1/E2 clean FPR agree b1.0
+- [x] E2 strength grid ([0.0, 0.1, 0.25, 0.5, 1.0])
+- [x] E2 rate/count T b1.0 s0.0
+- [x] E2 rate/count T b1.0 s0.1
+- [x] E2 rate/count T b1.0 s0.25
+- [x] E2 rate/count T b1.0 s0.5
+- [x] E2 rate/count T b1.0 s1.0
+- [x] E2 rate/count frob b1.0 s0.0
+- [x] E2 rate/count frob b1.0 s0.1
+- [x] E2 rate/count frob b1.0 s0.25
+- [x] E2 rate/count frob b1.0 s0.5
+- [x] E2 rate/count frob b1.0 s1.0
+- [x] E2 rate/count entropy b1.0 s0.0
+- [x] E2 rate/count entropy b1.0 s0.1
+- [x] E2 rate/count entropy b1.0 s0.25
+- [x] E2 rate/count entropy b1.0 s0.5
+- [x] E2 rate/count entropy b1.0 s1.0
+- [x] E2 rate/count active_dev b1.0 s0.0
+- [x] E2 rate/count active_dev b1.0 s0.1
+- [x] E2 rate/count active_dev b1.0 s0.25
+- [x] E2 rate/count active_dev b1.0 s0.5
+- [x] E2 rate/count active_dev b1.0 s1.0
+- [x] E2 rate/count U_two_sided b1.0 s0.0
+- [x] E2 rate/count U_two_sided b1.0 s0.1
+- [x] E2 rate/count U_two_sided b1.0 s0.25
+- [x] E2 rate/count U_two_sided b1.0 s0.5
+- [x] E2 rate/count U_two_sided b1.0 s1.0
+- [x] E4 range policy_base b1.0 s0.0
+- [x] E4 range policy_refine b1.0 s0.0
+- [x] E4 range policy_spectral_fallback b1.0 s0.0
+- [x] E4 range policy_entropy_fallback b1.0 s0.0
+- [x] E4 range policy_random_fallback b1.0 s0.0
+- [x] E4 range policy_base b1.0 s0.1
+- [x] E4 range policy_refine b1.0 s0.1
+- [x] E4 range policy_spectral_fallback b1.0 s0.1
+- [x] E4 range policy_entropy_fallback b1.0 s0.1
+- [x] E4 range policy_random_fallback b1.0 s0.1
+- [x] E4 range policy_base b1.0 s0.25
+- [x] E4 range policy_refine b1.0 s0.25
+- [x] E4 range policy_spectral_fallback b1.0 s0.25
+- [x] E4 range policy_entropy_fallback b1.0 s0.25
+- [x] E4 range policy_random_fallback b1.0 s0.25
+- [x] E4 range policy_base b1.0 s0.5
+- [x] E4 range policy_refine b1.0 s0.5
+- [x] E4 range policy_spectral_fallback b1.0 s0.5
+- [x] E4 range policy_entropy_fallback b1.0 s0.5
+- [x] E4 range policy_random_fallback b1.0 s0.5
+- [x] E4 range policy_base b1.0 s1.0
+- [x] E4 range policy_refine b1.0 s1.0
+- [x] E4 range policy_spectral_fallback b1.0 s1.0
+- [x] E4 range policy_entropy_fallback b1.0 s1.0
+- [x] E4 range policy_random_fallback b1.0 s1.0
+- [x] E4 CI ordered spec_minus_refine s0.0
+- [x] E4 CI ordered spec_minus_base s0.0
+- [x] E4 CI ordered ent_minus_refine s0.0
+- [x] E4 CI ordered refine_minus_base s0.0
+- [x] E4 CI ordered spec_minus_refine s0.5
+- [x] E4 CI ordered spec_minus_base s0.5
+- [x] E4 CI ordered ent_minus_refine s0.5
+- [x] E4 CI ordered refine_minus_base s0.5
+- [x] E4 CI ordered spec_minus_refine s1.0
+- [x] E4 CI ordered spec_minus_base s1.0
+- [x] E4 CI ordered ent_minus_refine s1.0
+- [x] E4 CI ordered refine_minus_base s1.0
+- [x] E3 event estimation status (zero task events: detection/precision not estimable (allowed))
+- [x] Holm adjusted >= raw
+- [x] Holm <= 1
+- [x] solver approximation diagnosed
+- [x] batch thresholds not pooled
+- [x] figure generated
+
+## Main paired comparison (sigma=0.5)
+
+- ntu2012: spec-refine = 0.00 pp [0.00, 0.00], p=1, Holm=1
+- modelnet40: spec-refine = 0.00 pp [0.00, 0.00], p=1, Holm=1

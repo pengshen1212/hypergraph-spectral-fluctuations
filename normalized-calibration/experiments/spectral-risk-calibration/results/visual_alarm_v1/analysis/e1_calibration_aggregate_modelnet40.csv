@@ -1,0 +1,9 @@
+dataset,arm,alpha,batches,rates,mean_rate,min_rate,max_rate,endpoint_envelope_lo,endpoint_envelope_hi,note
+modelnet40,L3_full_run,0.05,1,0.055,0.055,0.055,0.055,0.027772254552006544,0.09627764443391285,equal-weight mean of batch rates; endpoints are not a confidence interval for the mean
+modelnet40,L3_full_run,0.1,1,0.09,0.09,0.09,0.09,0.05421425445609637,0.13850820847382211,equal-weight mean of batch rates; endpoints are not a confidence interval for the mean
+modelnet40,L2_node_product,0.05,1,0,0.0,0.0,0.0,0.0,0.018275340355136237,equal-weight mean of batch rates; endpoints are not a confidence interval for the mean
+modelnet40,L2_node_product,0.1,1,0,0.0,0.0,0.0,0.0,0.018275340355136237,equal-weight mean of batch rates; endpoints are not a confidence interval for the mean
+modelnet40,edge_iid,0.05,1,0.265,0.265,0.265,0.265,0.20523909138592306,0.331870092208618,equal-weight mean of batch rates; endpoints are not a confidence interval for the mean
+modelnet40,edge_iid,0.1,1,0.265,0.265,0.265,0.265,0.20523909138592306,0.331870092208618,equal-weight mean of batch rates; endpoints are not a confidence interval for the mean
+modelnet40,L2_node_product_minus_L3,0.05,1,-0.055,-0.055,,,-0.09,-0.025,paired difference on shared evaluation runs; bootstrap CI
+modelnet40,edge_iid_minus_L3,0.05,1,0.21,0.21,,,0.155,0.265,paired difference on shared evaluation runs; bootstrap CI

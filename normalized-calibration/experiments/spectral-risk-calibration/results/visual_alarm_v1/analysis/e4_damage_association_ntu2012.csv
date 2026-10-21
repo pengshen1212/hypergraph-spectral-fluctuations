@@ -1,0 +1,11 @@
+dataset,sigma,alarm,tp,fp,fn,tn,detection_rate,false_alarm_rate,precision
+ntu2012,0.0,spectral,0,28,0,172,nan,0.14,0.0
+ntu2012,0.0,entropy,0,8,0,192,nan,0.04,0.0
+ntu2012,0.1,spectral,0,31,0,169,nan,0.155,0.0
+ntu2012,0.1,entropy,0,8,0,192,nan,0.04,0.0
+ntu2012,0.25,spectral,0,39,0,161,nan,0.195,0.0
+ntu2012,0.25,entropy,0,9,0,191,nan,0.045,0.0
+ntu2012,0.5,spectral,0,64,0,136,nan,0.32,0.0
+ntu2012,0.5,entropy,0,11,0,189,nan,0.055,0.0
+ntu2012,1.0,spectral,0,141,0,59,nan,0.705,0.0
+ntu2012,1.0,entropy,0,52,0,148,nan,0.26,0.0

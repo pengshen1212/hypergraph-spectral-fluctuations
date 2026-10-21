@@ -1,0 +1,114 @@
+{
+  "checked_at": "2026-10-21T23:21:27",
+  "protocol_sha256": "8e4a0b8687a19bcca44cbc3ee31d50c7895a7cf0158d089a1b5f88fb06faf16c",
+  "method": "s15 rerun from the frozen cache with --rebuild-sim; every CSV row compared after dropping wall-clock columns",
+  "excluded_columns": [
+    "cal_seconds",
+    "sim_seconds",
+    "score_seconds_median_eval",
+    "refine_seconds_median_eval",
+    "infer_seconds_median_eval",
+    "eval_run_seconds_median",
+    "train_seconds_median",
+    "analysis_at"
+  ],
+  "files": {
+    "e1_calibration_aggregate_modelnet40.csv": {
+      "run1": "223b054ed34a90c20c8a539e8d9bf043c745174026ad75dd903c7a013d0a0bcc",
+      "run2": "223b054ed34a90c20c8a539e8d9bf043c745174026ad75dd903c7a013d0a0bcc",
+      "same": true
+    },
+    "e1_calibration_aggregate_ntu2012.csv": {
+      "run1": "5cccfabda5dddec46341b65083eb947b17de614f242bf02ab164466bf27ad6df",
+      "run2": "5cccfabda5dddec46341b65083eb947b17de614f242bf02ab164466bf27ad6df",
+      "same": true
+    },
+    "e1_calibration_modelnet40.csv": {
+      "run1": "93af97165403916f98f53d0c0fcf928f21567b9221ff4acc9d22f679e5422496",
+      "run2": "93af97165403916f98f53d0c0fcf928f21567b9221ff4acc9d22f679e5422496",
+      "same": true
+    },
+    "e1_calibration_ntu2012.csv": {
+      "run1": "f34663a1582fd1c0055044ce35bdddc4eb5db8834054a63f4ef966b758253a5a",
+      "run2": "f34663a1582fd1c0055044ce35bdddc4eb5db8834054a63f4ef966b758253a5a",
+      "same": true
+    },
+    "e2_detection_aggregate_modelnet40.csv": {
+      "run1": "6cab0e297ee3a093713a1f76b453b5caaadcecc6e9d9e25a4dcb4074ee9dd53a",
+      "run2": "6cab0e297ee3a093713a1f76b453b5caaadcecc6e9d9e25a4dcb4074ee9dd53a",
+      "same": true
+    },
+    "e2_detection_aggregate_ntu2012.csv": {
+      "run1": "aed80c0fbefe9aa2f5b5bbae21cca244f728ad2a26481baf6f76214f8fd7a518",
+      "run2": "aed80c0fbefe9aa2f5b5bbae21cca244f728ad2a26481baf6f76214f8fd7a518",
+      "same": true
+    },
+    "e2_detection_modelnet40.csv": {
+      "run1": "c223ff42e76b89a3d9764f2edcfe31ab3cf6698afd010e5266ae79f2c123fa3e",
+      "run2": "c223ff42e76b89a3d9764f2edcfe31ab3cf6698afd010e5266ae79f2c123fa3e",
+      "same": true
+    },
+    "e2_detection_ntu2012.csv": {
+      "run1": "fee508f02d2117bd6ea485eab2ef497a456283d5085375cb785ef34a5189bf7b",
+      "run2": "fee508f02d2117bd6ea485eab2ef497a456283d5085375cb785ef34a5189bf7b",
+      "same": true
+    },
+    "e3_task_association_modelnet40.csv": {
+      "run1": "74c20257d5c314690b3afe76f57e922fcc1fe5bf034651ccaacbe1d2bbbb7e9a",
+      "run2": "74c20257d5c314690b3afe76f57e922fcc1fe5bf034651ccaacbe1d2bbbb7e9a",
+      "same": true
+    },
+    "e3_task_association_ntu2012.csv": {
+      "run1": "229cafefc64571ce9a9907c35ca557c75a022859f8e0f27a8cb2877534bf976a",
+      "run2": "229cafefc64571ce9a9907c35ca557c75a022859f8e0f27a8cb2877534bf976a",
+      "same": true
+    },
+    "e4_application_aggregate_modelnet40.csv": {
+      "run1": "4eddc392ef82974360acba95b3bf1417837a657007ecb99f535fbd1ee3108e7b",
+      "run2": "4eddc392ef82974360acba95b3bf1417837a657007ecb99f535fbd1ee3108e7b",
+      "same": true
+    },
+    "e4_application_aggregate_ntu2012.csv": {
+      "run1": "8fde2c58ab91350848e1c02271768f3a34f04392e13bc161d45bf1909a7d9643",
+      "run2": "8fde2c58ab91350848e1c02271768f3a34f04392e13bc161d45bf1909a7d9643",
+      "same": true
+    },
+    "e4_application_modelnet40.csv": {
+      "run1": "d4d408ffe8da10ffff0942eac31ccce130623ae16fc68de359546c6c67f3ad79",
+      "run2": "d4d408ffe8da10ffff0942eac31ccce130623ae16fc68de359546c6c67f3ad79",
+      "same": true
+    },
+    "e4_application_ntu2012.csv": {
+      "run1": "9a99ce3fb8b07a0b111bcbd7b0c09819c27bf0a3de80fdaf885e00ecb0af8764",
+      "run2": "9a99ce3fb8b07a0b111bcbd7b0c09819c27bf0a3de80fdaf885e00ecb0af8764",
+      "same": true
+    },
+    "e4_damage_association_modelnet40.csv": {
+      "run1": "81484e8564c113bec96854b0e18397dcf606a1801f6286b92e96988de651972b",
+      "run2": "81484e8564c113bec96854b0e18397dcf606a1801f6286b92e96988de651972b",
+      "same": true
+    },
+    "e4_damage_association_ntu2012.csv": {
+      "run1": "1199a08055d6e9bce1c2cf8c57ff4b3c4d94fb0b4ce86af97a622fda01c10eb3",
+      "run2": "1199a08055d6e9bce1c2cf8c57ff4b3c4d94fb0b4ce86af97a622fda01c10eb3",
+      "same": true
+    },
+    "e4_main_comparison_modelnet40.csv": {
+      "run1": "99b2ddf68ec5f2d8a08e319ae1e2344e3a4235b2f1fa88994b06eabe31b46fa9",
+      "run2": "99b2ddf68ec5f2d8a08e319ae1e2344e3a4235b2f1fa88994b06eabe31b46fa9",
+      "same": true
+    },
+    "e4_main_comparison_ntu2012.csv": {
+      "run1": "cee2b64cb7f784f668892fa7b76e82e45602e7f9e3008a6a4104578af424559a",
+      "run2": "cee2b64cb7f784f668892fa7b76e82e45602e7f9e3008a6a4104578af424559a",
+      "same": true
+    },
+    "e4_main_holm.csv": {
+      "run1": "eae010efbdd9b2e5e12b80fa84916ce1655657cf4f5975f9d3890588ef906c39",
+      "run2": "eae010efbdd9b2e5e12b80fa84916ce1655657cf4f5975f9d3890588ef906c39",
+      "same": true
+    }
+  },
+  "all_substantive_fields_same": true,
+  "note": "The only differences in the raw e1 calibration CSVs are simulation/scoring wall-clock columns; all counts, rates, thresholds, intervals and scores match."
+}

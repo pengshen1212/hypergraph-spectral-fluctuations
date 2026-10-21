@@ -1,0 +1,55 @@
+{
+  "class_count_max": 989,
+  "class_count_min": 84,
+  "content_sha256": "51565c050db09532ea16457bb04958aa5dec8acaab1f9009df47771ce76b8604",
+  "edges_sha256": "e6e0ae37a39369b4a55a230554148e0187c58ee47f6e650b62f5436c6eac4048",
+  "extra_rows_are_not_objects": true,
+  "feature_dim": 100,
+  "feature_finite": true,
+  "feature_shape": [
+    12311,
+    100
+  ],
+  "hyperedge_size_max": 5,
+  "hyperedge_size_min": 5,
+  "hyperedge_size_unique": [
+    5
+  ],
+  "n_classes": 40,
+  "n_edges": 12311,
+  "n_extra_content_rows": 12311,
+  "n_objects": 12311,
+  "name": "modelnet40",
+  "object_degree_max": 30,
+  "object_degree_min": 1,
+  "object_rows_unique": true,
+  "operator": {
+    "S_all_norm": 0.9999999999999992,
+    "S_all_resid": 9.57818834814595e-09,
+    "S_all_seconds": 0.5218472480773926,
+    "all_active_fraction": 1.0,
+    "kappa": 1.0,
+    "n_entries": 150199,
+    "nnz_ratio": 0.0009910153436126765
+  },
+  "seed_examples": {
+    "cal_b1_run0": 2026314100,
+    "eval_b1_run0": 2026315100,
+    "ref_b1_run0": 2026313100
+  },
+  "split": {
+    "fingerprint": "6c41c51eb545fb528acca7e533a058e5bcb1e776f837afed2b6c8b2cb085ddea",
+    "n_test": 2493,
+    "n_train": 7372,
+    "n_val": 2446,
+    "seed": 202610210,
+    "test_class_min": 18,
+    "train_class_min": 50,
+    "val_class_min": 16
+  },
+  "standardizer": {
+    "mean_abs_max": 0.4231256032983504,
+    "scale_min_nonzero": 0.13239282929886761,
+    "zero_variance_dims": 0
+  }
+}

@@ -1,0 +1,805 @@
+{
+  "all_checks_pass": true,
+  "analysis_summary_sha256": "0e99f0b2fbf4eba167081819910faefd4cc7872f45a7d88e89c7ad659621dceb",
+  "budget_counts": {
+    "batches": 1,
+    "cal": 99,
+    "eval": 200,
+    "ref": 30
+  },
+  "budget_selected": "formal_resource",
+  "checks": [
+    {
+      "check": "E1 rows L3_full_run",
+      "detail": "1 batches",
+      "pass": true
+    },
+    {
+      "check": "E1 rate matches count b1.0 L3_full_run",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1 rows L2_node_product",
+      "detail": "1 batches",
+      "pass": true
+    },
+    {
+      "check": "E1 rate matches count b1.0 L2_node_product",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1 rows edge_iid",
+      "detail": "1 batches",
+      "pass": true
+    },
+    {
+      "check": "E1 rate matches count b1.0 edge_iid",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1/E2 clean FPR agree b1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 strength grid",
+      "detail": "[0.0, 0.1, 0.25, 0.5, 1.0]",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_refine s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_base s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered ent_minus_refine s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered refine_minus_base s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_refine s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_base s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered ent_minus_refine s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered refine_minus_base s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_refine s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_base s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered ent_minus_refine s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered refine_minus_base s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E3 event counts",
+      "detail": "6.0 events",
+      "pass": true
+    },
+    {
+      "check": "Holm adjusted >= raw",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "Holm <= 1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "solver approximation diagnosed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "batch thresholds not pooled",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1 rows L3_full_run",
+      "detail": "1 batches",
+      "pass": true
+    },
+    {
+      "check": "E1 rate matches count b1.0 L3_full_run",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1 rows L2_node_product",
+      "detail": "1 batches",
+      "pass": true
+    },
+    {
+      "check": "E1 rate matches count b1.0 L2_node_product",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1 rows edge_iid",
+      "detail": "1 batches",
+      "pass": true
+    },
+    {
+      "check": "E1 rate matches count b1.0 edge_iid",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E1/E2 clean FPR agree b1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 strength grid",
+      "detail": "[0.0, 0.1, 0.25, 0.5, 1.0]",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count T b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count frob b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count entropy b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count active_dev b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E2 rate/count U_two_sided b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.25",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_base b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_refine b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_spectral_fallback b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_entropy_fallback b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 range policy_random_fallback b1.0 s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_refine s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_base s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered ent_minus_refine s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered refine_minus_base s0.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_refine s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_base s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered ent_minus_refine s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered refine_minus_base s0.5",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_refine s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered spec_minus_base s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered ent_minus_refine s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E4 CI ordered refine_minus_base s1.0",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "E3 event estimation status",
+      "detail": "zero task events: detection/precision not estimable (allowed)",
+      "pass": true
+    },
+    {
+      "check": "Holm adjusted >= raw",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "Holm <= 1",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "solver approximation diagnosed",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "batch thresholds not pooled",
+      "detail": "",
+      "pass": true
+    },
+    {
+      "check": "figure generated",
+      "pass": true
+    }
+  ],
+  "dataset_order": [
+    "ntu2012",
+    "modelnet40"
+  ],
+  "figure_pdf": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\figure_visual_alarm_main.pdf",
+  "figure_png": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\figure_visual_alarm_main.png",
+  "generated_at": "2026-10-22T01:00:22",
+  "holm_main": [
+    {
+      "ci_hi": 0.0,
+      "ci_lo": 0.0,
+      "comparison": "spec_minus_refine",
+      "dataset": "ntu2012",
+      "estimate": 0.0,
+      "p_holm": 1.0,
+      "p_raw": 1.0,
+      "sigma": 0.5
+    },
+    {
+      "ci_hi": 0.0,
+      "ci_lo": 0.0,
+      "comparison": "spec_minus_refine",
+      "dataset": "modelnet40",
+      "estimate": 0.0,
+      "p_holm": 1.0,
+      "p_raw": 1.0,
+      "sigma": 0.5
+    }
+  ],
+  "main_figure_pdf": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\figure_visual_alarm_main.pdf",
+  "main_figure_png": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\figure_visual_alarm_main.png",
+  "notes": [
+    "Batch rates keep their own center and threshold; no pooled binomial interval is reported for mixed batches.",
+    "Paired bootstrap resamples run IDs within batch; nodes are never treated as independent replicates.",
+    "Task association is offline and does not use test labels online.",
+    "Negative and degenerate results are retained in the CSV outputs."
+  ],
+  "table_tex": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\table_visual_results.tex"
+}

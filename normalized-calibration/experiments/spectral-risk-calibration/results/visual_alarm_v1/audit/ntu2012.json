@@ -1,0 +1,55 @@
+{
+  "class_count_max": 100,
+  "class_count_min": 10,
+  "content_sha256": "f59d6f62c94d1ef4861a95ddcd76c24411d7deb6fd4f2777e40ea83563630d2c",
+  "edges_sha256": "3de34493d0e37b2d1b7d5df35e0d9246e4d3dff0de39ec4fa7f16abdfacee8b8",
+  "extra_rows_are_not_objects": true,
+  "feature_dim": 100,
+  "feature_finite": true,
+  "feature_shape": [
+    2012,
+    100
+  ],
+  "hyperedge_size_max": 5,
+  "hyperedge_size_min": 5,
+  "hyperedge_size_unique": [
+    5
+  ],
+  "n_classes": 67,
+  "n_edges": 2012,
+  "n_extra_content_rows": 2012,
+  "n_objects": 2012,
+  "name": "ntu2012",
+  "object_degree_max": 19,
+  "object_degree_min": 1,
+  "object_rows_unique": true,
+  "operator": {
+    "S_all_norm": 0.9999999999999998,
+    "S_all_resid": 3.076293598731256e-09,
+    "S_all_seconds": 0.0498509407043457,
+    "all_active_fraction": 1.0,
+    "kappa": 1.0,
+    "n_entries": 22038,
+    "nnz_ratio": 0.005443976301238296
+  },
+  "seed_examples": {
+    "cal_b1_run0": 2026214100,
+    "eval_b1_run0": 2026215100,
+    "ref_b1_run0": 2026213100
+  },
+  "split": {
+    "fingerprint": "53b03d02cfb3a5965a506c99baf0241954bda94b00bb7672ef07ecc403292577",
+    "n_test": 453,
+    "n_train": 1182,
+    "n_val": 377,
+    "seed": 202610210,
+    "test_class_min": 2,
+    "train_class_min": 6,
+    "val_class_min": 2
+  },
+  "standardizer": {
+    "mean_abs_max": 0.3961480668764806,
+    "scale_min_nonzero": 0.14038790977934296,
+    "zero_variance_dims": 0
+  }
+}

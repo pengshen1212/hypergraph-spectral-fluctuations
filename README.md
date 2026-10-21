@@ -55,4 +55,37 @@ The manuscript's Walmart experiment uses an induced subgraph on the first 20,000
 
 The native certificates concern specified independent-node error laws on two fixed hypergraphs. Real-predictor results are empirical comparisons under per-edge calibration. The material does not establish a universal classification ranking or a replacement alarm-threshold algorithm.
 
-Original code, configurations, and saved result artifacts in this repository are released under the MIT license. Third-party data remain subject to their own terms. The manuscript and author photographs are not included in this release.
+Original code, configurations, and saved result artifacts in this repository are released under the MIT license. Third-party data remain subject to their own terms. The original raw-operator snapshot excludes the manuscript and author photographs. The revised manuscript is included in the normalized-calibration release below; manuscript copyright remains with the authors.
+
+## Normalized calibration release (2026-10-22)
+
+The revised manuscript and the complete normalized-calibration reproducibility
+package are in [`normalized-calibration/`](normalized-calibration/).
+Read the [manuscript PDF](normalized-calibration/paper/paper1/main.pdf) and
+[reproduction instructions](normalized-calibration/README.md).
+The root-level commands and evidence directories above retain the original
+raw-operator mechanism checks and certificates.
+
+For the normalized release, use Python with NumPy, SciPy, scikit-learn,
+matplotlib and pytest, then run:
+
+```bash
+cd normalized-calibration
+python run.py verify
+python run.py test
+python run.py figures
+python run.py tables
+python run.py compile
+```
+
+PDF compilation requires a LaTeX installation. The package records 658 formal
+visual runs on NTU2012 and ModelNet40, without additional training for this
+revision. It preserves the NTU L3 14% clean exceedance result and reports internal
+threshold sensitivity separately from independent validation. It makes no
+classification-improvement claim.
+
+Third-party datasets and the 459 MB prediction cache are excluded. Saved
+measurements rebuild tables, figures and the PDF; rerunning s15 from predictions
+requires separately transferred caches checked against the included cache
+manifest, or retraining under the frozen protocol. Publishing these artifacts
+does not submit the manuscript to a journal.

@@ -1,0 +1,13 @@
+dataset,sigma,comparison,estimate,ci_lo,ci_hi,p_signflip,n_runs,fallback_fraction_spectral,fallback_fraction_entropy
+ntu2012,0.0,spec_minus_refine,0.0,0.0,0.0,1.0,200,0.14,0.04
+ntu2012,0.0,spec_minus_base,0.0,0.0,0.0,1.0,200,0.14,0.04
+ntu2012,0.0,ent_minus_refine,0.0,0.0,0.0,1.0,200,0.14,0.04
+ntu2012,0.0,refine_minus_base,0.0,0.0,0.0,1.0,200,0.14,0.04
+ntu2012,0.5,spec_minus_refine,0.0,0.0,0.0,1.0,200,0.32,0.055
+ntu2012,0.5,spec_minus_base,0.0,0.0,0.0,1.0,200,0.32,0.055
+ntu2012,0.5,ent_minus_refine,0.0,0.0,0.0,1.0,200,0.32,0.055
+ntu2012,0.5,refine_minus_base,0.0,0.0,0.0,1.0,200,0.32,0.055
+ntu2012,1.0,spec_minus_refine,0.0,0.0,0.0,1.0,200,0.705,0.26
+ntu2012,1.0,spec_minus_base,0.0,0.0,0.0,1.0,200,0.705,0.26
+ntu2012,1.0,ent_minus_refine,0.0,0.0,0.0,1.0,200,0.705,0.26
+ntu2012,1.0,refine_minus_base,0.0,0.0,0.0,1.0,200,0.705,0.26

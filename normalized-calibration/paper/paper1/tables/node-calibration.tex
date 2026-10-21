@@ -1,0 +1,22 @@
+% Generated from frozen results by notes/calibration-integration/generate_tables.py
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrr}
+\toprule
+Structure & Profile & Node (\%) & Edge-iid (\%) \\
+\midrule
+Cora & binary .05 & 5.2 [3.7,7.2] & 99.5 [98.3,100.0] \\
+Cora & binary .15 & 5.0 [3.6,6.7] & 97.7 [95.6,99.4] \\
+Cora & hetero & 5.9 [3.0,9.3] & 47.5 [40.5,54.9] \\
+Cora & multi .05 & 4.8 [3.3,6.5] & 99.7 [98.7,100.0] \\
+Cora & multi .15 & 5.5 [2.9,8.3] & 99.0 [97.5,99.9] \\
+DBLP & binary .05 & 4.6 [1.4,9.3] & 100.0 [98.8,100.0] \\
+DBLP & binary .15 & 5.1 [1.4,10.1] & 96.8 [90.7,99.8] \\
+DBLP & hetero & 3.9 [0.9,8.9] & 99.7 [97.1,100.0] \\
+Coherent & aligned & 0.0 [0.0,0.2] & 9.2 [7.8,10.7] \\
+\bottomrule
+\end{tabular}
+\caption{Known-node-law exceedance at $\alpha=5\%$. Native entries are means over three independent threshold batches; brackets give the minimum lower and maximum upper endpoint of their individual 95\% binomial intervals, not a pooled 95\% interval. Per-batch reference/calibration/evaluation budgets are 200/500/1000 on Cora and 80/150/300 on DBLP. Hetero here uses multiclass errors at .02/.30. The coherent-family row is one batch with 400/800/1600 observations.}
+\label{tab:node-calibration}
+\end{table}

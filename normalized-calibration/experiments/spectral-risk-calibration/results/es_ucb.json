@@ -1,0 +1,140 @@
+{
+  "familyA": {
+    "V_hat": 2.2821209803901406,
+    "X2_frob": 2.0765027408986447,
+    "q99": 69.68765212015101,
+    "q999": 69.68765212015101,
+    "max": 80.83197119485254,
+    "thresholds": [
+      {
+        "t": 0.0,
+        "kept_frac": 0.967,
+        "tail_mass_E": 2.282120980390141,
+        "tail_share_of_mean": 1.0000000000000002,
+        "eb_bound_trunc": 0.0,
+        "total_ucb_prototype": 2.282120980390141,
+        "covers_x2": true
+      },
+      {
+        "t": 69.68765212015101,
+        "kept_frac": 0.99925,
+        "tail_mass_E": 0.05626963920617996,
+        "tail_share_of_mean": 0.024656729283721132,
+        "eb_bound_trunc": 2.902373519840364,
+        "total_ucb_prototype": 2.958643159046544,
+        "covers_x2": true
+      },
+      {
+        "t": 69.68765212015101,
+        "kept_frac": 0.99925,
+        "tail_mass_E": 0.05626963920617996,
+        "tail_share_of_mean": 0.024656729283721132,
+        "eb_bound_trunc": 2.902373519840364,
+        "total_ucb_prototype": 2.958643159046544,
+        "covers_x2": true
+      },
+      {
+        "t": 80.83197119485254,
+        "kept_frac": 1.0,
+        "tail_mass_E": 0.0,
+        "tail_share_of_mean": 0.0,
+        "eb_bound_trunc": 2.987421135064754,
+        "total_ucb_prototype": 2.987421135064754,
+        "covers_x2": true
+      }
+    ],
+    "secs": 1.8
+  },
+  "cora-cc": {
+    "V_hat": 30.842628778770486,
+    "X2_frob": 28.002698707911673,
+    "q99": 598.2499999997434,
+    "q999": 841.6511994071632,
+    "max": 1562.5769391093945,
+    "thresholds": [
+      {
+        "t": 252.74184850736074,
+        "kept_frac": 0.95,
+        "tail_mass_E": 23.049519923737996,
+        "tail_share_of_mean": 0.747326698027873,
+        "eb_bound_trunc": 11.67377488545644,
+        "total_ucb_prototype": 34.723294809194435,
+        "covers_x2": true
+      },
+      {
+        "t": 598.2499999997434,
+        "kept_frac": 0.99,
+        "tail_mass_E": 7.742438648923236,
+        "tail_share_of_mean": 0.25103043921640333,
+        "eb_bound_trunc": 31.098196523601896,
+        "total_ucb_prototype": 38.84063517252513,
+        "covers_x2": true
+      },
+      {
+        "t": 841.6511994071632,
+        "kept_frac": 0.999,
+        "tail_mass_E": 1.4098904865841142,
+        "tail_share_of_mean": 0.04571239684843486,
+        "eb_bound_trunc": 39.54228814974603,
+        "total_ucb_prototype": 40.952178636330146,
+        "covers_x2": true
+      },
+      {
+        "t": 1562.5769391093945,
+        "kept_frac": 1.0,
+        "tail_mass_E": 0.0,
+        "tail_share_of_mean": 0.0,
+        "eb_bound_trunc": 44.5467093150569,
+        "total_ucb_prototype": 44.5467093150569,
+        "covers_x2": true
+      }
+    ],
+    "secs": 5.4
+  },
+  "dblp-ca": {
+    "V_hat": 1597.6501583691593,
+    "X2_frob": 1278.0019216793285,
+    "q99": 32462.745673527595,
+    "q999": 84852.13086444305,
+    "max": 111162.22585391918,
+    "thresholds": [
+      {
+        "t": 10674.075540079557,
+        "kept_frac": 0.95,
+        "tail_mass_E": 1433.525096149748,
+        "tail_share_of_mean": 0.8972709630079804,
+        "eb_bound_trunc": 461.69981473060614,
+        "total_ucb_prototype": 1895.224910880354,
+        "covers_x2": true
+      },
+      {
+        "t": 32462.745673527595,
+        "kept_frac": 0.99,
+        "tail_mass_E": 626.6804439434364,
+        "tail_share_of_mean": 0.39225135782112397,
+        "eb_bound_trunc": 1930.8843550139209,
+        "total_ucb_prototype": 2557.564798957357,
+        "covers_x2": true
+      },
+      {
+        "t": 84852.13086444305,
+        "kept_frac": 0.9983333333333333,
+        "tail_mass_E": 185.27037642319863,
+        "tail_share_of_mean": 0.11596429634652804,
+        "eb_bound_trunc": 3356.167991465101,
+        "total_ucb_prototype": 3541.4383678882996,
+        "covers_x2": true
+      },
+      {
+        "t": 111162.22585391918,
+        "kept_frac": 1.0,
+        "tail_mass_E": 0.0,
+        "tail_share_of_mean": 0.0,
+        "eb_bound_trunc": 4068.879118126929,
+        "total_ucb_prototype": 4068.879118126929,
+        "covers_x2": true
+      }
+    ],
+    "secs": 73.2
+  }
+}

@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccc}
+\toprule
+Dataset & \multicolumn{3}{c}{Clean exceedance (\%; 95\% CP interval)} & Resplit & Time (s) \\
+\cmidrule(lr){2-4}
+ & L3 & L2 & Edge-iid & mean (\%) & train/score \\
+\midrule
+NTU2012 & 14.0 [9.5,19.6] & 0.0 [0.0,1.8] & 5.0 [2.4,9.0] & 5.0 & 3.5/0.04 \\
+ModelNet40 & 5.5 [2.8,9.6] & 0.0 [0.0,1.8] & 26.5 [20.5,33.2] & 5.0 & 56.2/0.26 \\
+\bottomrule
+\end{tabular}
+\caption{Cross-domain calibration at $\alpha=5\%$. Each dataset uses
+30 reference, 99 calibration and 200 independent evaluation complete
+runs. L3 calibrates on complete runs, L2 on a fitted node-product law,
+and Edge-iid on independently sampled edge events. Brackets are
+batch-specific $95\%$ Clopper--Pearson intervals. Resplit means use
+10,000 random 99/200 partitions of the same 299 scores with a frozen
+reference center; they are internal sensitivity summaries, not
+independent validation. Timing gives median training/spectral-scoring
+seconds per complete run under the recorded six-way parallel setup.}
+\label{tab:visual-alarm-validation}
+\end{table}

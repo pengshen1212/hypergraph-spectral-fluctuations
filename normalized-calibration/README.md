@@ -1,0 +1,91 @@
+# Paper1 normalized spectral-risk revision (reproducibility package)
+
+Read `paper/paper1/main.pdf`. The single argument is normalized influence →
+calibration under a stated prediction law → whole-run mismatch diagnosis.
+The manuscript retains 11pt type and 1in margins. Its five results tables
+come from saved CSVs; the original theorem/proof blocks and seven historical
+result tables remain in appendices. The main-text figures separate the
+operator chain from the L1/L2/L3 prediction-law comparison and report the
+visual external validation.
+
+This reproducibility release is provided in `normalized-calibration/` at
+https://github.com/pengshen1212/hypergraph-spectral-fluctuations .
+The repository root retains the raw-operator mechanism checks and certificates.
+Releasing these artifacts does not submit the revised manuscript to a journal.
+
+## Visual external validation
+
+The package includes the frozen protocol, analysis CSVs and report for the
+658-run visual calibration experiment (NTU2012 and ModelNet40; one
+30/99/200 batch per dataset). L2 gave 0/200 exceedances on both datasets;
+independent-edge calibration gave 10/200 on NTU and 53/200 on ModelNet.
+L3 frozen-threshold rates were 14.0% and 5.5%. The main visual figure
+compares calibration and the variation of frozen-threshold rates under
+10,000 partitions of the same 299 scores. Those partitions are internal
+sensitivity diagnostics, not new independent population validation.
+
+The manuscript focuses on cross-domain law comparisons and marginal versus
+conditional risk. Tolerance-rule comparisons and secondary feature-noise ROC
+remain in Appendix H. The ROC uses retrospective evaluation thresholds;
+its stronger aggregate-norm response does not establish a localized-change
+advantage for the spectral score. Original task-association and inert-action
+outputs remain in the audit data, but are outside the manuscript's
+calibration claims. Their removal from the manuscript does not change any
+original analysis count or introduce a task-performance claim.
+
+The released vision data are not redistributed. The real-data audit test skips
+when `data/vision-hypergraphs/NTU2012.content` is absent; synthetic protocol
+tests still run. The 459 MB prediction cache is **not** in this ZIP: the
+package can rebuild the stored tables, calibration and ROC figures, and PDF,
+but it cannot rerun s15 from prediction vectors. The ROC redraw reads stored
+full-curve coordinates, not prediction caches.
+`results/visual_alarm_v1/cache_manifest.json` lists the
+660 cache-file SHA-256 values; use it to verify a separately transferred cache
+archive, or rerun training under `protocol_frozen.json`.
+
+## Check and reproduce without benchmark data
+
+Use a Python environment with NumPy, SciPy, scikit-learn, matplotlib and pytest:
+
+```powershell
+python run.py verify
+python run.py test
+python run.py figures
+python run.py tables
+```
+
+`verify` checks the frozen files, `test` runs numerical/statistical regressions,
+and `tables` regenerates the five main-text results tables from stored results. To rebuild
+the PDF, use `python run.py compile` with pdflatex and BibTeX installed.
+Rebuilding figures or the PDF changes derived files, so verify the frozen archive
+before either operation. The workspace audit in verification.json documents preservation
+checks performed by the authors' integration workflow.
+
+## Scientific reruns
+
+Place the original AllSet inputs under `data/cora-cc` and `data/dblp-ca` at this
+package root. Place the four ED-HNN vision files under
+`data/vision-hypergraphs/` to rerun the visual protocol; they are third-party
+data and are not redistributed. Data loaders resolve the package root relative
+to their location. See the operator contract,
+experiment README and source hashes before rerunning. Historical scripts can
+write results, so use a working copy when reproducing costly experiments.
+The visual frozen protocol and its `formal_resource` counts are in
+`results/visual_alarm_v1/protocol_frozen.json`; the 459 MB run cache is not
+included, but the analysis/report CSV, JSON, table and figure files are.
+
+The Cora L1 follow-up rerun is stored with batch counts, thresholds, intervals,
+and seed provenance in `cora_calibration_batches_20271021.csv` and its JSON
+summary. It is descriptive and was not prospectively registered. The repaired
+auxiliary direction/amplitude scripts write separate v2 files; those scientific
+reruns have not been performed in this revision. DBLP
+spectral-norm precision and prospective L3 confirmation remain explicit limits;
+the visual L3 result is 14.0% at 99 calibration runs and is not a calibration
+success. Passing unit tests does not resolve these limits. Earlier raw-operator
+experiment code
+and full old evidence are referenced through the manuscript's older public
+snapshot, rather than duplicated in this small normalized-calibration bundle.
+
+See `paper/paper1/notes/calibration-integration/revision.md` and
+`experiments/spectral-risk-calibration/docs/claims_evidence.md` for the exact
+claim boundaries and source-to-result mapping.

@@ -884,8 +884,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4826,
-      "sha256": "533d0ddcfa937687930ee736606064ec7af911f0bb1c7a3efc758a940f53155e"
+      "bytes": 6371,
+      "sha256": "1e89f5b54da8c1bbd8c65cdf5da532fb0a2fc61c75f9762a9df7ae74e28fb07e"
     },
     {
       "path": "requirements.txt",

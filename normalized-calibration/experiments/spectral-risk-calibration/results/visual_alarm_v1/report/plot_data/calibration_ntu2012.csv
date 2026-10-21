@@ -1,0 +1,4 @@
+arm,alpha,mean_fpr,per_batch_rates
+L3_full_run,0.05,0.14,0.14
+L2_node_product,0.05,0.0,0.0
+edge_iid,0.05,0.05,0.05

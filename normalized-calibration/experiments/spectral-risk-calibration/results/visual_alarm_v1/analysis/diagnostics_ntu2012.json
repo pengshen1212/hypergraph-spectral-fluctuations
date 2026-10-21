@@ -1,0 +1,40 @@
+{
+  "batches": {
+    "1": {
+      "active_fraction_clean_max": 0.7152087475149106,
+      "active_fraction_clean_mean": 0.7029821073558647,
+      "active_fraction_clean_min": 0.6923459244532804,
+      "cache_bytes_median": 345411.0,
+      "cal_T_tie_mode_fraction": 0.030303030303030304,
+      "cal_T_unique": 93,
+      "cal_edge_unique": 73,
+      "cal_mean_test_acc": 0.8739046090039467,
+      "cal_node_unique": 93,
+      "center_recompute_max_abs_diff": 0.0,
+      "eval_mean_clean_acc": 0.8736975717439293,
+      "eval_run_seconds_median": 3.875508666038513,
+      "infer_seconds_median_eval": 0.02004075050354004,
+      "m_ref": 0.6281739362927573,
+      "min_class_count": 10,
+      "n_cal": 99,
+      "n_eval": 200,
+      "n_ref": 30,
+      "node_law_hash": "e7edf0d136ada2ae391ac0acb5a4de96d4c9b6535bbafd1ee5bf32226986d955",
+      "refine_seconds_median_eval": 0.0027971267700195312,
+      "score_seconds_median_eval": 0.04443049430847168,
+      "sim_seconds_edge": 1.8175950050354004,
+      "sim_seconds_node": 2.7868971824645996,
+      "solver_approx_fraction_eval": 0.0,
+      "train_seconds_median": 3.513019561767578
+    }
+  },
+  "config_sha256": "dff61bc3f93a263fef0610587548632f7382e50b9e7fdaeb242d335372863fde",
+  "counts": {
+    "batches": 1,
+    "cal": 99,
+    "eval": 200,
+    "ref": 30
+  },
+  "dataset": "ntu2012",
+  "seconds": 15.062446594238281
+}

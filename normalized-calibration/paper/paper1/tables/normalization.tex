@@ -1,0 +1,25 @@
+% Generated from frozen results by notes/calibration-integration/generate_tables.py
+\begin{table}[htbp]
+\centering\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llrrrr}
+\toprule
+Structure & Profile & $R_B$ & $R_{S_0}$ & $R_S$ & $\Delta_\mu$ \\
+\midrule
+Coherent & aligned & 2.93 & 1.16 & 0.24 & 0.53 \\
+Competition & $\gamma=.05$ & 1.01 & 1.00 & 1.00 & 0.02 \\
+Competition & $\gamma=.50$ & 1.40 & 1.02 & 0.99 & 0.09 \\
+Competition & $\gamma=.95$ & 2.28 & 0.85 & 0.53 & 0.44 \\
+Cora & binary .05 & 3.25 & 1.39 & 1.24 & 0.08 \\
+Cora & binary .15 & 2.93 & 1.41 & 1.09 & 0.18 \\
+Cora & multi .05 & 3.47 & 1.24 & 1.26 & 0.08 \\
+Cora & multi .15 & 3.28 & 1.29 & 1.11 & 0.17 \\
+Cora & hetero & 3.23 & 1.45 & 1.05 & 0.23 \\
+DBLP$^\dagger$ & binary .05 & 2.48 & 1.70 & 1.13 & 0.19 \\
+DBLP$^\dagger$ & binary .15 & 2.16 & 1.42 & 1.03 & 0.29 \\
+DBLP$^\dagger$ & hetero & 2.15 & 1.77 & 1.07 & 0.34 \\
+\bottomrule
+\end{tabular}
+\caption{Computed mean centered-norm ratios A/B; $\Delta_\mu=\|\widehat{\mathbb E}_A S-\widehat{\mathbb E}_B S\|_2$. Dynamic norms use each arm's own estimated mean; raw and fixed-degree means match analytically. Center/evaluation budgets per arm are 800/600 for the controlled families and Cora, and 120/80 for DBLP. Native binary/multiclass profiles have the displayed error probability; hetero uses binary errors at .02 below the upper degree decile and .30 within it. $\dagger$ DBLP raw/fixed-control scores include numerical approximations; these are point estimates, not certified norm ratios.}
+\label{tab:normalization}
+\end{table}

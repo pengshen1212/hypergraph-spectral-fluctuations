@@ -1,0 +1,182 @@
+{
+  "t4": {
+    "familyA": {
+      "trials": 200,
+      "violations": 0,
+      "max_lhs_over_rhs": 0.005705013042720256,
+      "secs": 15.1
+    },
+    "familyB_max": {
+      "trials": 200,
+      "violations": 0,
+      "max_lhs_over_rhs": 0.2500000000000001,
+      "secs": 9.8
+    },
+    "cora-cc": {
+      "trials": 200,
+      "violations": 0,
+      "max_lhs_over_rhs": 0.001914273570113232,
+      "secs": 48.3
+    },
+    "dblp-ca": {
+      "trials": 60,
+      "violations": 0,
+      "max_lhs_over_rhs": 0.008323227273433252,
+      "secs": 223.3
+    }
+  },
+  "es": {
+    "familyA": {
+      "V_ES_hat": 1.9937592419925614,
+      "se_V": 0.411829709460798,
+      "V_ci95": [
+        1.1865730114493973,
+        2.8009454725357257
+      ],
+      "effective_n": 22.79802351173726,
+      "n_replacements": 800,
+      "X2_frob": 2.272472257146263,
+      "ratio_V_over_X2": 0.8773525114433277,
+      "ratio_violation_within_se": true,
+      "tail": [
+        {
+          "t": 0.8984963657324316,
+          "emp_exceed": 0.0,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.8984963657324316,
+          "emp_exceed": 0.0,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.8984963657324316,
+          "emp_exceed": 0.0,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        }
+      ],
+      "note": "V_hat is a point estimate with recorded standard error; a value below X2 within ~2 se is NOT by itself an implementation error proof (heavy-tailed estimator). Tail rows with bound>=1 are trivially true, not validation. Certificate requires a UCB (T2b).",
+      "secs": 23.8
+    },
+    "familyB_max": {
+      "V_ES_hat": 1.3281137562538847,
+      "se_V": 0.29553840366466594,
+      "V_ci95": [
+        0.7488584850711395,
+        1.90736902743663
+      ],
+      "effective_n": 19.721748956540974,
+      "n_replacements": 800,
+      "X2_frob": 1.5814360340873128,
+      "ratio_V_over_X2": 0.8398150336952283,
+      "ratio_violation_within_se": true,
+      "tail": [
+        {
+          "t": 0.7228186528790363,
+          "emp_exceed": 0.01,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.7229996497927574,
+          "emp_exceed": 0.00125,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.7230028774476465,
+          "emp_exceed": 0.0,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        }
+      ],
+      "note": "V_hat is a point estimate with recorded standard error; a value below X2 within ~2 se is NOT by itself an implementation error proof (heavy-tailed estimator). Tail rows with bound>=1 are trivially true, not validation. Certificate requires a UCB (T2b).",
+      "secs": 13.7
+    },
+    "cora-cc": {
+      "V_ES_hat": 22.291969386312623,
+      "se_V": 4.589115034933995,
+      "V_ci95": [
+        13.297303917841992,
+        31.28663485478325
+      ],
+      "effective_n": 22.334362630334226,
+      "n_replacements": 400,
+      "X2_frob": 28.032517322979075,
+      "ratio_V_over_X2": 0.7952182506292164,
+      "ratio_violation_within_se": true,
+      "tail": [
+        {
+          "t": 0.785883156644736,
+          "emp_exceed": 0.01,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.7969886344734121,
+          "emp_exceed": 0.0025,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.8027933516936149,
+          "emp_exceed": 0.0,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        }
+      ],
+      "note": "V_hat is a point estimate with recorded standard error; a value below X2 within ~2 se is NOT by itself an implementation error proof (heavy-tailed estimator). Tail rows with bound>=1 are trivially true, not validation. Certificate requires a UCB (T2b).",
+      "secs": 10.7
+    },
+    "dblp-ca": {
+      "V_ES_hat": 1588.8501486039188,
+      "se_V": 491.2038356050449,
+      "V_ci95": [
+        626.0906308180308,
+        2551.609666389807
+      ],
+      "effective_n": 9.990005953840534,
+      "n_replacements": 200,
+      "X2_frob": 1282.145570532179,
+      "ratio_V_over_X2": 1.2392119780474196,
+      "ratio_violation_within_se": true,
+      "tail": [
+        {
+          "t": 0.8708434297470642,
+          "emp_exceed": 0.01,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.8708434297470682,
+          "emp_exceed": 0.005,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        },
+        {
+          "t": 0.8708434297470686,
+          "emp_exceed": 0.0,
+          "V_ES_bound": 1.0,
+          "trivially_true": true,
+          "informative_valid": false
+        }
+      ],
+      "note": "V_hat is a point estimate with recorded standard error; a value below X2 within ~2 se is NOT by itself an implementation error proof (heavy-tailed estimator). Tail rows with bound>=1 are trivially true, not validation. Certificate requires a UCB (T2b).",
+      "secs": 204.4
+    }
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "dataset": "ntu2012",
+  "lambdas": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "n_runs": 10,
+  "n_val": 377,
+  "rows": {
+    "0.0": {
+      "0.0": {
+        "base_val_acc": 0.8647214854111406,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8647214854111406,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.1": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.25": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.5": {
+        "base_val_acc": 0.8655172413793103,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8655172413793103,
+        "mean_val_change_fraction": 0.0
+      },
+      "1.0": {
+        "base_val_acc": 0.8522546419098143,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8522546419098143,
+        "mean_val_change_fraction": 0.0
+      }
+    },
+    "0.25": {
+      "0.0": {
+        "base_val_acc": 0.8647214854111406,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8647214854111406,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.1": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.25": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.5": {
+        "base_val_acc": 0.8655172413793103,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8655172413793103,
+        "mean_val_change_fraction": 0.0
+      },
+      "1.0": {
+        "base_val_acc": 0.8522546419098143,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8522546419098143,
+        "mean_val_change_fraction": 0.0
+      }
+    },
+    "0.5": {
+      "0.0": {
+        "base_val_acc": 0.8647214854111406,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8647214854111406,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.1": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.25": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.5": {
+        "base_val_acc": 0.8655172413793103,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8655172413793103,
+        "mean_val_change_fraction": 0.0
+      },
+      "1.0": {
+        "base_val_acc": 0.8522546419098143,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8522546419098143,
+        "mean_val_change_fraction": 0.0
+      }
+    },
+    "0.75": {
+      "0.0": {
+        "base_val_acc": 0.8647214854111406,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8647214854111406,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.1": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.25": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.5": {
+        "base_val_acc": 0.8655172413793103,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8655172413793103,
+        "mean_val_change_fraction": 0.0
+      },
+      "1.0": {
+        "base_val_acc": 0.8522546419098143,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8522546419098143,
+        "mean_val_change_fraction": 0.0
+      }
+    },
+    "1.0": {
+      "0.0": {
+        "base_val_acc": 0.8647214854111406,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8647214854111406,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.1": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.25": {
+        "base_val_acc": 0.8660477453580901,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8660477453580901,
+        "mean_val_change_fraction": 0.0
+      },
+      "0.5": {
+        "base_val_acc": 0.8655172413793103,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8655172413793103,
+        "mean_val_change_fraction": 0.0
+      },
+      "1.0": {
+        "base_val_acc": 0.8522546419098143,
+        "max_val_change_fraction": 0.0,
+        "max_val_changed_nodes": 0,
+        "mean_val_acc": 0.8522546419098143,
+        "mean_val_change_fraction": 0.0
+      }
+    }
+  },
+  "seed_note": "development runs only",
+  "sigmas": [
+    0.0,
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ]
+}

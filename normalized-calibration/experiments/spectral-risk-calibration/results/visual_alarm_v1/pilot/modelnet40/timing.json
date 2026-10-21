@@ -1,0 +1,48 @@
+{
+  "T_cal_tie_fraction_at_mode": 0.05263157894736842,
+  "T_cal_unique": 19,
+  "active_fraction": {
+    "p50": 0.8273901389001705,
+    "p95": 0.8325318820566973
+  },
+  "active_fraction_below_0_05": 0.0,
+  "budget": {
+    "batches": 1,
+    "cal": 19,
+    "eval": 20,
+    "ref": 10
+  },
+  "cache_bytes_median": 1040664.0,
+  "cache_bytes_total": 54704268,
+  "counts_ok": true,
+  "dataset": "modelnet40",
+  "eval_non_train_seconds": {
+    "p50": 4.702891111373901,
+    "p95": 9.47191355228424
+  },
+  "eval_run_seconds": {
+    "p50": 45.809699296951294,
+    "p95": 50.578721737861635
+  },
+  "failed": 0,
+  "infer_seconds": {
+    "p50": 0.05438971519470215,
+    "p95": 0.07374438047409057
+  },
+  "note": "Pilot only: not used to select a positive result.",
+  "ref_score_seconds_total": 1.0100367069244385,
+  "reference_center_norm": 59.31512292097681,
+  "reference_m_ref": 0.6836868686868688,
+  "score_seconds": {
+    "p50": 0.1746513843536377,
+    "p95": 0.24286682605743404
+  },
+  "solver_approx_fraction": 0.0,
+  "train_seconds": {
+    "p50": 41.10680818557739,
+    "p95": 48.90387439727783
+  },
+  "train_seconds_median": 41.10680818557739,
+  "wall_seconds": 560.1595861911774,
+  "worker_rss_mb_median": 178.251953125
+}

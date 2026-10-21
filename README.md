@@ -84,8 +84,10 @@ revision. It preserves the NTU L3 14% clean exceedance result and reports intern
 threshold sensitivity separately from independent validation. It makes no
 classification-improvement claim.
 
-Third-party datasets and the 459 MB prediction cache are excluded. Saved
-measurements rebuild tables, figures and the PDF; rerunning s15 from predictions
-requires separately transferred caches checked against the included cache
-manifest, or retraining under the frozen protocol. Publishing these artifacts
+Third-party datasets are excluded. The 459 MB prediction cache is provided as
+a [separate release attachment](https://github.com/pengshen1212/hypergraph-spectral-fluctuations/releases/tag/paper1-visual-cache-20261022)
+with archive and per-file SHA-256 values. It is excluded from Git history and
+the small reproduction package. Saved measurements rebuild tables, figures
+and the PDF; rerunning s15 requires these caches and the original third-party
+inputs, or retraining under the frozen protocol. Publishing these artifacts
 does not submit the manuscript to a journal.

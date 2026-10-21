@@ -79,6 +79,10 @@ available at\\
 \url{https://github.com/pengshen1212/hypergraph-spectral-fluctuations}.
 The normalized calibration materials are also provided in the accompanying
 submission package.
+Frozen visual prediction caches are available separately as a
+\href{https://github.com/pengshen1212/hypergraph-spectral-fluctuations/releases/tag/paper1-visual-cache-20261022}{GitHub Release attachment},
+with per-file SHA-256 values in the repository's cache manifest.
+Cache-based reanalysis also requires the original third-party inputs.
 Cora-CC and DBLP-CA inputs are available through
 \href{https://github.com/jianhao2016/AllSet}{AllSet}; preprocessed
 NTU2012 and ModelNet40 visual hypergraphs are obtained from the public

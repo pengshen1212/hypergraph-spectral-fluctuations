@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "release_url": "https://github.com/pengshen1212/hypergraph-spectral-fluctuations/releases/tag/paper1-visual-cache-20261022",
+  "asset_url": "https://github.com/pengshen1212/hypergraph-spectral-fluctuations/releases/download/paper1-visual-cache-20261022/paper1-visual-cache-20261022.zip",
+  "archive_sha256": "1030cded69b1cf0273b647009a1912380853128d6b24160acb74ce13558cf32c",
+  "archive_bytes": 312889293,
+  "cache_files": 660,
+  "cache_bytes": 479539809,
+  "public_download_sha256_verified": true,
+  "third_party_inputs_included": false,
+  "new_training": false
+}

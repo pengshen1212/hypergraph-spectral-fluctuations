@@ -40,8 +40,21 @@ package can rebuild the stored tables, calibration and ROC figures, and PDF,
 but it cannot rerun s15 from prediction vectors. The ROC redraw reads stored
 full-curve coordinates, not prediction caches.
 `results/visual_alarm_v1/cache_manifest.json` lists the
-660 cache-file SHA-256 values; use it to verify a separately transferred cache
-archive, or rerun training under `protocol_frozen.json`.
+660 cache-file SHA-256 values. The cache archive is publicly available as a
+[separate GitHub Release attachment](https://github.com/pengshen1212/hypergraph-spectral-fluctuations/releases/tag/paper1-visual-cache-20261022).
+Download `paper1-visual-cache-20261022.zip`, verify its archive SHA-256 against
+`results/visual_alarm_v1/cache_release.json`, and extract it into
+`experiments/spectral-risk-calibration/results/visual_alarm_v1/` at the package
+root. This restores the `formal/` subtree; verify all 660 NPZ files against
+`cache_manifest.json`. Cache-based s15 reanalysis also requires the original
+four ED-HNN input files with matching hashes, not just the predictions.
+With those inputs present, use a working copy and run (without retraining):
+
+```powershell
+python experiments/spectral-risk-calibration/scripts/s15_visual_alarm_analysis.py --protocol experiments/spectral-risk-calibration/results/visual_alarm_v1/protocol_frozen.json --rebuild-sim
+```
+
+Alternatively, regenerate caches by training under `protocol_frozen.json`.
 
 ## Check and reproduce without benchmark data
 
@@ -71,8 +84,9 @@ to their location. See the operator contract,
 experiment README and source hashes before rerunning. Historical scripts can
 write results, so use a working copy when reproducing costly experiments.
 The visual frozen protocol and its `formal_resource` counts are in
-`results/visual_alarm_v1/protocol_frozen.json`; the 459 MB run cache is not
-included, but the analysis/report CSV, JSON, table and figure files are.
+`results/visual_alarm_v1/protocol_frozen.json`; the 459 MB run cache is distributed
+as the separate release attachment linked above, while the analysis/report
+CSV, JSON, table and figure files are included in the small package.
 
 The Cora L1 follow-up rerun is stored with batch counts, thresholds, intervals,
 and seed provenance in `cora_calibration_batches_20271021.csv` and its JSON

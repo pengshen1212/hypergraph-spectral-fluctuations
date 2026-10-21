@@ -10,6 +10,7 @@
   "training_rerun": true,
   "visual_validation": "658 formal runs, one 30/99/200 batch per dataset; cross-domain calibration and internal threshold-sensitivity analysis; no new training during revision",
   "visual_run_cache_included": false,
+  "visual_run_cache_release_url": "https://github.com/pengshen1212/hypergraph-spectral-fluctuations/releases/tag/paper1-visual-cache-20261022",
   "analysis_from_cache_rebuildable_from_package": false,
   "cache_manifest": "experiments/spectral-risk-calibration/results/visual_alarm_v1/cache_manifest.json",
   "scientific_limits": [

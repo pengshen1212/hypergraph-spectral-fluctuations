@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "source_hashes": {
+    "e1_calibration_ntu2012.csv": "17785fde3c450f5723201b55f509027903bbf0f1758c62ad0408b1996a7415cf",
+    "threshold_stability_ntu2012.json": "b9968952987218206010bbb3a227b3b940cf75cf9eeb37710f104ecccc7bd908",
+    "e1_calibration_modelnet40.csv": "3133692692023008bd055731c48e966b358bd2f1e2fc82fd1fc9187f51ce07c5",
+    "threshold_stability_modelnet40.json": "bcf6925d492e0fe36e628dd37e46947414d7ae9edb6ba0da5c0087091f538865"
+  },
+  "all_six_CP_intervals_independently_checked": true,
+  "source_rows": 8,
+  "text_outside_canvas": [],
+  "size_mm": [
+    183,
+    98
+  ],
+  "new_training_or_resampling": false,
+  "usage": "approved manuscript Figure 2"
+}

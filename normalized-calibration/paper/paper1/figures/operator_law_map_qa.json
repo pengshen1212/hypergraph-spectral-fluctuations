@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "size_mm": [
+    183,
+    115
+  ],
+  "backend": "python/matplotlib",
+  "text_artists": 23,
+  "text_box_checks": 17,
+  "bounds_issues": [],
+  "quantitative_data": false,
+  "usage": "approved manuscript Figure 1"
+}

@@ -192,64 +192,16 @@ def make_figure(out_pdf, out_png, all_data):
 
 
 def make_main_figure(out_pdf, out_png, all_data):
-    """Calibration and internal split variability; no task/action panels."""
-    import matplotlib
-    matplotlib.use("Agg")
-    import matplotlib.pyplot as plt
+    """Rebuild the approved point/interval layout from the same frozen files."""
+    import subprocess
 
-    plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 11,
-                         "axes.labelsize": 11, "axes.titlesize": 11,
-                         "xtick.labelsize": 10.5, "ytick.labelsize": 10.5,
-                         "legend.fontsize": 10.5, "pdf.fonttype": 42,
-                         "svg.fonttype": "none", "axes.spines.top": False,
-                         "axes.spines.right": False})
-    dsets = [d for d in ("ntu2012", "modelnet40") if d in all_data]
-    labels = {"ntu2012": "NTU2012", "modelnet40": "ModelNet40"}
-    colors = {"ntu2012": "#3973A1", "modelnet40": "#D58232"}
-    fig, axes = plt.subplots(1, 2, figsize=(6.6, 3.55), layout="constrained")
-    ax = axes[0]
-    arms = ["L3_full_run", "L2_node_product", "edge_iid"]
-    width = 0.35
-    for index, ds in enumerate(dsets):
-        records = [pick(all_data[ds]["e1"], dataset=ds, arm=arm,
-                        alpha=0.05)[0] for arm in arms]
-        rates = 100*np.array([r["mean_rate"] for r in records], dtype=float)
-        lo = 100*np.array([r["endpoint_envelope_lo"] for r in records], dtype=float)
-        hi = 100*np.array([r["endpoint_envelope_hi"] for r in records], dtype=float)
-        ax.bar(np.arange(3)+(index-.5)*width, rates, width,
-               yerr=np.stack([rates-lo, hi-rates]), capsize=2,
-               error_kw={"linewidth": 1}, color=colors[ds], label=labels[ds])
-    ax.axhline(5, color="#555555", ls="--", lw=1)
-    ax.set_xticks(range(3), ["Full-run\n(L3)", "Node-product\n(L2)", "Edge-iid"])
-    ax.set_ylabel("Clean exceedance (%)")
-    ax.set_ylim(0, 40)
-    ax.set_title(r"(a) Calibration at $\alpha=0.05$", loc="left")
-    ax.legend(frameon=False, loc="upper left")
-    ax = axes[1]
-    for index, ds in enumerate(dsets):
-        st = all_data[ds]["stability"]
-        split = st["repeated_split"]
-        median, low, high = [100*float(split[key]) for key in
-                              ("fpr_median", "fpr_p2_5", "fpr_p97_5")]
-        ax.errorbar(index-.07, median,
-                    yerr=np.array([[median-low], [high-median]]),
-                    fmt="o", color="#3973A1", capsize=5, linewidth=2,
-                    label="Resplit median / 95% range" if index==0 else None)
-        ax.scatter(index+.07, 100*float(st["original"]["rate"]), marker="D",
-                   s=35, color="#B94B43", zorder=3,
-                   label="Frozen split" if index==0 else None)
-    ax.axhline(5, color="#555555", ls="--", lw=1)
-    ax.set_xticks(range(len(dsets)), [labels[d] for d in dsets])
-    ax.set_xlim(-.5, len(dsets)-.5)
-    ax.set_ylim(0, 22)
-    ax.set_ylabel("Clean exceedance (%)")
-    ax.set_title("(b) Conditional variability", loc="left")
-    ax.legend(frameon=False, loc="upper left", handlelength=1)
-    fig.savefig(out_pdf, bbox_inches="tight",
-                metadata={"CreationDate": None, "ModDate": None})
-    fig.savefig(out_png, dpi=300, bbox_inches="tight")
-    fig.savefig(Path(out_pdf).with_suffix(".svg"), bbox_inches="tight")
-    plt.close(fig)
+    out_pdf, out_png = Path(out_pdf), Path(out_png)
+    assert out_png == out_pdf.with_suffix(".png")
+    subprocess.run([
+        sys.executable, str(Path(__file__).with_name("s16a_calibration_figure.py")),
+        "--analysis-dir", str(out_pdf.parent.parent/"analysis"),
+        "--output-prefix", str(out_pdf.with_suffix("")),
+    ], check=True)
 
 
 def verify(ds, e1, e2, e3, e4, main, diag, holm_rows):

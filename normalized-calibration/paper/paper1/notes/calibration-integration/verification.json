@@ -20,20 +20,24 @@
   "preserved_result_files": 19,
   "protected_paper2_and_submission_files": 4,
   "latex_unresolved_or_overflow": [],
+  "main_figure_hashes": {
+    "operator_law_map.pdf": "07a9dfd1fe92557c06eeb5df3fab34e3a3a1f9163f0bf402e8483a0bb7551cb0",
+    "visual_alarm_main.pdf": "08b118a6080e4610c4a7326e5d582e54f7c34c70485a480eeefa78ceb8bb7076"
+  },
   "main_source_sha256": "97096b90508dc3af05ff20ef9530f25731fb6f412c894c99c55d2a8ae29c3bc1",
-  "expanded_source_sha256": "799d1ee3b5b2e64891f013ba7d8b70a7dace0b6147e0efe80d4780301410542a",
+  "expanded_source_sha256": "6ff9e87b32a1ced50485c347f6bfc43a16ffac2f3e86d10bfced4f4dfa8072cd",
   "source_tree_hashes": {
     "main.tex": "97096b90508dc3af05ff20ef9530f25731fb6f412c894c99c55d2a8ae29c3bc1",
     "references.bib": "6cf61c304cdcdee5f7a1e12f81f91d74ac270d3e9187084474615c6f9f8ccfa8",
     "sections\\calibration-appendix.tex": "8feaecd9ff2a70a04ea4ad30e126299ddf3f2cba030fba69dae20f50914fccc7",
-    "sections\\calibration-main.tex": "6437d7a551d917c096b49f1e3abc1043b98f484d1579d6ff8e54e6c23e248f3e",
+    "sections\\calibration-main.tex": "93b8d8fe1b0e627ecf673b16673b2636574cc02d263d3bcbfbee4192154cde97",
     "tables\\cora-rerun.tex": "0c9368499a358c3ddb07cf8ef07a17971e8121e710390d3dcfdecd35547275bb",
     "tables\\node-calibration.tex": "f948f53a456efef17b02b571bef57b045e5481c03548fe84e3c19838bf4e69e4",
     "tables\\normalization.tex": "97abc015278396857a64bab6b0adc157e6dc9e9390be70883ce74d0a5053a639",
     "tables\\run-calibration.tex": "6ef1adf48e7309a956c370d86768f9bb1e49b0d028ff9b1ca3ceb1effcc096b5",
     "tables\\visual-alarm.tex": "82f1270dec8090774dfb1ad75a7a6397fb949edae969468eed6e77792c2ad93a"
   },
-  "pdf_sha256": "7ec4dae6640a1aec10e2b297d718d048dad99d0f44a840c74f11bb9589f9ab50",
+  "pdf_sha256": "4957b0fda6db0502fd09216f33d38a0e9ff42a5e11fbfbaa823ed3246a3dc859",
   "pages": [
     {
       "page": 1,
@@ -88,15 +92,15 @@
     },
     {
       "page": 4,
-      "words": 441,
+      "words": 332,
       "first_lines": [
-        "B(a)",
-        "raw relation operator",
-        "Operator comparison"
+        "a",
+        "Operator comparison",
+        "𝘉(𝘢)"
       ],
       "last_lines": [
-        "than interpreting a common-center difference as fluctuation alone. Local derivative channels and a",
-        "general perturbation bound are given in Appendix H as supporting analysis.",
+        "The proposition is the classical first-order decomposition applied to the normalized matrix",
+        "function. It identifies structure beyond degree: two nodes with the same incident-edge count",
         "4"
       ],
       "content_bottom": 752.2847900390625,
@@ -105,15 +109,15 @@
     },
     {
       "page": 5,
-      "words": 460,
+      "words": 501,
       "first_lines": [
-        "4. Calibration under a Stated Prediction Law",
-        "4.1. Reference, calibration, and evaluation",
-        "The input is a fixed candidate hypergraph, its prediction-to-relation map, a specified prediction"
+        "can have different ∆u because the remaining class profiles reinforce or cancel. It does not assert",
+        "that first-order influence dominates the remainder. The raw-operator separation and cancellation",
+        "theorems in Appendix A make their additional structure conditions explicit. Their exact conclusions"
       ],
       "last_lines": [
-        "have a common success probability. We report batch-specific intervals or their explicitly labeled",
-        "endpoint envelope.",
+        "same protocol. Repeatedly resampling a finite run pool is not itself evidence of exchangeability with",
+        "a fresh training run.",
         "5"
       ],
       "content_bottom": 752.2847900390625,
@@ -122,15 +126,15 @@
     },
     {
       "page": 6,
-      "words": 496,
+      "words": 502,
       "first_lines": [
-        "5. Experiments",
-        "The main experiments ask three consecutive questions: what normalization changes, whether the",
-        "chosen law supports calibration, and whether a fitted node product reproduces complete training"
+        "4.3. Interpreting empirical exceedance",
+        "The realized threshold’s conditional exceedance probability need not equal α or satisfy (7)",
+        "conditional on that particular calibration sample. Binomial Clopper–Pearson intervals describe"
       ],
       "last_lines": [
-        "influence estimates used selected high-impact and background nodes; no full-native energy closure is",
-        "claimed.",
+        "The controlled coherent family illustrates conservative ties. Its 5% node threshold had zero",
+        "strict exceedances in 1,600 evaluations, because a discrete upper-tail atom determined the threshold.",
         "6"
       ],
       "content_bottom": 752.2847900390625,
@@ -139,15 +143,15 @@
     },
     {
       "page": 7,
-      "words": 456,
+      "words": 300,
       "first_lines": [
-        "5.2. Model-law calibration and separate-seed reanalysis",
-        "Preserving node-induced relations sharply changed calibration under known node laws (Table 2).",
-        "At target α = 5%, native node-calibrated batch means ranged from 3.9% to 5.9%, while independent-"
+        "Structure",
+        "Profile",
+        "RB"
       ],
       "last_lines": [
-        "The product of empirical node frequencies produced zero observed exceedances in every displayed",
-        "L3 setting (Table 4). Whole-run thresholds instead produced nonzero exceedances with broad",
+        "on DBLP. Hetero here uses multiclass errors at .02/.30. The coherent-family row is one batch with 400/800/1600",
+        "observations.",
         "7"
       ],
       "content_bottom": 752.2847900390625,
@@ -156,15 +160,15 @@
     },
     {
       "page": 8,
-      "words": 537,
+      "words": 506,
       "first_lines": [
-        "conditional intervals. In the two fixed-training-set GCN settings, the run-pool counts at 5% were 1/60",
-        "on Cora and 1/40 on DBLP; the corresponding node-product counts were zero. These observations",
-        "support using complete runs as the practical calibration baseline for the tested mechanisms. They"
+        "Zero exceedance does not establish useful detection power, even when rank validity holds. In the",
+        "fitted-law Cora pilot, the three-repeat mean 5% exceedance was approximately 5.0% within the",
+        "fitted model and 4.9% under the specified generating law. That observation concerns a weak-error"
       ],
       "last_lines": [
-        "Its frozen threshold yielded 28/200 (14.0%) exceedances on NTU and 11/200 (5.5%) on ModelNet.",
-        "Proposition 4.1 averages over the calibration sample and the next exchangeable run; it does not",
+        "At α = 10%, the fixed-split run-pool counts were 9/60 on Cora and 1/40 on DBLP. Their",
+        "intervals included the target but were too wide to establish equivalence. At α = 1%, calibration",
         "8"
       ],
       "content_bottom": 752.2847900390625,
@@ -173,15 +177,15 @@
     },
     {
       "page": 9,
-      "words": 432,
+      "words": 577,
       "first_lines": [
         "Dataset",
         "Clean exceedance (%; 95% CP interval)",
         "Resplit"
       ],
       "last_lines": [
-        "the same evaluation runs this gives 19/200 (9.5%) on NTU and 3/200 (1.5%) on ModelNet. These",
-        "realized rates remain distinct from the rule’s probability statement over calibration samples. The",
+        "retained. Appendix H.2 gives the criterion, numerical sensitivity, and secondary feature-perturbation",
+        "comparisons.",
         "9"
       ],
       "content_bottom": 752.2847900390625,
@@ -190,15 +194,15 @@
     },
     {
       "page": 10,
-      "words": 483,
+      "words": 434,
       "first_lines": [
-        "tolerance comparison reuses the observed evaluation data; the original thresholds and counts are",
-        "retained. Appendix H.2 gives the criterion, numerical sensitivity, and secondary feature-perturbation",
-        "comparisons."
+        "0",
+        "10",
+        "20"
       ],
       "last_lines": [
-        "distinguish marginal validity from the conditional behavior of a frozen threshold. These results",
-        "guide the construction and interpretation of upstream operator-deviation alarms.",
+        "Fitted node products remained conservative on both, while independent-edge calibration gave",
+        "substantial exceedance on ModelNet40. The NTU frozen threshold and split-sensitivity analysis",
         "10"
       ],
       "content_bottom": 752.2847900390625,
@@ -207,15 +211,15 @@
     },
     {
       "page": 11,
-      "words": 284,
+      "words": 372,
       "first_lines": [
-        "Data and Code Availability",
-        "The complete source code, frozen configurations, certificates, saved measurements, and re-",
-        "producibility instructions for both the normalized calibration experiments and the raw-operator"
+        "further separate the probability target from any one realization: marginal rank validity does not",
+        "give a high-confidence bound on the conditional risk of every deployed threshold. Binomial tolerance",
+        "calibration provides an established way to express the latter objective under an independent-run"
       ],
       "last_lines": [
-        "AAAI Conference on Artificial Intelligence, Vol. 33, 2019, pp. 3558–3565. doi:10.1609/aaai.",
-        "v33i01.33013558.",
+        "Declaration of Competing Interest",
+        "The authors declare that they have no competing interests.",
         "11"
       ],
       "content_bottom": 752.2847900390625,
@@ -224,15 +228,15 @@
     },
     {
       "page": 12,
-      "words": 379,
+      "words": 330,
       "first_lines": [
-        "[2] E. Chien, C. Pan, J. Peng, O. Milenkovic, You are AllSet: A multiset function framework for",
-        "hypergraph neural networks, in: International Conference on Learning Representations, 2022.",
-        "URL https://openreview.net/forum?id=hpBTIv2uy_E"
+        "Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Prepara-",
+        "tion Process",
+        "ChatGPT (OpenAI) was used for literature discovery, assistance with intermediate mathematical"
       ],
       "last_lines": [
-        "[15] M. Zhou, Z. Zhou, X. Han, G. Yan, Towards trustworthy hypergraph neural networks under",
-        "label noise, arXiv:2608.04377, preprint (2026). doi:10.48550/arXiv.2608.04377.",
+        "survey, J. Mach. Learn. Res. 18 (226) (2018) 1–92.",
+        "URL https://jmlr.org/papers/v18/17-448.html",
         "12"
       ],
       "content_bottom": 752.2847900390625,
@@ -241,18 +245,18 @@
     },
     {
       "page": 13,
-      "words": 55,
+      "words": 210,
       "first_lines": [
-        "[16] P. Wang, S. Yang, Y. Liu, Z. Wang, P. Li, Equivariant hypergraph diffusion neural operators,",
-        "in: International Conference on Learning Representations, 2023.",
-        "URL https://arxiv.org/abs/2207.06680"
+        "[11] M. Hayhoe, H. M. Riess, M. M. Zavlanos, V. Preciado, A. Ribeiro, Transferable hypergraph",
+        "neural networks via spectral similarity, in: Proceedings of the Second Learning on Graphs",
+        "Conference, Vol. 231 of Proceedings of Machine Learning Research, 2024, pp. 18:1–18:23."
       ],
       "last_lines": [
         "edge labels, in: Proceedings of The Web Conference 2020, 2020, pp. 706–717. doi:10.1145/",
         "3366423.3380152.",
         "13"
       ],
-      "content_bottom": 752.2847900390625,
+      "content_bottom": 752.2848510742188,
       "page_width": 612.0,
       "page_height": 792.0
     },

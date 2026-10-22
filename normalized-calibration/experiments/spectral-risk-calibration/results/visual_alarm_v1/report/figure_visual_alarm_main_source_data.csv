@@ -1,0 +1,9 @@
+panel,dataset,arm,count,n_eval,rate_pct,low_pct,high_pct,interval_type
+a,ntu2012,L3_full_run,28,200,14.0,9.508751735901981,19.594526111961425,exact 95% Clopper-Pearson confidence interval
+a,ntu2012,L2_node_product,0,200,0.0,0.0,1.8275340355136238,exact 95% Clopper-Pearson confidence interval
+a,ntu2012,edge_iid,10,200,5.0,2.423416547210855,9.002753770135136,exact 95% Clopper-Pearson confidence interval
+b,ntu2012,L3_resplit,,200,4.5,1.0,11.012499999999818,central 95% range over internal repeated splits
+a,modelnet40,L3_full_run,11,200,5.5,2.777225455200654,9.627764443391285,exact 95% Clopper-Pearson confidence interval
+a,modelnet40,L2_node_product,0,200,0.0,0.0,1.8275340355136238,exact 95% Clopper-Pearson confidence interval
+a,modelnet40,edge_iid,53,200,26.5,20.52390913859232,33.1870092208618,exact 95% Clopper-Pearson confidence interval
+b,modelnet40,L3_resplit,,200,4.5,1.0,11.0,central 95% range over internal repeated splits

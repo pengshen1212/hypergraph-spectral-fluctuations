@@ -140,44 +140,13 @@ Figure~\ref{fig:calibration-map} separates two parts of the analysis.
 The operator chain isolates static degree weighting from dynamic degree
 recomputation, while each prediction law supplies complete relation draws
 to the same normalized scoring pipeline.
-\Needspace{8cm}
+\Needspace{12cm}
 \begin{figure}[H]
 \centering
-\begin{tikzpicture}[
-  box/.style={draw,rounded corners,align=center,minimum height=8mm,
-              text width=3.8cm,font=\small,inner sep=5pt},
-  law/.style={draw,rounded corners,align=center,minimum height=20mm,
-              text width=3.8cm,font=\small,inner sep=5pt},
-  arrow/.style={-{Latex[length=2mm]},thick}
-]
-\node[box,minimum height=15mm] (raw) at (2,-1.1) {$B(a)$\\raw relation operator};
-\node[font=\small\bfseries,anchor=south west,inner sep=0pt,
-      yshift=4mm] at (raw.north west) {Operator comparison};
-\node[box,minimum height=15mm] (fixed) at (7,-1.1) {$S_0(a)$\\fixed expected degrees};
-\node[box,minimum height=15mm] (dynamic) at (12,-1.1) {$S(a)$\\degrees recomputed per draw};
-\draw[arrow] (raw.east)--(fixed.west);
-\draw[arrow] (fixed.east)--(dynamic.west);
-\node[font=\scriptsize,align=center] at (4.5,-2.05)
-  {static degree weighting};
-\node[font=\scriptsize,align=center] at (9.5,-2.05)
-  {dynamic degree recomputation};
-
-\node[law] (lone) at (2,-3.4)
-  {L1: specified node-product law\\jointly induced relations};
-\node[law] (ltwo) at (7,-3.4)
-  {L2: fitted node-product law\\marginals retained};
-\node[law] (lthree) at (12,-3.4)
-  {L3: complete training runs\\run-level dependence retained};
-\node[box,text width=8.3cm,minimum height=15mm] (score) at (7,-5.55)
-  {For each law: jointly construct $a(Y)$, recompute $D(a)$,\\
-   and evaluate the frozen normalized spectral score $T(Y)$};
-\draw[arrow] (lone.south) -- ++(0,-5mm) -| (score.west);
-\draw[arrow] (ltwo.south)--(score.north);
-\draw[arrow] (lthree.south) -- ++(0,-5mm) -| (score.east);
-\end{tikzpicture}
+\includegraphics[width=\textwidth]{figures/operator_law_map.pdf}
 \caption{The operator comparison and the prediction-law comparison are
-distinct axes. $B\to S_0\to S$ separates static weighting from dynamic
-normalization; L1--L3 specify which joint prediction mechanism generates
+distinct axes. (a) $B\to S_0\to S$ separates static weighting from dynamic
+normalization. (b) L1--L3 specify which joint prediction mechanism generates
 the relation draws used by the same normalized score.}
 \label{fig:calibration-map}
 \end{figure}
@@ -449,7 +418,7 @@ the marginal guarantee.
 \includegraphics[width=\textwidth]{figures/visual_alarm_main.pdf}
 \caption{Cross-domain calibration and frozen-threshold variability.
 (a) Clean exceedance for complete-run (L3), fitted node-product (L2),
-and independent-edge calibration at $\alpha=5\%$; error bars are
+and independent-edge calibration at $\alpha=5\%$; horizontal error bars are
 batch-specific $95\%$ Clopper--Pearson intervals from 200 evaluation
 runs. (b) Original frozen-split rates and the median and central
 $95\%$ range of 10,000 random 99/200 splits of the same 299 scores,

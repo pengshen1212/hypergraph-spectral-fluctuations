@@ -770,7 +770,7 @@
   ],
   "figure_pdf": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\figure_visual_alarm_main.pdf",
   "figure_png": "experiments\\spectral-risk-calibration\\results\\visual_alarm_v1\\report\\figure_visual_alarm_main.png",
-  "generated_at": "2026-10-22T01:00:22",
+  "generated_at": "2026-10-22T15:34:15",
   "holm_main": [
     {
       "ci_hi": 0.0,

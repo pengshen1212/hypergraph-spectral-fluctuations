@@ -23,6 +23,7 @@ elif mode == "test":
 elif mode == "tables":
     subprocess.run([sys.executable, str(PAPER/"notes/calibration-integration/generate_tables.py")], check=True)
 elif mode == "figures":
+    subprocess.run([sys.executable, str(PAPER/"figures/draw_operator_law_map.py")], check=True)
     experiment = ROOT/"experiments/spectral-risk-calibration"
     subprocess.run([sys.executable, str(experiment/"scripts/s16_visual_alarm_report.py"),
                     "--results", str(experiment/"results/visual_alarm_v1")], check=True)
